@@ -15,7 +15,7 @@
   </p>
   <p>
     <%= f.label :time %><br />
-    <%= f.datetime_select :time %>
+    <%= f.time_select :time %>
   </p>
   <p>
     <%= f.label :address %><br />
@@ -32,26 +32,11 @@
   <% if -%>
     <%= render 'round_trip_form', :f => f %>
   <% end -%>
-  <p>
-    <%= f.label :first_name %><br />
-    <%= f.text_field :first_name %>
-  </p>
-  <p>
-    <%= f.label :last_name %><br />
-    <%= f.text_field :last_name %>
-  </p>
-  <p>
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </p>
-  <p>
-    <%= f.label :phone %><br />
-    <%= f.text_field :phone %>
-  </p>
-  <p>
-    <%= f.label :note %><br />
-    <%= f.text_area :note %>
-  </p>
+
+  <% unless logged_in? -%>
+    <%= render "user_info", :f => f %>
+  <% end -%>
+
   <p><%= f.submit "Next", :name => "next_button" %>
      <%= f.submit "Back", :name => "back_button" %></p>
 <% end %>
