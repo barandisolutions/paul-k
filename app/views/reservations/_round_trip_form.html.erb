@@ -1,11 +1,6 @@
 <p>
   <%= f.label :date_round %><br />
-  <%= f.date_select :date_round %>
-</p>
-<p>
-  <%= f.label :time_round %><br />
-  <%= f.datetime_select :time_round %>
-</p>
+<%= calendar_date_select_tag "reservation[date_round]", @reservation.date_round, :time => true %>
 <p>
   <%= f.label :address_round %><br />
   <%= f.text_field :address_round %>
