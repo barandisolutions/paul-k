@@ -1,0 +1,16 @@
+<%= link_to 'Home', root_path %> |
+<% if logged_in? -%>
+  <%= link_to 'Edit Profile', edit_user_path(current_user) %> |
+  <%= link_to 'Log out', logout_path %> |
+<% else -%>
+  <%= link_to 'Signup', signup_path %> |
+  <%= link_to 'Login', login_path %> |
+<% end -%>
+<%= link_to 'Ads', ads_path %> |
+<%= link_to 'Contact', contact_path %> |
+<%= link_to 'Courier', courier_path %> |
+<%= link_to 'Feedback', feedback_path %> |
+<%= link_to 'Job', job_path %> |
+<%= link_to 'Rates', rates_path %> |
+<%= link_to 'Terms', terms_path %>
+

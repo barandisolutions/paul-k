@@ -1,0 +1,12 @@
+development:
+  username: admin
+  password: admin
+
+test:
+  username: test
+  password: test
+
+production:
+  username: admin
+  password: admin
+

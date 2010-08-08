@@ -1,0 +1,69 @@
+<% title "Reservation" %>
+
+<p>
+  <strong>Category:</strong>
+  <%=h @reservation.category_id %>
+</p>
+<p>
+  <strong>Event:</strong>
+  <%= link_to @event.title, admin_event_path(@event) %>
+</p>
+<p>
+  <strong>Type of:</strong>
+  <%=h @reservation.type_of %>
+</p>
+<p>
+<%= show_title( @event.date_title_show,
+                @event.date_title,
+                @reservation.date) %>
+</p>
+<p>
+<%= show_title( @event.time_title_show,
+                @event.time_title,
+                @reservation.time) %>
+</p>
+<p>
+<%= show_title( @event.address_title_show,
+                @event.address_title,
+                @reservation.address) %>
+</p>
+<p>
+<%= show_title( @event.city_title_show,
+                @event.city_title,
+                @reservation.city) %>
+</p>
+<p>
+<%= show_title( @event.zipcode_title_show,
+                @event.zipcode_title,
+                @reservation.zipcode) %>
+</p>
+<p>
+<%= show_title( @event.first_name_title_show,
+                @event.first_name_title,
+                @reservation.first_name) %>
+</p>
+<p>
+<%= show_title( @event.last_name_title_show,
+                @event.last_name_title,
+                @reservation.last_name) %>
+</p>
+<p>
+<%= show_title( @event.email_title_show,
+                @event.email_title,
+                @reservation.email) %>
+</p>
+<p>
+<%= show_title( @event.phone_title_show,
+                @event.phone_title,
+                @reservation.phone) %>
+</p>
+<p>
+<%= show_title( @event.note_title_show,
+                @event.note_title,
+                @reservation.note) %>
+</p>
+<p>
+  <%= link_to "Edit", edit_reservation_path(@reservation) %> |
+  <%= link_to "Destroy", @reservation, :confirm => 'Are you sure?', :method => :delete %> |
+</p>
+

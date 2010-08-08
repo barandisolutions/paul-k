@@ -1,0 +1,22 @@
+<% title "Categories" %>
+
+<% form_for @reservation do |f| %>
+  <%= f.collection_select :type_of, Event::TYPES, :to_s, :humanize %>
+<br>
+<br>
+  <% for category in @categories %>
+    <%= link_to category.title, category %>
+    <%=h category.url %>
+<br>
+    <% category.events.each do |event| %>
+        <%= f.radio_button :event_id, event.id %>
+        <%=h event.title %><br>
+    <% end -%>
+    <br>
+  <% end -%>
+
+  <%= f.submit "Next", :name => "next_button" %>
+<% end -%>
+
+<p><%= link_to "New Category", new_admin_category_path %></p>
+

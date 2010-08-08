@@ -1,0 +1,60 @@
+<% title "Reservation" %>
+
+<p>
+  <strong>Category:</strong>
+  <%=h @reservation.category_id %>
+</p>
+<p>
+  <strong>Event:</strong>
+  <%=h @reservation.event_id %>
+</p>
+<p>
+  <strong>Type Of:</strong>
+  <%=h @reservation.type_of %>
+</p>
+<p>
+  <strong>Date:</strong>
+  <%=h @reservation.date %>
+</p>
+<p>
+  <strong>Time:</strong>
+  <%=h @reservation.time %>
+</p>
+<p>
+  <strong>Address:</strong>
+  <%=h @reservation.address %>
+</p>
+<p>
+  <strong>City:</strong>
+  <%=h @reservation.city %>
+</p>
+<p>
+  <strong>Zipcode:</strong>
+  <%=h @reservation.zipcode %>
+</p>
+<p>
+  <strong>First Name:</strong>
+  <%=h @reservation.first_name %>
+</p>
+<p>
+  <strong>Last Name:</strong>
+  <%=h @reservation.last_name %>
+</p>
+<p>
+  <strong>Email:</strong>
+  <%=h @reservation.email %>
+</p>
+<p>
+  <strong>Phone:</strong>
+  <%=h @reservation.phone %>
+</p>
+<p>
+  <strong>Note:</strong>
+  <%=h @reservation.note %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_reservation_path(@reservation) %> |
+  <%= link_to "Destroy", @reservation, :confirm => 'Are you sure?', :method => :delete %> |
+</p>
+

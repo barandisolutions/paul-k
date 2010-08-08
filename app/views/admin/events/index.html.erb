@@ -1,0 +1,47 @@
+<% title "Admin:Events" %>
+
+<table>
+  <tr>
+    <th>Title title</th>
+    <th>Type title</th>
+    <th>Note title</th>
+    <th>Date title</th>
+    <th>Time title</th>
+    <th>Address title</th>
+    <th>City title</th>
+    <th>Zipcode title</th>
+    <th>First Name title</th>
+    <th>Last Name_title</th>
+    <th>Email title</th>
+    <th>Phone title</th>
+  </tr>
+  <% for event in @events %>
+    <tr>
+      <td><%=h event.title %></td>
+      <td><%=h event.type_title %></td>
+      <td><%=h event.note_title %></td>
+      <td><%=h event.category_ids %></td>
+      <td><%=h event.date_title %></td>
+      <td><%=h event.time_title %></td>
+      <td><%=h event.address_title %></td>
+      <td><%=h event.city_title %></td>
+      <td><%=h event.zipcode_title %></td>
+      <td><%=h event.first_name_title %></td>
+      <td><%=h event.last_name_title %></td>
+      <td><%=h event.email_title %></td>
+      <td><%=h event.phone_title %></td>
+      <td>
+        <%= link_to "Show", admin_event_path(event) %>
+      </td>
+      <td>
+        <%= link_to "Edit", edit_admin_event_path(event) %>
+      </td>
+      <td>
+        <%= link_to "Destroy", admin_event_path(event), :confirm => 'Are you sure?', :method => :delete %>
+      </td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Event", new_admin_event_path %></p>
+

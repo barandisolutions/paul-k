@@ -1,0 +1,69 @@
+<% title "Event" %>
+
+<strong>Type:</strong>
+  <%=h @event.type_title %>
+
+<p>
+  <% @event.categories.each do |category|%>
+    <strong>Category Title:</strong>
+    <%=h category.title %> <br />
+  <% end -%>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%=h @event.title %>
+</p>
+
+<p>
+  <strong>Note title:</strong>
+  <%=h @event.note_title %>
+</p>
+
+<p>
+  <strong>Category title:</strong>
+  <%=h @event.category_ids %>
+</p>
+<p>
+  <strong>Date title:</strong>
+  <%=h @event.date_title %>
+</p>
+<p>
+  <strong>Time title:</strong>
+  <%=h @event.time_title %>
+</p>
+<p>
+  <strong>Address title:</strong>
+  <%=h @event.address_title %>
+</p>
+<p>
+  <strong>City title:</strong>
+  <%=h @event.city_title %>
+</p>
+<p>
+  <strong>Zipcode title:</strong>
+  <%=h @event.zipcode_title %>
+</p>
+<p>
+  <strong>First Name title:</strong>
+  <%=h @event.first_name_title %>
+</p>
+<p>
+  <strong>Last Name title:</strong>
+  <%=h @event.last_name_title %>
+</p>
+<p>
+  <strong>Email title:</strong>
+  <%=h @event.email_title %>
+</p>
+<p>
+  <strong>Phone title:</strong>
+  <%=h @event.phone_title %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_admin_event_path(@event) %> |
+  <%= link_to "Destroy", admin_event_path(@event), :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", admin_events_path %>
+</p>
+

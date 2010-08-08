@@ -1,0 +1,7 @@
+<% title "Sign up" %>
+
+<% form_for [:admin, @user] do |f| %>
+  <%= render "users/form", :f => f %>
+  <p><%= f.submit "Sign up" %></p>
+<% end %>
+

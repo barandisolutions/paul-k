@@ -1,0 +1,17 @@
+<% title "Category" %>
+
+<p>
+  <strong>Title:</strong>
+  <%=h @category.title %>
+</p>
+<p>
+  <strong>Url:</strong>
+  <%=h @category.url %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_admin_category_path(@category) %> |
+  <%= link_to "Destroy", admin_category_path(@category), :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", admin_categories_path %>
+</p>
+

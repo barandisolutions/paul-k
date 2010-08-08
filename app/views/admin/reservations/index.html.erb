@@ -1,0 +1,40 @@
+<% title "Admin:Reservations" %>
+
+<table>
+  <tr>
+    <th>Category</th>
+    <th>Event</th>
+    <th>Type Of</th>
+    <th>Date</th>
+    <th>Time</th>
+    <th>Address</th>
+    <th>City</th>
+    <th>Zipcode</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Note</th>
+  </tr>
+  <% for reservation in @reservations %>
+    <tr>
+      <td><%=h reservation.category_id %></td>
+      <td><%=h reservation.event_id %></td>
+      <td><%=h reservation.type_of %></td>
+      <td><%=h reservation.date %></td>
+      <td><%=h reservation.time %></td>
+      <td><%=h reservation.address %></td>
+      <td><%=h reservation.city %></td>
+      <td><%=h reservation.zipcode %></td>
+      <td><%=h reservation.first_name %></td>
+      <td><%=h reservation.last_name %></td>
+      <td><%=h reservation.email %></td>
+      <td><%=h reservation.phone %></td>
+      <td><%=h reservation.note %></td>
+      <td><%= link_to "Show", admin_reservation_path(reservation) %></td>
+      <td><%= link_to "Edit", edit_admin_reservation_path(reservation) %></td>
+      <td><%= link_to "Destroy", admin_reservation_path(reservation), :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+

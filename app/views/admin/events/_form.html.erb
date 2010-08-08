@@ -1,0 +1,79 @@
+<% form_for [:admin, @event] do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+    <%= f.check_box :title_show %>
+  </p>
+  <p>
+    <%= f.label :price %><br />
+    <%= f.text_field :price %>
+  </p>
+  <p>
+    <%= f.label :purchaseable %>
+    <%= f.check_box :purchaseable %>
+  </p>
+  <p>
+    <%= f.label :type_title %><br />
+    <%= f.collection_select :type_title, Event::TYPES, :to_s, :humanize %>
+  </p>
+  <p>
+    <%= f.label :note_title %><br />
+    <%= f.text_area :note_title %>
+    <%= f.check_box :note_title_show %>
+  </p>
+  <p>
+   <% Category.all.each do |category| -%>
+     <%= check_box_tag "event[category_ids][]", category.id, @event.categories.include?(category) %>
+     <%= category.title %>
+   <% end %>
+  </p>
+  <p>
+    <%= f.label :date_title %><br />
+    <%= f.text_field :date_title %>
+    <%= f.check_box :date_title_show %>
+  </p>
+  <p>
+    <%= f.label :time_title %><br />
+    <%= f.text_field :time_title %>
+    <%= f.check_box :time_title_show %>
+  </p>
+  <p>
+    <%= f.label :address_title %><br />
+    <%= f.text_field :address_title %>
+    <%= f.check_box :address_title_show %>
+  </p>
+  <p>
+    <%= f.label :city_title %><br />
+    <%= f.text_field :city_title %>
+    <%= f.check_box :city_title_show %>
+  </p>
+  <p>
+    <%= f.label :zipcode_title %><br />
+    <%= f.text_field :zipcode_title %>
+    <%= f.check_box :zipcode_title_show %>
+  </p>
+  <p>
+    <%= f.label :first_name_title %><br />
+    <%= f.text_field :first_name_title %>
+    <%= f.check_box :first_name_title_show %>
+  </p>
+  <p>
+    <%= f.label :last_name_title %><br />
+    <%= f.text_field :last_name_title %>
+    <%= f.check_box :last_name_title_show %>
+  </p>
+  <p>
+    <%= f.label :email_title %><br />
+    <%= f.text_field :email_title %>
+    <%= f.check_box :email_title_show %>
+  </p>
+  <p>
+    <%= f.label :phone_title %><br />
+    <%= f.text_field :phone_title %>
+    <%= f.check_box :phone_title_show %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>
+

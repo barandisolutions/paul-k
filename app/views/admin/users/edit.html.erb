@@ -1,0 +1,27 @@
+<% title "Edit Profile" %>
+
+<% form_for [:admin, @user] do |f| %>
+  <%= render "users/form", :f => f %>
+  <p>
+    <%= f.label :first_name %><br />
+    <%= f.text_field :address %>
+  </p>
+  <p>
+    <%= f.label :last_name %><br />
+    <%= f.text_field :address %>
+  </p>
+  <p>
+    <%= f.label :address %><br />
+    <%= f.text_field :address %>
+  </p>
+  <p>
+    <%= f.label :city %><br />
+    <%= f.text_field :city %>
+  </p>
+  <p>
+    <%= f.label :zipcode %><br />
+    <%= f.text_field :zipcode %>
+  </p>
+  <p><%= f.submit "Update Profile" %></p>
+<% end %>
+
