@@ -1,4 +1,4 @@
-<% title "Reservation" %>
+<% title "Please confirm your Trip details: #{@reservation.current_step}" -%>
 
 <p>
   <strong>Category:</strong>
@@ -6,7 +6,7 @@
 </p>
 <p>
   <strong>Event:</strong>
-  <%=h @reservation.event_id %>
+  <%=h Event.find(@reservation.event_id)%>
 </p>
 <p>
   <strong>Type Of:</strong>

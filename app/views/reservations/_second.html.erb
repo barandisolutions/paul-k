@@ -1,31 +1,37 @@
-<%= @reservation.current_step %>
+<% title "Please enter in Trip details: #{@reservation.current_step}" -%>
+
 <% form_for @reservation do |f| %>
   <%= f.error_messages %>
+
   <p>
-    <strong>Event: </strong>
-    <%=h @reservation.event_id %>
+    <strong>
+      <%= (@reservation.type_of.to_s).humanize %>
+      <%=h Event.find(@reservation.event_id).title %> |
+      <%= f.submit "Change", :name => "back_button" %></p>
+    </strong>
   </p>
-  <p>
-    <strong>Type of: </strong>
-    <%=h @reservation.type_of %>
-  </p>
+
   <p>
     <%= f.label :date %><br />
-	  <%= calendar_date_select_tag "reservation[date]", @reservation.date, :time => true %>
+	  <%= calendar_date_select_tag "reservation[date]", @reservation.date, :time => true, :size => '30' %>
   </p>
+
   <p>
     <%= f.label :address %><br />
     <%= f.text_field :address %>
   </p>
+
   <p>
     <%= f.label :city %><br />
     <%= f.text_field :city %>
   </p>
+
   <p>
     <%= f.label :zipcode %><br />
     <%= f.text_field :zipcode %>
   </p>
-  <% if -%>
+
+  <% if @reservation.round_trip? -%>
     <%= render 'round_trip_form', :f => f %>
   <% end -%>
 
@@ -33,7 +39,9 @@
     <%= render "user_info", :f => f %>
   <% end -%>
 
-  <p><%= f.submit "Next", :name => "next_button" %>
-     <%= f.submit "Back", :name => "back_button" %></p>
+  <p>
+    <%= f.submit "Next", :name => "next_button" %>
+    <%= f.submit "Back", :name => "back_button" %>
+  </p>
 <% end %>
 

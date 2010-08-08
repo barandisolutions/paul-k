@@ -32,5 +32,9 @@ class Reservation < ActiveRecord::Base
       valid?
     end
   end
+
+  def round_trip?
+    type_of == ('round_trip_(To)' || 'round_trip_(From)')
+  end
 end
 
