@@ -2,6 +2,7 @@ class ReservationsController < ApplicationController
 
   def show
     @reservation = Reservation.find(params[:id])
+    @event = Event.find(@reservation.event_id)
   end
 
   def new
