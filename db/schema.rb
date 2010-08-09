@@ -1,4 +1,4 @@
-# This file is auto-generated from the current state of the database. Instead of editing this file,
+# This file is auto-generated from the current state of the database. Instead of editing this file, 
 # please use the migrations feature of Active Record to incrementally modify your database, and
 # then regenerate this schema definition.
 #
@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(:version => 20100802231401) do
     t.boolean  "title_show"
     t.string   "type_title"
     t.boolean  "type_title_show"
-    t.string   "note_title"
+    t.string   "note_title",            :default => "Note: "
     t.boolean  "note_title_show"
     t.integer  "category_ids"
     t.boolean  "category_ids_show"
@@ -60,10 +60,10 @@ ActiveRecord::Schema.define(:version => 20100802231401) do
     t.integer  "category_id"
     t.integer  "event_id"
     t.string   "type_of"
-    t.date     "date"
-    t.date     "date_round"
-    t.time     "time"
-    t.time     "time_round"
+    t.string   "date"
+    t.string   "date_round"
+    t.string   "time"
+    t.string   "time_round"
     t.string   "address"
     t.string   "address_round"
     t.string   "city"
@@ -94,4 +94,3 @@ ActiveRecord::Schema.define(:version => 20100802231401) do
   end
 
 end
-

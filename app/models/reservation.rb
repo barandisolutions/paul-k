@@ -2,6 +2,10 @@ class Reservation < ActiveRecord::Base
 
   attr_writer :current_step
 
+  TYPES = %w[to from round_trip_(To) round_trip_(From)]
+
+  validates_presence_of :event_id, :if => lambda { |o| o.current_step == "first" }
+
   def steps
     %w[first second third]
   end

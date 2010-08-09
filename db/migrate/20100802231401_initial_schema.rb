@@ -60,10 +60,10 @@ class InitialSchema < ActiveRecord::Migration
       t.integer :category_id
       t.integer :event_id
       t.string :type_of
-      t.date :date
-      t.date :date_round
-      t.time :time
-      t.time :time_round
+      t.string :date
+      t.string :date_round
+      t.string :time
+      t.string :time_round
       t.string :address
       t.string :address_round
       t.string :city

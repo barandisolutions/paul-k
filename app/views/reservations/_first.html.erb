@@ -2,7 +2,7 @@
 
 <p><strong>Please choose Trip type:</strong></p>
 <% form_for @reservation do |f| %>
-  <%= f.collection_select :type_of, Event::TYPES, :to_s, :humanize %>
+  <%= f.collection_select :type_of, Reservation::TYPES, :to_s, :humanize %>
 <br>
 <p><strong>Please choose Trip location:</strong></p>
   <% @categories.each do |category| -%>

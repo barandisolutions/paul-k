@@ -1,60 +1,71 @@
 <% title "Please confirm your Trip details: #{@reservation.current_step}" -%>
 
+  <p>
+    <strong>
+      <%= (@reservation.type_of.to_s).humanize %>:
+    </strong>
+    <% if @event -%>
+      <% if admin? -%>
+      <%= link_to @event.title, admin_event_path(@event) %>
+      <% else -%>
+        <%=h @event.title %>
+      <% end -%>
+    <% end -%>
+  </p>
+
 <p>
-  <strong>Category:</strong>
-  <%=h @reservation.category_id %>
+<%= show_title( @event.date_title_show,
+                @event.date_title,
+                @reservation.date) %>
 </p>
 <p>
-  <strong>Event:</strong>
-  <%=h Event.find(@reservation.event_id)%>
+<%= show_title( @event.time_title_show,
+                @event.time_title,
+                @reservation.time) %>
 </p>
 <p>
-  <strong>Type Of:</strong>
-  <%=h @reservation.type_of %>
+<%= show_title( @event.address_title_show,
+                @event.address_title,
+                @reservation.address) %>
 </p>
 <p>
-  <strong>Date:</strong>
-  <%=h @reservation.date %>
+<%= show_title( @event.city_title_show,
+                @event.city_title,
+                @reservation.city) %>
 </p>
 <p>
-  <strong>Time:</strong>
-  <%=h @reservation.time %>
+<%= show_title( @event.zipcode_title_show,
+                @event.zipcode_title,
+                @reservation.zipcode) %>
 </p>
 <p>
-  <strong>Address:</strong>
-  <%=h @reservation.address %>
+<%= show_title( @event.first_name_title_show,
+                @event.first_name_title,
+                @reservation.first_name) %>
 </p>
 <p>
-  <strong>City:</strong>
-  <%=h @reservation.city %>
+<%= show_title( @event.last_name_title_show,
+                @event.last_name_title,
+                @reservation.last_name) %>
 </p>
 <p>
-  <strong>Zipcode:</strong>
-  <%=h @reservation.zipcode %>
+<%= show_title( @event.email_title_show,
+                @event.email_title,
+                @reservation.email) %>
 </p>
 <p>
-  <strong>First Name:</strong>
-  <%=h @reservation.first_name %>
+<%= show_title( @event.phone_title_show,
+                @event.phone_title,
+                @reservation.phone) %>
 </p>
 <p>
-  <strong>Last Name:</strong>
-  <%=h @reservation.last_name %>
-</p>
-<p>
-  <strong>Email:</strong>
-  <%=h @reservation.email %>
-</p>
-<p>
-  <strong>Phone:</strong>
-  <%=h @reservation.phone %>
-</p>
-<p>
-  <strong>Note:</strong>
-  <%=h @reservation.note %>
+<%= show_title( @event.note_title_show,
+                @event.note_title,
+                @reservation.note) %>
 </p>
 
 <% form_for @reservation do |f| %>
-  <%= f.submit "CONFIRM", :name => "next_button" %>
-  <%= f.submit "Back", :name => "back_button" %>
+  <%= f.submit 'Confirm', :name => "next_button" %>
+  <%= f.submit 'Back', :name => "back_button" %>
 <% end -%>
 

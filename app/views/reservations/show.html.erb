@@ -13,8 +13,9 @@
   <%=h @reservation.type_of %>
 </p>
 <p>
-  <strong>Date:</strong>
-  <%=h @reservation.date %>
+<%= show_title( @event.date_title_show,
+                @event.date_title,
+                @reservation.date) %>
 </p>
 <p>
   <strong>Time:</strong>

@@ -16,7 +16,7 @@
   </p>
   <p>
     <%= f.label :type_title %><br />
-    <%= f.collection_select :type_title, Event::TYPES, :to_s, :humanize %>
+    <%= f.collection_select :type_title, Reservation::TYPES, :to_s, :humanize %>
   </p>
   <p>
     <%= f.label :note_title %><br />

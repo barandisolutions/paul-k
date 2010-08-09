@@ -5,31 +5,45 @@
 
   <p>
     <strong>
-      <%= (@reservation.type_of.to_s).humanize %>
-      <%=h Event.find(@reservation.event_id).title %> |
-      <%= f.submit "Change", :name => "back_button" %></p>
+      <%= (@reservation.type_of.to_s).humanize %>:
     </strong>
+    <% if @event -%>
+      <% if admin? -%>
+      <%= link_to @event.title, admin_event_path(@event) %> |
+      <% else -%>
+        <%=h @event.title %>
+      <% end -%>
+    <% end -%>
+      <%= f.submit "Change", :name => "back_button" %></p>
   </p>
 
-  <p>
-    <%= f.label :date %><br />
-	  <%= calendar_date_select_tag "reservation[date]", @reservation.date, :time => true, :size => '30' %>
-  </p>
+  <% if @event.date_title_show == true -%>
+    <p>
+      <%= f.label @event.date_title %><br />
+	    <%= calendar_date_select_tag "reservation[date]", @reservation.date, :time => true, :size => '30' %>
+    </p>
+  <% end -%>
 
-  <p>
-    <%= f.label :address %><br />
-    <%= f.text_field :address %>
-  </p>
+  <% if @event.address_title_show == true -%>
+    <p>
+      <%= f.label @event.address_title %><br />
+      <%= f.text_field :address %>
+    </p>
+  <% end -%>
 
-  <p>
-    <%= f.label :city %><br />
-    <%= f.text_field :city %>
-  </p>
+  <% if @event.city_title_show == true -%>
+    <p>
+      <%= f.label @event.city_title %><br />
+      <%= f.text_field :city %>
+    </p>
+  <% end -%>
 
-  <p>
-    <%= f.label :zipcode %><br />
-    <%= f.text_field :zipcode %>
-  </p>
+  <% if @event.zipcode_title_show == true -%>
+    <p>
+      <%= f.label @event.zipcode_title %><br />
+      <%= f.text_field :zipcode %>
+    </p>
+  <% end -%>
 
   <% if @reservation.round_trip? -%>
     <%= render 'round_trip_form', :f => f %>
