@@ -1,5 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :reservations
+  map.resources :reservations, :collection => { :dump_csv => :get }
 
   map.resources :categories
 
@@ -32,7 +32,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.namespace :admin do |admin|
     admin.resources :users
-    admin.resources :events
+    admin.resources :events, :collection => { :dump_csv => :get }
     admin.resources :categories
     admin.resources :reservations
   end

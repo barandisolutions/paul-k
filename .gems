@@ -1,0 +1,4 @@
+rails -v 2.3.5
+fastercsv
+calendar_date_select
+

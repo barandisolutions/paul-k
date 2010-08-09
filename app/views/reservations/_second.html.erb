@@ -17,6 +17,7 @@
       <%= f.submit "Change", :name => "back_button" %></p>
   </p>
 
+<% if @event -%>
   <% if @event.date_title_show == true -%>
     <p>
       <%= f.label @event.date_title %><br />
@@ -43,7 +44,6 @@
       <%= f.label @event.zipcode_title %><br />
       <%= f.text_field :zipcode %>
     </p>
-  <% end -%>
 
   <% if @reservation.round_trip? -%>
     <%= render 'round_trip_form', :f => f %>
@@ -53,6 +53,8 @@
     <%= render "user_info", :f => f %>
   <% end -%>
 
+<% end -%>
+<% end -%>
   <p>
     <%= f.submit "Next", :name => "next_button" %>
     <%= f.submit "Back", :name => "back_button" %>

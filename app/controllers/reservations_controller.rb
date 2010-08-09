@@ -56,5 +56,28 @@ class ReservationsController < ApplicationController
     flash[:notice] = "Successfully destroyed reservation."
     redirect_to reservations_url
   end
+
+  def dump_csv
+    @reservations = Reservation.find(:all)
+    @outfile = "members_" + Time.now.strftime("%m-%d-%Y") + ".csv"
+
+    csv_data = FasterCSV.generate do |csv|
+      csv << [
+      "Date",
+      "Address"
+      ]
+      @reservations.each do |reservation|
+        csv << [
+        reservation.date,
+        "\n",
+        reservation.address
+        ]
+      end
+    end
+
+  send_data csv_data,
+    :type => 'text/csv; charset=iso-8859-1; header=present',
+    :disposition => "attachment; filename=#{@outfile}"
+  end
 end
 
