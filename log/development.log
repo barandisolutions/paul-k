@@ -27990,3 +27990,44 @@ Processing Admin::EventsController#dump_csv (for 127.0.0.1 at 2010-08-08 20:01:2
   [4;35;1mEvent Load (3.0ms)[0m   [0mSELECT * FROM "events" [0m
 Sending data 
 Completed in 32ms (View: 1, DB: 3) | 200 OK [http://localhost/admin/events/dump_csv]
+
+
+Processing ReservationsController#new (for 127.0.0.1 at 2010-08-08 20:45:04) [GET]
+  Parameters: {"action"=>"new", "controller"=>"reservations"}
+  [4;36;1mCategory Load (1.3ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/application
+Rendering reservations/new
+  [4;35;1mEvent Load (1.8ms)[0m   [0mSELECT * FROM "events" INNER JOIN "categories_events" ON "events".id = "categories_events".event_id WHERE ("categories_events".category_id = 1 ) [0m
+  [4;36;1mEvent Load (1.7ms)[0m   [0;1mSELECT * FROM "events" INNER JOIN "categories_events" ON "events".id = "categories_events".event_id WHERE ("categories_events".category_id = 2 ) [0m
+Rendered reservations/_first (60.3ms)
+Rendered shared/_header (2.9ms)
+Rendered shared/_admin_header (1.9ms)
+Completed in 134ms (View: 97, DB: 5) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-08 20:45:04) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ReservationsController#create (for 127.0.0.1 at 2010-08-08 20:45:09) [POST]
+  Parameters: {"reservation"=>{"event_id"=>"1", "type_of"=>"to"}, "action"=>"create", "authenticity_token"=>"mIbeNV+1X7DdLYwo0iOi1xg3qtUsec6FVB/tM2mmPAA=", "controller"=>"reservations", "next_button"=>"Next"}
+  [4;35;1mCategory Load (0.9ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mEvent Load (1.3ms)[0m   [0;1mSELECT * FROM "events" WHERE ("events"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering reservations/new
+Rendered reservations/_second (19.5ms)
+Rendered shared/_header (1.0ms)
+Rendered shared/_admin_header (0.9ms)
+Completed in 149ms (View: 34, DB: 2) | 200 OK [http://localhost/reservations]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-08 20:45:09) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
