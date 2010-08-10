@@ -33358,3 +33358,1129 @@ ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" wit
   
 
 Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 22:45:47) [GET]
+  Parameters: {"action"=>"index", "controller"=>"calenders"}
+
+NameError (uninitialized constant CalendersController):
+  
+
+Rendered rescues/_trace (52.5ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 22:45:50) [GET]
+
+ActionController::RoutingError (No route matches "/calendars" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CalendarsController#index (for 127.0.0.1 at 2010-08-09 22:46:10) [GET]
+  Parameters: {"action"=>"index", "controller"=>"calendars"}
+  [4;35;1mEvent Load (3.3ms)[0m   [0mSELECT * FROM "events" [0m
+Rendering template within layouts/application
+Rendering calendars/index
+
+ActionView::TemplateError (undefined method `calendar_for' for #<ActionView::Base:0xb62444b8>) on line #9 of app/views/calendars/index.html.erb:
+6:     <%=h @date.strftime("%B %Y") %>
+7:     <%= link_to ">", :month => (@date.end_of_month+1) %>
+8:   </h2>
+9:   <% calendar_for @articles, :year => @date.year, :month => @date.month do |calendar| %>
+10:     <%= calendar.head('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday') %>
+11:     <% calendar.day(:day_method => :published_on) do |date, articles| %>
+12:       <%= date.day %>
+
+    app/views/calendars/index.html.erb:9
+
+Rendered rescues/_trace (151.7ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CalendarsController#index (for 127.0.0.1 at 2010-08-09 22:46:35) [GET]
+  Parameters: {"action"=>"index", "controller"=>"calendars"}
+  [4;36;1mEvent Load (4.0ms)[0m   [0;1mSELECT * FROM "events" [0m
+Rendering template within layouts/application
+Rendering calendars/index
+
+ActionView::TemplateError (undefined method `published_on' for #<Event:0xb6421614>) on line #11 of app/views/calendars/index.html.erb:
+8:   </h2>
+9:   <% calendar_for @articles, :year => @date.year, :month => @date.month do |calendar| %>
+10:     <%= calendar.head('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday') %>
+11:     <% calendar.day(:day_method => :published_on) do |date, articles| %>
+12:       <%= date.day %>
+13:       <ul>
+14:         <% for article in articles %>
+
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:73:in `objects_for_days'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:72:in `each'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:72:in `objects_for_days'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:24
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/table_builder.rb:58:in `capture'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/table_builder.rb:49:in `tag'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:22:in `day'
+    app/views/calendars/index.html.erb:11
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:7
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:7:in `calendar_for'
+    app/views/calendars/index.html.erb:9
+
+Rendered rescues/_trace (95.4ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CalendarsController#index (for 127.0.0.1 at 2010-08-09 22:46:48) [GET]
+  Parameters: {"action"=>"index", "controller"=>"calendars"}
+  [4;35;1mEvent Load (3.4ms)[0m   [0mSELECT * FROM "events" [0m
+Rendering template within layouts/application
+Rendering calendars/index
+
+ActionView::TemplateError (undefined method `strftime' for 21:Fixnum) on line #11 of app/views/calendars/index.html.erb:
+8:   </h2>
+9:   <% calendar_for @articles, :year => @date.year, :month => @date.month do |calendar| %>
+10:     <%= calendar.head('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday') %>
+11:     <% calendar.day(:day_method => :created_at) do |date, articles| %>
+12:       <%= date.day %>
+13:       <ul>
+14:         <% for article in articles %>
+
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:74:in `objects_for_days'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:73:in `each'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:73:in `objects_for_days'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:72:in `each'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:72:in `objects_for_days'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:24
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/table_builder.rb:58:in `capture'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/table_builder.rb:49:in `tag'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:22:in `day'
+    app/views/calendars/index.html.erb:11
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:7
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:7:in `calendar_for'
+    app/views/calendars/index.html.erb:9
+
+Rendered rescues/_trace (102.1ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to InitialSchema (20100802231401)
+Migrating to CreateCalenders (20100810054834)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCREATE TABLE "calenders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100810054834')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.7ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("calenders")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("categories")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("categories_events")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("events")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("reservations")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("trips")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("users")[0m
+
+
+Processing CalendersController#index (for 127.0.0.1 at 2010-08-09 22:49:46) [GET]
+  Parameters: {"action"=>"index", "controller"=>"calenders"}
+  [4;36;1mEvent Load (4.3ms)[0m   [0;1mSELECT * FROM "events" [0m
+Rendering template within layouts/application
+Rendering calenders/index
+
+ActionView::TemplateError (undefined method `strftime' for 21:Fixnum) on line #11 of app/views/calenders/index.html.erb:
+8:   </h2>
+9:   <% calendar_for @articles, :year => @date.year, :month => @date.month do |calendar| %>
+10:     <%= calendar.head('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday') %>
+11:     <% calendar.day(:day_method => :created_at) do |date, articles| %>
+12:       <%= date.day %>
+13:       <ul>
+14:         <% for article in articles %>
+
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:74:in `objects_for_days'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:73:in `each'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:73:in `objects_for_days'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:72:in `each'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:72:in `objects_for_days'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:24
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/table_builder.rb:58:in `capture'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/table_builder.rb:49:in `tag'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:22:in `day'
+    app/views/calenders/index.html.erb:11
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:7
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:7:in `calendar_for'
+    app/views/calenders/index.html.erb:9
+
+Rendered rescues/_trace (100.5ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CalendersController#new (for 127.0.0.1 at 2010-08-09 22:50:00) [GET]
+  Parameters: {"action"=>"new", "controller"=>"calenders"}
+Rendering template within layouts/application
+Rendering calenders/new
+Rendered calenders/_form (16.6ms)
+Rendered shared/_header (3.1ms)
+Rendered shared/_admin_header (1.9ms)
+Completed in 64ms (View: 53, DB: 0) | 200 OK [http://localhost/calenders/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 22:50:00) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 22:50:05) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CalendersController#create (for 127.0.0.1 at 2010-08-09 22:50:09) [POST]
+  Parameters: {"commit"=>"Save changes", "action"=>"create", "authenticity_token"=>"RzsQ9UZPOknVO6vXlabxONU+WI3qPfPs6TV/3C+R6hQ=", "calender"=>{"title"=>"test"}, "controller"=>"calenders"}
+  [4;35;1mCalender Create (0.5ms)[0m   [0mINSERT INTO "calenders" ("created_at", "title", "updated_at") VALUES('2010-08-10 05:50:09', 'test', '2010-08-10 05:50:09')[0m
+Redirected to http://localhost:3000/calenders/1
+Completed in 128ms (DB: 0) | 302 Found [http://localhost/calenders]
+
+
+Processing CalendersController#show (for 127.0.0.1 at 2010-08-09 22:50:10) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"calenders"}
+  [4;36;1mCalender Load (0.4ms)[0m   [0;1mSELECT * FROM "calenders" WHERE ("calenders"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering calenders/show
+Rendered shared/_header (1.0ms)
+Rendered shared/_admin_header (0.9ms)
+Completed in 112ms (View: 32, DB: 0) | 200 OK [http://localhost/calenders/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 22:50:10) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 22:50:14) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CalendersController#index (for 127.0.0.1 at 2010-08-09 22:50:19) [GET]
+  Parameters: {"action"=>"index", "controller"=>"calenders"}
+  [4;35;1mEvent Load (3.9ms)[0m   [0mSELECT * FROM "events" [0m
+Rendering template within layouts/application
+Rendering calenders/index
+
+ActionView::TemplateError (undefined method `strftime' for 21:Fixnum) on line #11 of app/views/calenders/index.html.erb:
+8:   </h2>
+9:   <% calendar_for @articles, :year => @date.year, :month => @date.month do |calendar| %>
+10:     <%= calendar.head('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday') %>
+11:     <% calendar.day(:day_method => :created_at) do |date, articles| %>
+12:       <%= date.day %>
+13:       <ul>
+14:         <% for article in articles %>
+
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:74:in `objects_for_days'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:73:in `each'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:73:in `objects_for_days'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:72:in `each'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:72:in `objects_for_days'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:24
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/table_builder.rb:58:in `capture'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/table_builder.rb:49:in `tag'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:22:in `day'
+    app/views/calenders/index.html.erb:11
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:7
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:7:in `calendar_for'
+    app/views/calenders/index.html.erb:9
+
+Rendered rescues/_trace (99.3ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CalendersController#index (for 127.0.0.1 at 2010-08-09 22:50:59) [GET]
+  Parameters: {"month"=>"2011-10=10", "action"=>"index", "controller"=>"calenders"}
+  [4;36;1mEvent Load (5.0ms)[0m   [0;1mSELECT * FROM "events" [0m
+
+ArgumentError (invalid date):
+  /usr/lib/ruby/1.8/date.rb:956:in `new_by_frags'
+  /usr/lib/ruby/1.8/date.rb:1000:in `parse'
+  app/controllers/calenders_controller.rb:4:in `index'
+
+Rendered rescues/_trace (64.9ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CalendersController#index (for 127.0.0.1 at 2010-08-09 22:51:09) [GET]
+  Parameters: {"month"=>"2011-10-10", "action"=>"index", "controller"=>"calenders"}
+  [4;35;1mEvent Load (3.6ms)[0m   [0mSELECT * FROM "events" [0m
+Rendering template within layouts/application
+Rendering calenders/index
+
+ActionView::TemplateError (undefined method `strftime' for 21:Fixnum) on line #11 of app/views/calenders/index.html.erb:
+8:   </h2>
+9:   <% calendar_for @articles, :year => @date.year, :month => @date.month do |calendar| %>
+10:     <%= calendar.head('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday') %>
+11:     <% calendar.day(:day_method => :created_at) do |date, articles| %>
+12:       <%= date.day %>
+13:       <ul>
+14:         <% for article in articles %>
+
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:74:in `objects_for_days'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:73:in `each'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:73:in `objects_for_days'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:72:in `each'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:72:in `objects_for_days'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:24
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/table_builder.rb:58:in `capture'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/table_builder.rb:49:in `tag'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:22:in `day'
+    app/views/calenders/index.html.erb:11
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:7
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:7:in `calendar_for'
+    app/views/calenders/index.html.erb:9
+
+Rendered rescues/_trace (92.2ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 22:51:32) [GET]
+  Parameters: {"month"=>"2010-08-01"}
+
+ActionController::RoutingError (No route matches "/articles" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CalendersController#index (for 127.0.0.1 at 2010-08-09 22:51:41) [GET]
+  Parameters: {"month"=>"2010-08-01", "action"=>"index", "controller"=>"calenders"}
+  [4;36;1mEvent Load (3.5ms)[0m   [0;1mSELECT * FROM "events" [0m
+Rendering template within layouts/application
+Rendering calenders/index
+
+ActionView::TemplateError (undefined method `strftime' for 21:Fixnum) on line #11 of app/views/calenders/index.html.erb:
+8:   </h2>
+9:   <% calendar_for @articles, :year => @date.year, :month => @date.month do |calendar| %>
+10:     <%= calendar.head('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday') %>
+11:     <% calendar.day(:day_method => :created_at) do |date, articles| %>
+12:       <%= date.day %>
+13:       <ul>
+14:         <% for article in articles %>
+
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:74:in `objects_for_days'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:73:in `each'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:73:in `objects_for_days'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:72:in `each'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:72:in `objects_for_days'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:24
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/table_builder.rb:58:in `capture'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/table_builder.rb:49:in `tag'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:22:in `day'
+    app/views/calenders/index.html.erb:11
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:7
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:7:in `calendar_for'
+    app/views/calenders/index.html.erb:9
+
+Rendered rescues/_trace (111.6ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CalendersController#index (for 127.0.0.1 at 2010-08-09 22:53:54) [GET]
+  Parameters: {"month"=>"2010-08-01", "action"=>"index", "controller"=>"calenders"}
+  [4;35;1mEvent Load (3.5ms)[0m   [0mSELECT * FROM "events" [0m
+Rendering template within layouts/application
+Rendering calenders/index
+
+ActionView::TemplateError (undefined method `created_at' for nil:NilClass) on line #11 of app/views/calenders/index.html.erb:
+8:   </h2>
+9:   <% calendar_for @articles, :year => @date.year, :month => @date.month do |calendar| %>
+10:     <%= calendar.head('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday') %>
+11:     <% calendar.day(:day_method => @caleder.created_at.strftime("%B %Y")) do |date, articles| %>
+12:       <%= date.day %>
+13:       <ul>
+14:         <% for article in articles %>
+
+    app/views/calenders/index.html.erb:11
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:7
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:7:in `calendar_for'
+    app/views/calenders/index.html.erb:9
+
+Rendered rescues/_trace (104.6ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CalendersController#index (for 127.0.0.1 at 2010-08-09 22:54:00) [GET]
+  Parameters: {"month"=>"2010-08-01", "action"=>"index", "controller"=>"calenders"}
+  [4;36;1mEvent Load (3.9ms)[0m   [0;1mSELECT * FROM "events" [0m
+Rendering template within layouts/application
+Rendering calenders/index
+
+ActionView::TemplateError (undefined method `created_at' for nil:NilClass) on line #11 of app/views/calenders/index.html.erb:
+8:   </h2>
+9:   <% calendar_for @articles, :year => @date.year, :month => @date.month do |calendar| %>
+10:     <%= calendar.head('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday') %>
+11:     <% calendar.day(:day_method => @calender.created_at.strftime("%B %Y")) do |date, articles| %>
+12:       <%= date.day %>
+13:       <ul>
+14:         <% for article in articles %>
+
+    app/views/calenders/index.html.erb:11
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:7
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:7:in `calendar_for'
+    app/views/calenders/index.html.erb:9
+
+Rendered rescues/_trace (92.2ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CalendersController#index (for 127.0.0.1 at 2010-08-09 22:54:16) [GET]
+  Parameters: {"month"=>"2010-08-01", "action"=>"index", "controller"=>"calenders"}
+  [4;35;1mEvent Load (4.5ms)[0m   [0mSELECT * FROM "events" [0m
+Rendering template within layouts/application
+Rendering calenders/index
+
+ActionView::TemplateError (undefined method `created_at' for nil:NilClass) on line #11 of app/views/calenders/index.html.erb:
+8:   </h2>
+9:   <% calendar_for @articles, :year => @date.year, :month => @date.month do |calendar| %>
+10:     <%= calendar.head('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday') %>
+11:     <% calendar.day(:day_method => @article.created_at.strftime("%B %Y")) do |date, articles| %>
+12:       <%= date.day %>
+13:       <ul>
+14:         <% for article in articles %>
+
+    app/views/calenders/index.html.erb:11
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:7
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:7:in `calendar_for'
+    app/views/calenders/index.html.erb:9
+
+Rendered rescues/_trace (92.1ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to InitialSchema (20100802231401)
+Migrating to CreateCalenders (20100810055605)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSQLite3::SQLException: table "calenders" already exists: CREATE TABLE "calenders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "published_on" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (345.3ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (123.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to InitialSchema (20100802231401)
+  [4;36;1mSQL (1.7ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255), "address" varchar(255), "city" varchar(255), "zipcode" varchar(255), "password_hash" varchar(255), "password_salt" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "url" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "events" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "reservation_top_html" text, "reservation_bottom_html" text, "payment_top_html" text, "payment_bottom_html" text, "image_file_name" varchar(255), "title" varchar(255), "title_show" boolean, "type_title" varchar(255), "type_title_show" boolean, "note_title" varchar(255) DEFAULT 'Note: ', "note_title_show" boolean, "category_ids" integer, "category_ids_show" boolean, "date_title" varchar(255) DEFAULT 'Date: ', "date_title_show" boolean, "time_title" varchar(255) DEFAULT 'Time: ', "time_title_show" boolean, "address_title" varchar(255) DEFAULT 'Address: ', "address_title_show" boolean, "city_title" varchar(255) DEFAULT 'City: ', "city_title_show" boolean, "zipcode_title" varchar(255) DEFAULT 'Zipcode: ', "zipcode_title_show" boolean, "first_name_title" varchar(255) DEFAULT 'First Name: ', "first_name_title_show" boolean, "last_name_title" varchar(255) DEFAULT 'Last Name: ', "last_name_title_show" boolean, "email_title" varchar(255) DEFAULT 'Email: ', "email_title_show" boolean, "phone_title" varchar(255) DEFAULT 'Phone: ', "phone_title_show" boolean, "price" integer, "visible" boolean, "purchaseable" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE TABLE "categories_events" ("event_id" integer, "category_id" integer) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCREATE TABLE "reservations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "trip_id" integer, "event_id" integer, "type_of" varchar(255), "date" varchar(255), "date_round" varchar(255), "time" varchar(255), "time_round" varchar(255), "address" varchar(255), "address_round" varchar(255), "city" varchar(255), "city_round" varchar(255), "zipcode" varchar(255), "zipcode_round" varchar(255), "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255), "phone" integer, "note" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE TABLE "trips" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "event_id" integer, "title" varchar(255), "date" varchar(255), "passengers" integer, "published_on" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mCategory Create (0.2ms)[0m   [0;1mINSERT INTO "categories" ("created_at", "title", "updated_at", "url") VALUES('2010-08-10 05:56:16', 'Category 1', '2010-08-10 05:56:16', NULL)[0m
+  [4;35;1mCategory Create (0.1ms)[0m   [0mINSERT INTO "categories" ("created_at", "title", "updated_at", "url") VALUES('2010-08-10 05:56:16', 'Category 2', '2010-08-10 05:56:16', NULL)[0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mEvent Create (0.2ms)[0m   [0mINSERT INTO "events" ("type_title_show", "date_title", "time_title_show", "price", "reservation_top_html", "image_file_name", "first_name_title", "email_title", "created_at", "title", "note_title", "reservation_bottom_html", "phone_title_show", "updated_at", "title_show", "address_title", "city_title_show", "payment_top_html", "purchaseable", "time_title", "address_title_show", "city_title", "last_name_title", "last_name_title_show", "category_ids", "category_ids_show", "payment_bottom_html", "note_title_show", "zipcode_title", "first_name_title_show", "email_title_show", "phone_title", "visible", "type_title", "date_title_show", "zipcode_title_show") VALUES(NULL, 'Date: ', NULL, NULL, NULL, NULL, 'First Name: ', 'Email: ', '2010-08-10 05:56:16', 'Event 1', 'Note: ', NULL, NULL, '2010-08-10 05:56:16', NULL, 'Address: ', NULL, NULL, NULL, 'Time: ', NULL, 'City: ', 'Last Name: ', NULL, NULL, NULL, NULL, NULL, 'Zipcode: ', NULL, NULL, 'Phone: ', NULL, NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO "categories_events" ("event_id", "category_id") VALUES (1, 1)[0m
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mEvent Create (0.2ms)[0m   [0;1mINSERT INTO "events" ("type_title_show", "date_title", "time_title_show", "price", "reservation_top_html", "image_file_name", "first_name_title", "email_title", "created_at", "title", "note_title", "reservation_bottom_html", "phone_title_show", "updated_at", "title_show", "address_title", "city_title_show", "payment_top_html", "purchaseable", "time_title", "address_title_show", "city_title", "last_name_title", "last_name_title_show", "category_ids", "category_ids_show", "payment_bottom_html", "note_title_show", "zipcode_title", "first_name_title_show", "email_title_show", "phone_title", "visible", "type_title", "date_title_show", "zipcode_title_show") VALUES(NULL, 'Date: ', NULL, NULL, NULL, NULL, 'First Name: ', 'Email: ', '2010-08-10 05:56:16', 'Event 2', 'Note: ', NULL, NULL, '2010-08-10 05:56:16', NULL, 'Address: ', NULL, NULL, NULL, 'Time: ', NULL, 'City: ', 'Last Name: ', NULL, NULL, NULL, NULL, NULL, 'Zipcode: ', NULL, NULL, 'Phone: ', NULL, NULL, NULL, NULL)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO "categories_events" ("event_id", "category_id") VALUES (2, 1)[0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;35;1mEvent Create (0.2ms)[0m   [0mINSERT INTO "events" ("type_title_show", "date_title", "time_title_show", "price", "reservation_top_html", "image_file_name", "first_name_title", "email_title", "created_at", "title", "note_title", "reservation_bottom_html", "phone_title_show", "updated_at", "title_show", "address_title", "city_title_show", "payment_top_html", "purchaseable", "time_title", "address_title_show", "city_title", "last_name_title", "last_name_title_show", "category_ids", "category_ids_show", "payment_bottom_html", "note_title_show", "zipcode_title", "first_name_title_show", "email_title_show", "phone_title", "visible", "type_title", "date_title_show", "zipcode_title_show") VALUES(NULL, 'Date: ', NULL, NULL, NULL, NULL, 'First Name: ', 'Email: ', '2010-08-10 05:56:16', 'Event 3', 'Note: ', NULL, NULL, '2010-08-10 05:56:16', NULL, 'Address: ', NULL, NULL, NULL, 'Time: ', NULL, 'City: ', 'Last Name: ', NULL, NULL, NULL, NULL, NULL, 'Zipcode: ', NULL, NULL, 'Phone: ', NULL, NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO "categories_events" ("event_id", "category_id") VALUES (3, 2)[0m
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;36;1mEvent Create (0.2ms)[0m   [0;1mINSERT INTO "events" ("type_title_show", "date_title", "time_title_show", "price", "reservation_top_html", "image_file_name", "first_name_title", "email_title", "created_at", "title", "note_title", "reservation_bottom_html", "phone_title_show", "updated_at", "title_show", "address_title", "city_title_show", "payment_top_html", "purchaseable", "time_title", "address_title_show", "city_title", "last_name_title", "last_name_title_show", "category_ids", "category_ids_show", "payment_bottom_html", "note_title_show", "zipcode_title", "first_name_title_show", "email_title_show", "phone_title", "visible", "type_title", "date_title_show", "zipcode_title_show") VALUES(NULL, 'Date: ', NULL, NULL, NULL, NULL, 'First Name: ', 'Email: ', '2010-08-10 05:56:16', 'Event 4', 'Note: ', NULL, NULL, '2010-08-10 05:56:16', NULL, 'Address: ', NULL, NULL, NULL, 'Time: ', NULL, 'City: ', 'Last Name: ', NULL, NULL, NULL, NULL, NULL, 'Zipcode: ', NULL, NULL, 'Phone: ', NULL, NULL, NULL, NULL)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO "categories_events" ("event_id", "category_id") VALUES (4, 2)[0m
+  [4;36;1mReservation Create (0.2ms)[0m   [0;1mINSERT INTO "reservations" ("address", "city", "zipcode_round", "trip_id", "created_at", "event_id", "zipcode", "updated_at", "time", "city_round", "date", "address_round", "last_name", "phone", "note", "time_round", "date_round", "type_of", "first_name", "email") VALUES(NULL, NULL, NULL, NULL, '2010-08-10 05:56:16', 1, NULL, '2010-08-10 05:56:16', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;35;1mReservation Create (0.2ms)[0m   [0mINSERT INTO "reservations" ("address", "city", "zipcode_round", "trip_id", "created_at", "event_id", "zipcode", "updated_at", "time", "city_round", "date", "address_round", "last_name", "phone", "note", "time_round", "date_round", "type_of", "first_name", "email") VALUES(NULL, NULL, NULL, NULL, '2010-08-10 05:56:16', 2, NULL, '2010-08-10 05:56:16', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100802231401')[0m
+Migrating to CreateCalenders (20100810055605)
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE TABLE "calenders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "published_on" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100810055605')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("calenders")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("categories")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("categories_events")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("events")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("reservations")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("trips")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("users")[0m
+
+
+Processing CalendersController#index (for 127.0.0.1 at 2010-08-09 22:56:53) [GET]
+  Parameters: {"action"=>"index", "controller"=>"calenders"}
+  [4;36;1mEvent Load (3.3ms)[0m   [0;1mSELECT * FROM "events" [0m
+Rendering template within layouts/application
+Rendering calenders/index
+
+ActionView::TemplateError (undefined method `published_on' for #<Event:0xb62a92f0>) on line #11 of app/views/calenders/index.html.erb:
+8:   </h2>
+9:   <% calendar_for @articles, :year => @date.year, :month => @date.month do |calendar| %>
+10:     <%= calendar.head('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday') %>
+11:     <% calendar.day(:day_method => :published_on) do |date, articles| %>
+12:       <%= date.day %>
+13:       <ul>
+14:         <% for article in articles %>
+
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:73:in `objects_for_days'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:72:in `each'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:72:in `objects_for_days'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:24
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/table_builder.rb:58:in `capture'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/table_builder.rb:49:in `tag'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:22:in `day'
+    app/views/calenders/index.html.erb:11
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:7
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:7:in `calendar_for'
+    app/views/calenders/index.html.erb:9
+
+Rendered rescues/_trace (181.5ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CalendersController#new (for 127.0.0.1 at 2010-08-09 22:56:58) [GET]
+  Parameters: {"action"=>"new", "controller"=>"calenders"}
+Rendering template within layouts/application
+Rendering calenders/new
+Rendered calenders/_form (13.2ms)
+Rendered shared/_header (1.1ms)
+Rendered shared/_admin_header (0.9ms)
+Completed in 42ms (View: 32, DB: 0) | 200 OK [http://localhost/calenders/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 22:56:58) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 22:57:00) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CalendersController#new (for 127.0.0.1 at 2010-08-09 22:57:16) [GET]
+  Parameters: {"action"=>"new", "controller"=>"calenders"}
+Rendering template within layouts/application
+Rendering calenders/new
+Rendered calenders/_form (13.7ms)
+Rendered shared/_header (1.0ms)
+Completed in 37ms (View: 22, DB: 0) | 200 OK [http://localhost/calenders/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 22:57:16) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CalendersController#new (for 127.0.0.1 at 2010-08-09 22:57:50) [GET]
+  Parameters: {"action"=>"new", "controller"=>"calenders"}
+Rendering template within layouts/application
+Rendering calenders/new
+Rendered calenders/_form (6.3ms)
+Rendered shared/_header (1.2ms)
+Completed in 34ms (View: 22, DB: 0) | 200 OK [http://localhost/calenders/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 22:57:50) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CalendersController#create (for 127.0.0.1 at 2010-08-09 22:58:04) [POST]
+  Parameters: {"commit"=>"Save changes", "action"=>"create", "authenticity_token"=>"HbFQbaIAXwE6o2Ofg45oZMeNWh13T2OxFRasFw4tAX0=", "calender"=>{"title"=>"test", "published_on"=>"2010-09-09"}, "controller"=>"calenders"}
+  [4;35;1mCalender Create (2.1ms)[0m   [0mINSERT INTO "calenders" ("created_at", "title", "updated_at", "published_on") VALUES('2010-08-10 05:58:04', 'test', '2010-08-10 05:58:04', '2010-09-09')[0m
+Redirected to http://localhost:3000/calenders/1
+Completed in 208ms (DB: 2) | 302 Found [http://localhost/calenders]
+
+
+Processing CalendersController#show (for 127.0.0.1 at 2010-08-09 22:58:05) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"calenders"}
+  [4;36;1mCalender Load (0.4ms)[0m   [0;1mSELECT * FROM "calenders" WHERE ("calenders"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering calenders/show
+Rendered shared/_header (1.0ms)
+Completed in 37ms (View: 22, DB: 0) | 200 OK [http://localhost/calenders/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 22:58:05) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CalendersController#index (for 127.0.0.1 at 2010-08-09 22:58:08) [GET]
+  Parameters: {"action"=>"index", "controller"=>"calenders"}
+  [4;35;1mEvent Load (3.4ms)[0m   [0mSELECT * FROM "events" [0m
+Rendering template within layouts/application
+Rendering calenders/index
+
+ActionView::TemplateError (undefined method `published_on' for #<Event:0xb632d208>) on line #11 of app/views/calenders/index.html.erb:
+8:   </h2>
+9:   <% calendar_for @articles, :year => @date.year, :month => @date.month do |calendar| %>
+10:     <%= calendar.head('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday') %>
+11:     <% calendar.day(:day_method => :published_on) do |date, articles| %>
+12:       <%= date.day %>
+13:       <ul>
+14:         <% for article in articles %>
+
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:73:in `objects_for_days'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:72:in `each'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:72:in `objects_for_days'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:24
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/table_builder.rb:58:in `capture'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/table_builder.rb:49:in `tag'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:22:in `day'
+    app/views/calenders/index.html.erb:11
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:7
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:7:in `calendar_for'
+    app/views/calenders/index.html.erb:9
+
+Rendered rescues/_trace (97.6ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CalendersController#index (for 127.0.0.1 at 2010-08-09 22:58:58) [GET]
+  Parameters: {"action"=>"index", "controller"=>"calenders"}
+  [4;36;1mCalender Load (1.0ms)[0m   [0;1mSELECT * FROM "calenders" [0m
+Rendering template within layouts/application
+Rendering calenders/index
+
+ActionView::TemplateError (undefined method `strftime' for "2010-09-09":String) on line #11 of app/views/calenders/index.html.erb:
+8:   </h2>
+9:   <% calendar_for @articles, :year => @date.year, :month => @date.month do |calendar| %>
+10:     <%= calendar.head('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday') %>
+11:     <% calendar.day(:day_method => :published_on) do |date, articles| %>
+12:       <%= date.day %>
+13:       <ul>
+14:         <% for article in articles %>
+
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:74:in `objects_for_days'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:73:in `each'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:73:in `objects_for_days'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:72:in `each'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:72:in `objects_for_days'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:24
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/table_builder.rb:58:in `capture'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/table_builder.rb:49:in `tag'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:22:in `day'
+    app/views/calenders/index.html.erb:11
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:7
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:7:in `calendar_for'
+    app/views/calenders/index.html.erb:9
+
+Rendered rescues/_trace (96.5ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (141.9ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (116.7ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to InitialSchema (20100802231401)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255), "address" varchar(255), "city" varchar(255), "zipcode" varchar(255), "password_hash" varchar(255), "password_salt" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "url" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCREATE TABLE "events" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "reservation_top_html" text, "reservation_bottom_html" text, "payment_top_html" text, "payment_bottom_html" text, "image_file_name" varchar(255), "title" varchar(255), "title_show" boolean, "type_title" varchar(255), "type_title_show" boolean, "note_title" varchar(255) DEFAULT 'Note: ', "note_title_show" boolean, "category_ids" integer, "category_ids_show" boolean, "date_title" varchar(255) DEFAULT 'Date: ', "date_title_show" boolean, "time_title" varchar(255) DEFAULT 'Time: ', "time_title_show" boolean, "address_title" varchar(255) DEFAULT 'Address: ', "address_title_show" boolean, "city_title" varchar(255) DEFAULT 'City: ', "city_title_show" boolean, "zipcode_title" varchar(255) DEFAULT 'Zipcode: ', "zipcode_title_show" boolean, "first_name_title" varchar(255) DEFAULT 'First Name: ', "first_name_title_show" boolean, "last_name_title" varchar(255) DEFAULT 'Last Name: ', "last_name_title_show" boolean, "email_title" varchar(255) DEFAULT 'Email: ', "email_title_show" boolean, "phone_title" varchar(255) DEFAULT 'Phone: ', "phone_title_show" boolean, "price" integer, "visible" boolean, "purchaseable" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE TABLE "categories_events" ("event_id" integer, "category_id" integer) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCREATE TABLE "reservations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "trip_id" integer, "event_id" integer, "type_of" varchar(255), "date" varchar(255), "date_round" varchar(255), "time" varchar(255), "time_round" varchar(255), "address" varchar(255), "address_round" varchar(255), "city" varchar(255), "city_round" varchar(255), "zipcode" varchar(255), "zipcode_round" varchar(255), "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255), "phone" integer, "note" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE TABLE "trips" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "event_id" integer, "title" varchar(255), "date" varchar(255), "passengers" integer, "published_on" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mCategory Create (0.2ms)[0m   [0;1mINSERT INTO "categories" ("created_at", "title", "updated_at", "url") VALUES('2010-08-10 05:59:35', 'Category 1', '2010-08-10 05:59:35', NULL)[0m
+  [4;35;1mCategory Create (0.1ms)[0m   [0mINSERT INTO "categories" ("created_at", "title", "updated_at", "url") VALUES('2010-08-10 05:59:35', 'Category 2', '2010-08-10 05:59:35', NULL)[0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mEvent Create (0.2ms)[0m   [0mINSERT INTO "events" ("type_title_show", "date_title", "time_title_show", "price", "reservation_top_html", "image_file_name", "first_name_title", "email_title", "created_at", "title", "note_title", "reservation_bottom_html", "phone_title_show", "updated_at", "title_show", "address_title", "city_title_show", "payment_top_html", "purchaseable", "time_title", "address_title_show", "city_title", "last_name_title", "last_name_title_show", "category_ids", "category_ids_show", "payment_bottom_html", "note_title_show", "zipcode_title", "first_name_title_show", "email_title_show", "phone_title", "visible", "type_title", "date_title_show", "zipcode_title_show") VALUES(NULL, 'Date: ', NULL, NULL, NULL, NULL, 'First Name: ', 'Email: ', '2010-08-10 05:59:35', 'Event 1', 'Note: ', NULL, NULL, '2010-08-10 05:59:35', NULL, 'Address: ', NULL, NULL, NULL, 'Time: ', NULL, 'City: ', 'Last Name: ', NULL, NULL, NULL, NULL, NULL, 'Zipcode: ', NULL, NULL, 'Phone: ', NULL, NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO "categories_events" ("event_id", "category_id") VALUES (1, 1)[0m
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mEvent Create (0.2ms)[0m   [0;1mINSERT INTO "events" ("type_title_show", "date_title", "time_title_show", "price", "reservation_top_html", "image_file_name", "first_name_title", "email_title", "created_at", "title", "note_title", "reservation_bottom_html", "phone_title_show", "updated_at", "title_show", "address_title", "city_title_show", "payment_top_html", "purchaseable", "time_title", "address_title_show", "city_title", "last_name_title", "last_name_title_show", "category_ids", "category_ids_show", "payment_bottom_html", "note_title_show", "zipcode_title", "first_name_title_show", "email_title_show", "phone_title", "visible", "type_title", "date_title_show", "zipcode_title_show") VALUES(NULL, 'Date: ', NULL, NULL, NULL, NULL, 'First Name: ', 'Email: ', '2010-08-10 05:59:35', 'Event 2', 'Note: ', NULL, NULL, '2010-08-10 05:59:35', NULL, 'Address: ', NULL, NULL, NULL, 'Time: ', NULL, 'City: ', 'Last Name: ', NULL, NULL, NULL, NULL, NULL, 'Zipcode: ', NULL, NULL, 'Phone: ', NULL, NULL, NULL, NULL)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO "categories_events" ("event_id", "category_id") VALUES (2, 1)[0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;35;1mEvent Create (0.2ms)[0m   [0mINSERT INTO "events" ("type_title_show", "date_title", "time_title_show", "price", "reservation_top_html", "image_file_name", "first_name_title", "email_title", "created_at", "title", "note_title", "reservation_bottom_html", "phone_title_show", "updated_at", "title_show", "address_title", "city_title_show", "payment_top_html", "purchaseable", "time_title", "address_title_show", "city_title", "last_name_title", "last_name_title_show", "category_ids", "category_ids_show", "payment_bottom_html", "note_title_show", "zipcode_title", "first_name_title_show", "email_title_show", "phone_title", "visible", "type_title", "date_title_show", "zipcode_title_show") VALUES(NULL, 'Date: ', NULL, NULL, NULL, NULL, 'First Name: ', 'Email: ', '2010-08-10 05:59:35', 'Event 3', 'Note: ', NULL, NULL, '2010-08-10 05:59:35', NULL, 'Address: ', NULL, NULL, NULL, 'Time: ', NULL, 'City: ', 'Last Name: ', NULL, NULL, NULL, NULL, NULL, 'Zipcode: ', NULL, NULL, 'Phone: ', NULL, NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO "categories_events" ("event_id", "category_id") VALUES (3, 2)[0m
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;36;1mEvent Create (0.2ms)[0m   [0;1mINSERT INTO "events" ("type_title_show", "date_title", "time_title_show", "price", "reservation_top_html", "image_file_name", "first_name_title", "email_title", "created_at", "title", "note_title", "reservation_bottom_html", "phone_title_show", "updated_at", "title_show", "address_title", "city_title_show", "payment_top_html", "purchaseable", "time_title", "address_title_show", "city_title", "last_name_title", "last_name_title_show", "category_ids", "category_ids_show", "payment_bottom_html", "note_title_show", "zipcode_title", "first_name_title_show", "email_title_show", "phone_title", "visible", "type_title", "date_title_show", "zipcode_title_show") VALUES(NULL, 'Date: ', NULL, NULL, NULL, NULL, 'First Name: ', 'Email: ', '2010-08-10 05:59:35', 'Event 4', 'Note: ', NULL, NULL, '2010-08-10 05:59:35', NULL, 'Address: ', NULL, NULL, NULL, 'Time: ', NULL, 'City: ', 'Last Name: ', NULL, NULL, NULL, NULL, NULL, 'Zipcode: ', NULL, NULL, 'Phone: ', NULL, NULL, NULL, NULL)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO "categories_events" ("event_id", "category_id") VALUES (4, 2)[0m
+  [4;36;1mReservation Create (0.2ms)[0m   [0;1mINSERT INTO "reservations" ("address", "city", "zipcode_round", "trip_id", "created_at", "event_id", "zipcode", "updated_at", "time", "city_round", "date", "address_round", "last_name", "phone", "note", "time_round", "date_round", "type_of", "first_name", "email") VALUES(NULL, NULL, NULL, NULL, '2010-08-10 05:59:35', 1, NULL, '2010-08-10 05:59:35', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;35;1mReservation Create (0.2ms)[0m   [0mINSERT INTO "reservations" ("address", "city", "zipcode_round", "trip_id", "created_at", "event_id", "zipcode", "updated_at", "time", "city_round", "date", "address_round", "last_name", "phone", "note", "time_round", "date_round", "type_of", "first_name", "email") VALUES(NULL, NULL, NULL, NULL, '2010-08-10 05:59:35', 2, NULL, '2010-08-10 05:59:35', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100802231401')[0m
+Migrating to CreateCalenders (20100810055605)
+  [4;35;1mSQL (0.6ms)[0m   [0mCREATE TABLE "calenders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "published_on" date, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100810055605')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("calenders")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("categories")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("categories_events")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("events")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("reservations")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("trips")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("users")[0m
+
+
+Processing CalendersController#index (for 127.0.0.1 at 2010-08-09 22:59:38) [GET]
+  Parameters: {"action"=>"index", "controller"=>"calenders"}
+  [4;35;1mCalender Load (0.6ms)[0m   [0mSELECT * FROM "calenders" [0m
+Rendering template within layouts/application
+Rendering calenders/index
+Rendered shared/_header (1.6ms)
+Completed in 73ms (View: 62, DB: 1) | 200 OK [http://localhost/calenders]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 22:59:38) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CalendersController#new (for 127.0.0.1 at 2010-08-09 22:59:45) [GET]
+  Parameters: {"action"=>"new", "controller"=>"calenders"}
+Rendering template within layouts/application
+Rendering calenders/new
+Rendered calenders/_form (9.0ms)
+Rendered shared/_header (1.1ms)
+Completed in 30ms (View: 19, DB: 0) | 200 OK [http://localhost/calenders/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 22:59:45) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CalendersController#create (for 127.0.0.1 at 2010-08-09 22:59:52) [POST]
+  Parameters: {"commit"=>"Save changes", "action"=>"create", "authenticity_token"=>"HbFQbaIAXwE6o2Ofg45oZMeNWh13T2OxFRasFw4tAX0=", "calender"=>{"title"=>"test", "published_on"=>"2010-09-09"}, "controller"=>"calenders"}
+  [4;36;1mCalender Create (0.4ms)[0m   [0;1mINSERT INTO "calenders" ("created_at", "title", "updated_at", "published_on") VALUES('2010-08-10 05:59:52', 'test', '2010-08-10 05:59:52', '2010-09-09')[0m
+Redirected to http://localhost:3000/calenders/1
+Completed in 122ms (DB: 0) | 302 Found [http://localhost/calenders]
+
+
+Processing CalendersController#show (for 127.0.0.1 at 2010-08-09 22:59:52) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"calenders"}
+  [4;35;1mCalender Load (0.3ms)[0m   [0mSELECT * FROM "calenders" WHERE ("calenders"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering calenders/show
+Rendered shared/_header (1.5ms)
+Completed in 31ms (View: 17, DB: 0) | 200 OK [http://localhost/calenders/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 22:59:52) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CalendersController#index (for 127.0.0.1 at 2010-08-09 22:59:53) [GET]
+  Parameters: {"action"=>"index", "controller"=>"calenders"}
+  [4;36;1mCalender Load (0.8ms)[0m   [0;1mSELECT * FROM "calenders" [0m
+Rendering template within layouts/application
+Rendering calenders/index
+Rendered shared/_header (1.0ms)
+Completed in 71ms (View: 60, DB: 1) | 200 OK [http://localhost/calenders]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 22:59:54) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CalendersController#index (for 127.0.0.1 at 2010-08-09 23:00:24) [GET]
+  Parameters: {"action"=>"index", "controller"=>"calenders"}
+  [4;35;1mCalender Load (1.2ms)[0m   [0mSELECT * FROM "calenders" [0m
+Rendering template within layouts/application
+Rendering calenders/index
+Rendered shared/_header (1.0ms)
+Completed in 68ms (View: 57, DB: 1) | 200 OK [http://localhost/calenders]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 23:00:24) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CalendersController#index (for 127.0.0.1 at 2010-08-09 23:00:36) [GET]
+  Parameters: {"month"=>"2010-09-01", "action"=>"index", "controller"=>"calenders"}
+  [4;36;1mCalender Load (1.0ms)[0m   [0;1mSELECT * FROM "calenders" [0m
+Rendering template within layouts/application
+Rendering calenders/index
+
+ActionView::TemplateError (undefined method `name' for #<Calender:0xb682b3b8>) on line #15 of app/views/calenders/index.html.erb:
+12:       <%= date.day %>
+13:       <ul>
+14:         <% for article in articles %>
+15:           <li><%= link_to h(article.name), article %></li>
+16:         <% end %>
+17:       </ul>
+18:     <% end %>
+
+    app/views/calenders/index.html.erb:15
+    app/views/calenders/index.html.erb:14:in `each'
+    app/views/calenders/index.html.erb:14
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:27
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/table_builder.rb:58:in `capture'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:27
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:26:in `map'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:26
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/table_builder.rb:58:in `capture'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/table_builder.rb:49:in `tag'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/table_builder.rb:35:in `r'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:25
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:24:in `each'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:24:in `each_slice'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:24
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/table_builder.rb:58:in `capture'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/table_builder.rb:49:in `tag'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:22:in `day'
+    app/views/calenders/index.html.erb:11
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:7
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:7:in `calendar_for'
+    app/views/calenders/index.html.erb:9
+
+Rendered rescues/_trace (115.2ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CalendersController#index (for 127.0.0.1 at 2010-08-09 23:01:00) [GET]
+  Parameters: {"action"=>"index", "controller"=>"calenders"}
+  [4;35;1mCalender Load (0.8ms)[0m   [0mSELECT * FROM "calenders" [0m
+Rendering template within layouts/application
+Rendering calenders/index
+Rendered shared/_header (1.2ms)
+Completed in 169ms (View: 158, DB: 1) | 200 OK [http://localhost/calenders]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 23:01:01) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CalendersController#index (for 127.0.0.1 at 2010-08-09 23:01:01) [GET]
+  Parameters: {"month"=>"2010-09-01", "action"=>"index", "controller"=>"calenders"}
+  [4;36;1mCalender Load (0.8ms)[0m   [0;1mSELECT * FROM "calenders" [0m
+Rendering template within layouts/application
+Rendering calenders/index
+Rendered shared/_header (1.0ms)
+Completed in 83ms (View: 71, DB: 1) | 200 OK [http://localhost/calenders?month=2010-09-01]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 23:01:01) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CalendersController#show (for 127.0.0.1 at 2010-08-09 23:01:18) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"calenders"}
+  [4;35;1mCalender Load (0.4ms)[0m   [0mSELECT * FROM "calenders" WHERE ("calenders"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering calenders/show
+Rendered shared/_header (1.1ms)
+Completed in 32ms (View: 19, DB: 0) | 200 OK [http://localhost/calenders/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 23:01:18) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CalendersController#index (for 127.0.0.1 at 2010-08-09 23:07:50) [GET]
+  Parameters: {"action"=>"index", "controller"=>"calenders"}
+  [4;36;1mCalender Load (0.8ms)[0m   [0;1mSELECT * FROM "calenders" [0m
+Rendering template within layouts/application
+Rendering calenders/index
+Rendered shared/_header (1.0ms)
+Rendered shared/_admin_header (0.9ms)
+Completed in 118ms (View: 107, DB: 1) | 200 OK [http://localhost/calenders]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 23:07:51) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 23:07:51) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CalendersController#index (for 127.0.0.1 at 2010-08-09 23:07:56) [GET]
+  Parameters: {"action"=>"index", "controller"=>"calenders"}
+  [4;35;1mCalender Load (0.8ms)[0m   [0mSELECT * FROM "calenders" [0m
+Rendering template within layouts/application
+Rendering calenders/index
+Rendered shared/_header (1.0ms)
+Rendered shared/_admin_header (0.9ms)
+Completed in 83ms (View: 73, DB: 1) | 200 OK [http://localhost/calenders]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 23:07:57) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 23:07:57) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CalendersController#index (for 127.0.0.1 at 2010-08-09 23:08:00) [GET]
+  Parameters: {"month"=>"2010-09-01", "action"=>"index", "controller"=>"calenders"}
+  [4;36;1mCalender Load (0.8ms)[0m   [0;1mSELECT * FROM "calenders" [0m
+Rendering template within layouts/application
+Rendering calenders/index
+Rendered shared/_header (1.0ms)
+Rendered shared/_admin_header (1.9ms)
+Completed in 87ms (View: 76, DB: 1) | 200 OK [http://localhost/calenders?month=2010-09-01]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 23:08:00) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 23:08:01) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CalendersController#index (for 127.0.0.1 at 2010-08-09 23:08:03) [GET]
+  Parameters: {"month"=>"2010-08-31", "action"=>"index", "controller"=>"calenders"}
+  [4;35;1mCalender Load (0.8ms)[0m   [0mSELECT * FROM "calenders" [0m
+Rendering template within layouts/application
+Rendering calenders/index
+Rendered shared/_header (1.0ms)
+Rendered shared/_admin_header (0.9ms)
+Completed in 77ms (View: 63, DB: 1) | 200 OK [http://localhost/calenders?month=2010-08-31]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 23:08:03) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 23:08:03) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CalendersController#index (for 127.0.0.1 at 2010-08-09 23:08:10) [GET]
+  Parameters: {"month"=>"2010-09-01", "action"=>"index", "controller"=>"calenders"}
+  [4;36;1mCalender Load (0.8ms)[0m   [0;1mSELECT * FROM "calenders" [0m
+Rendering template within layouts/application
+Rendering calenders/index
+Rendered shared/_header (1.0ms)
+Rendered shared/_admin_header (0.9ms)
+Completed in 75ms (View: 65, DB: 1) | 200 OK [http://localhost/calenders?month=2010-09-01]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 23:08:10) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CalendersController#index (for 127.0.0.1 at 2010-08-09 23:08:13) [GET]
+  Parameters: {"month"=>"2010-08-31", "action"=>"index", "controller"=>"calenders"}
+  [4;35;1mCalender Load (0.9ms)[0m   [0mSELECT * FROM "calenders" [0m
+Rendering template within layouts/application
+Rendering calenders/index
+Rendered shared/_header (1.0ms)
+Rendered shared/_admin_header (0.9ms)
+Completed in 74ms (View: 63, DB: 1) | 200 OK [http://localhost/calenders?month=2010-08-31]
+
+
+Processing CalendersController#index (for 127.0.0.1 at 2010-08-09 23:08:13) [GET]
+  Parameters: {"month"=>"2010-08-31", "action"=>"index", "controller"=>"calenders"}
+  [4;36;1mCalender Load (0.8ms)[0m   [0;1mSELECT * FROM "calenders" [0m
+Rendering template within layouts/application
+Rendering calenders/index
+Rendered shared/_header (1.1ms)
+Rendered shared/_admin_header (0.9ms)
+Completed in 78ms (View: 67, DB: 1) | 200 OK [http://localhost/calenders?month=2010-08-31]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 23:08:13) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 23:08:14) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (216.1ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (104.8ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to InitialSchema (20100802231401)
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255), "address" varchar(255), "city" varchar(255), "zipcode" varchar(255), "password_hash" varchar(255), "password_salt" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "url" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "events" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "reservation_top_html" text, "reservation_bottom_html" text, "payment_top_html" text, "payment_bottom_html" text, "image_file_name" varchar(255), "title" varchar(255), "title_show" boolean, "type_title" varchar(255), "type_title_show" boolean, "note_title" varchar(255) DEFAULT 'Note: ', "note_title_show" boolean, "category_ids" integer, "category_ids_show" boolean, "date_title" varchar(255) DEFAULT 'Date: ', "date_title_show" boolean, "time_title" varchar(255) DEFAULT 'Time: ', "time_title_show" boolean, "address_title" varchar(255) DEFAULT 'Address: ', "address_title_show" boolean, "city_title" varchar(255) DEFAULT 'City: ', "city_title_show" boolean, "zipcode_title" varchar(255) DEFAULT 'Zipcode: ', "zipcode_title_show" boolean, "first_name_title" varchar(255) DEFAULT 'First Name: ', "first_name_title_show" boolean, "last_name_title" varchar(255) DEFAULT 'Last Name: ', "last_name_title_show" boolean, "email_title" varchar(255) DEFAULT 'Email: ', "email_title_show" boolean, "phone_title" varchar(255) DEFAULT 'Phone: ', "phone_title_show" boolean, "price" integer, "visible" boolean, "purchaseable" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE TABLE "categories_events" ("event_id" integer, "category_id" integer) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCREATE TABLE "reservations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "trip_id" integer, "event_id" integer, "type_of" varchar(255), "date" varchar(255), "date_round" varchar(255), "time" varchar(255), "time_round" varchar(255), "address" varchar(255), "address_round" varchar(255), "city" varchar(255), "city_round" varchar(255), "zipcode" varchar(255), "zipcode_round" varchar(255), "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255), "phone" integer, "note" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE TABLE "trips" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "event_id" integer, "title" varchar(255), "date" varchar(255), "passengers" integer, "published_on" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCREATE TABLE "calenders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "published_on" date, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mCalender Create (0.2ms)[0m   [0mINSERT INTO "calenders" ("created_at", "title", "updated_at", "published_on") VALUES('2010-08-10 06:13:28', 'Calendar 1', '2010-08-10 06:13:28', '2010-08-09')[0m
+  [4;36;1mCalender Create (0.2ms)[0m   [0;1mINSERT INTO "calenders" ("created_at", "title", "updated_at", "published_on") VALUES('2010-08-10 06:13:28', 'Calendar 2', '2010-08-10 06:13:28', '2010-08-09')[0m
+  [4;35;1mCategory Create (0.1ms)[0m   [0mINSERT INTO "categories" ("created_at", "title", "updated_at", "url") VALUES('2010-08-10 06:13:28', 'Category 1', '2010-08-10 06:13:28', NULL)[0m
+  [4;36;1mCategory Create (0.1ms)[0m   [0;1mINSERT INTO "categories" ("created_at", "title", "updated_at", "url") VALUES('2010-08-10 06:13:28', 'Category 2', '2010-08-10 06:13:28', NULL)[0m
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mEvent Create (0.2ms)[0m   [0;1mINSERT INTO "events" ("type_title_show", "date_title", "time_title_show", "price", "reservation_top_html", "image_file_name", "first_name_title", "email_title", "created_at", "title", "note_title", "reservation_bottom_html", "phone_title_show", "updated_at", "title_show", "address_title", "city_title_show", "payment_top_html", "purchaseable", "time_title", "address_title_show", "city_title", "last_name_title", "last_name_title_show", "category_ids", "category_ids_show", "payment_bottom_html", "note_title_show", "zipcode_title", "first_name_title_show", "email_title_show", "phone_title", "visible", "type_title", "date_title_show", "zipcode_title_show") VALUES(NULL, 'Date: ', NULL, NULL, NULL, NULL, 'First Name: ', 'Email: ', '2010-08-10 06:13:28', 'Event 1', 'Note: ', NULL, NULL, '2010-08-10 06:13:28', NULL, 'Address: ', NULL, NULL, NULL, 'Time: ', NULL, 'City: ', 'Last Name: ', NULL, NULL, NULL, NULL, NULL, 'Zipcode: ', NULL, NULL, 'Phone: ', NULL, NULL, NULL, NULL)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO "categories_events" ("event_id", "category_id") VALUES (1, 1)[0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mEvent Create (0.2ms)[0m   [0mINSERT INTO "events" ("type_title_show", "date_title", "time_title_show", "price", "reservation_top_html", "image_file_name", "first_name_title", "email_title", "created_at", "title", "note_title", "reservation_bottom_html", "phone_title_show", "updated_at", "title_show", "address_title", "city_title_show", "payment_top_html", "purchaseable", "time_title", "address_title_show", "city_title", "last_name_title", "last_name_title_show", "category_ids", "category_ids_show", "payment_bottom_html", "note_title_show", "zipcode_title", "first_name_title_show", "email_title_show", "phone_title", "visible", "type_title", "date_title_show", "zipcode_title_show") VALUES(NULL, 'Date: ', NULL, NULL, NULL, NULL, 'First Name: ', 'Email: ', '2010-08-10 06:13:28', 'Event 2', 'Note: ', NULL, NULL, '2010-08-10 06:13:28', NULL, 'Address: ', NULL, NULL, NULL, 'Time: ', NULL, 'City: ', 'Last Name: ', NULL, NULL, NULL, NULL, NULL, 'Zipcode: ', NULL, NULL, 'Phone: ', NULL, NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO "categories_events" ("event_id", "category_id") VALUES (2, 1)[0m
+  [4;35;1mCategory Load (0.8ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;36;1mEvent Create (0.2ms)[0m   [0;1mINSERT INTO "events" ("type_title_show", "date_title", "time_title_show", "price", "reservation_top_html", "image_file_name", "first_name_title", "email_title", "created_at", "title", "note_title", "reservation_bottom_html", "phone_title_show", "updated_at", "title_show", "address_title", "city_title_show", "payment_top_html", "purchaseable", "time_title", "address_title_show", "city_title", "last_name_title", "last_name_title_show", "category_ids", "category_ids_show", "payment_bottom_html", "note_title_show", "zipcode_title", "first_name_title_show", "email_title_show", "phone_title", "visible", "type_title", "date_title_show", "zipcode_title_show") VALUES(NULL, 'Date: ', NULL, NULL, NULL, NULL, 'First Name: ', 'Email: ', '2010-08-10 06:13:28', 'Event 3', 'Note: ', NULL, NULL, '2010-08-10 06:13:28', NULL, 'Address: ', NULL, NULL, NULL, 'Time: ', NULL, 'City: ', 'Last Name: ', NULL, NULL, NULL, NULL, NULL, 'Zipcode: ', NULL, NULL, 'Phone: ', NULL, NULL, NULL, NULL)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO "categories_events" ("event_id", "category_id") VALUES (3, 2)[0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;35;1mEvent Create (0.2ms)[0m   [0mINSERT INTO "events" ("type_title_show", "date_title", "time_title_show", "price", "reservation_top_html", "image_file_name", "first_name_title", "email_title", "created_at", "title", "note_title", "reservation_bottom_html", "phone_title_show", "updated_at", "title_show", "address_title", "city_title_show", "payment_top_html", "purchaseable", "time_title", "address_title_show", "city_title", "last_name_title", "last_name_title_show", "category_ids", "category_ids_show", "payment_bottom_html", "note_title_show", "zipcode_title", "first_name_title_show", "email_title_show", "phone_title", "visible", "type_title", "date_title_show", "zipcode_title_show") VALUES(NULL, 'Date: ', NULL, NULL, NULL, NULL, 'First Name: ', 'Email: ', '2010-08-10 06:13:28', 'Event 4', 'Note: ', NULL, NULL, '2010-08-10 06:13:28', NULL, 'Address: ', NULL, NULL, NULL, 'Time: ', NULL, 'City: ', 'Last Name: ', NULL, NULL, NULL, NULL, NULL, 'Zipcode: ', NULL, NULL, 'Phone: ', NULL, NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO "categories_events" ("event_id", "category_id") VALUES (4, 2)[0m
+  [4;35;1mReservation Create (0.2ms)[0m   [0mINSERT INTO "reservations" ("address", "city", "zipcode_round", "trip_id", "created_at", "event_id", "zipcode", "updated_at", "time", "city_round", "date", "address_round", "last_name", "phone", "note", "time_round", "date_round", "type_of", "first_name", "email") VALUES(NULL, NULL, NULL, NULL, '2010-08-10 06:13:28', 1, NULL, '2010-08-10 06:13:28', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;36;1mReservation Create (0.2ms)[0m   [0;1mINSERT INTO "reservations" ("address", "city", "zipcode_round", "trip_id", "created_at", "event_id", "zipcode", "updated_at", "time", "city_round", "date", "address_round", "last_name", "phone", "note", "time_round", "date_round", "type_of", "first_name", "email") VALUES(NULL, NULL, NULL, NULL, '2010-08-10 06:13:28', 2, NULL, '2010-08-10 06:13:28', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100802231401')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("calenders")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("categories")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("categories_events")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("events")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("reservations")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("trips")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("users")[0m

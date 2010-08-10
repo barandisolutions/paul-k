@@ -11,6 +11,13 @@
 
 ActiveRecord::Schema.define(:version => 20100802231401) do
 
+  create_table "calenders", :force => true do |t|
+    t.string   "title"
+    t.date     "published_on"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "categories", :force => true do |t|
     t.string   "title"
     t.string   "url"

@@ -1,0 +1,16 @@
+<% title "Calender" %>
+
+<p>
+  <strong>Title:</strong>
+  <%=h @calender.title %>
+</p>
+<p>
+  <strong>Published On:</strong>
+  <%=h @calender.published_on %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_calender_path(@calender) %> |
+  <%= link_to "Destroy", @calender, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", calenders_path %>
+</p>
