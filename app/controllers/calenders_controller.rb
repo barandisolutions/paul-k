@@ -1,6 +1,6 @@
 class CalendersController < ApplicationController
   def index
-    @articles = Calender.find(:all)
+    @articles = Trip.all
     @date = params[:month] ? Date.parse(params[:month]) : Date.today
   end
 

@@ -34484,3 +34484,2509 @@ Migrating to InitialSchema (20100802231401)
   [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("reservations")[0m
   [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("trips")[0m
   [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("users")[0m
+
+
+Processing Admin::CategoriesController#index (for 127.0.0.1 at 2010-08-09 23:25:00) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/categories"}
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/application
+Rendering admin/categories/index
+  [4;36;1mEvent Load (1.9ms)[0m   [0;1mSELECT * FROM "events" INNER JOIN "categories_events" ON "events".id = "categories_events".event_id WHERE ("categories_events".category_id = 1 ) [0m
+  [4;35;1mEvent Load (2.0ms)[0m   [0mSELECT * FROM "events" INNER JOIN "categories_events" ON "events".id = "categories_events".event_id WHERE ("categories_events".category_id = 2 ) [0m
+Rendered shared/_header (1.0ms)
+Rendered shared/_admin_header (0.9ms)
+Completed in 105ms (View: 70, DB: 5) | 200 OK [http://localhost/admin/categories]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 23:25:00) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 23:25:00) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::TripsController#index (for 127.0.0.1 at 2010-08-09 23:25:03) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/trips"}
+  [4;36;1mTrip Load (0.6ms)[0m   [0;1mSELECT * FROM "trips" [0m
+Rendering template within layouts/application
+Rendering admin/trips/index
+Rendered shared/_header (1.1ms)
+Rendered shared/_admin_header (1.4ms)
+Completed in 39ms (View: 27, DB: 1) | 200 OK [http://localhost/admin/trips]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 23:25:03) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 23:25:03) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::TripsController#new (for 127.0.0.1 at 2010-08-09 23:25:05) [GET]
+  Parameters: {"action"=>"new", "controller"=>"admin/trips"}
+Rendering template within layouts/application
+Rendering admin/trips/new
+
+ActionView::TemplateError (undefined method `trips_path' for #<ActionView::Base:0xb66625cc>) on line #1 of app/views/admin/trips/_form.html.erb:
+1: <% form_for @trip do |f| %>
+2:   <%= f.error_messages %>
+3:   <p>
+4:     <%= f.label :title %><br />
+
+    app/views/admin/trips/_form.html.erb:1
+    app/views/admin/trips/new.html.erb:3
+
+Rendered rescues/_trace (96.9ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::TripsController#new (for 127.0.0.1 at 2010-08-09 23:25:24) [GET]
+  Parameters: {"action"=>"new", "controller"=>"admin/trips"}
+Rendering template within layouts/application
+Rendering admin/trips/new
+
+ActionView::TemplateError (undefined method `address' for #<Trip:0xb6678214>) on line #17 of app/views/admin/trips/_form.html.erb:
+14:   </p>
+15:   <p>
+16:     <%= f.label :address %><br />
+17:     <%= f.text_field :address %>
+18:   </p>
+19:   <p><%= f.submit %></p>
+20: <% end %>
+
+    app/views/admin/trips/_form.html.erb:17
+    app/views/admin/trips/_form.html.erb:1
+    app/views/admin/trips/new.html.erb:3
+
+Rendered rescues/_trace (105.8ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::TripsController#new (for 127.0.0.1 at 2010-08-09 23:25:35) [GET]
+  Parameters: {"action"=>"new", "controller"=>"admin/trips"}
+Rendering template within layouts/application
+Rendering admin/trips/new
+Rendered admin/trips/_form (20.9ms)
+Rendered shared/_header (1.2ms)
+Rendered shared/_admin_header (1.1ms)
+Completed in 133ms (View: 35, DB: 0) | 200 OK [http://localhost/admin/trips/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 23:25:36) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 23:25:36) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::TripsController#create (for 127.0.0.1 at 2010-08-09 23:25:40) [POST]
+  Parameters: {"commit"=>"Save changes", "action"=>"create", "authenticity_token"=>"RzsQ9UZPOknVO6vXlabxONU+WI3qPfPs6TV/3C+R6hQ=", "trip"=>{"title"=>"test", "date"=>"test", "passengers"=>"test"}, "controller"=>"admin/trips"}
+  [4;35;1mTrip Create (0.4ms)[0m   [0mINSERT INTO "trips" ("created_at", "event_id", "title", "updated_at", "date", "passengers", "published_on") VALUES('2010-08-10 06:25:40', NULL, 'test', '2010-08-10 06:25:40', 'test', 0, NULL)[0m
+Redirected to http://localhost:3000/admin/trips/1
+Completed in 223ms (DB: 0) | 302 Found [http://localhost/admin/trips]
+
+
+Processing Admin::TripsController#show (for 127.0.0.1 at 2010-08-09 23:25:40) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"admin/trips"}
+  [4;36;1mTrip Load (0.6ms)[0m   [0;1mSELECT * FROM "trips" WHERE ("trips"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering admin/trips/show
+
+ActionView::TemplateError (undefined method `address' for #<Trip:0xb64ca4f8>) on line #17 of app/views/admin/trips/show.html.erb:
+14: </p>
+15: <p>
+16:   <strong>Address:</strong>
+17:   <%=h @trip.address %>
+18: </p>
+19: 
+20: <p>
+
+    app/views/admin/trips/show.html.erb:17
+
+Rendered rescues/_trace (73.1ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::TripsController#show (for 127.0.0.1 at 2010-08-09 23:25:59) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"admin/trips"}
+  [4;35;1mTrip Load (0.5ms)[0m   [0mSELECT * FROM "trips" WHERE ("trips"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering admin/trips/show
+
+ActionView::TemplateError (undefined local variable or method `trip' for #<ActionView::Base:0xb6ec3f18>) on line #17 of app/views/admin/trips/show.html.erb:
+14: </p>
+15: 
+16: <p>
+17:   <%= link_to "Show", admin_trip_path(trip) %>
+18:   <%= link_to "Edit", edit_admin_trip_path(trip) %>
+19:   <%= link_to "Destroy", admin_trip_path(trip), :confirm => 'Are you sure?', :method => :delete %>
+20: </p>
+
+    app/views/admin/trips/show.html.erb:17
+
+Rendered rescues/_trace (74.6ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::TripsController#show (for 127.0.0.1 at 2010-08-09 23:26:22) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"admin/trips"}
+  [4;36;1mTrip Load (0.5ms)[0m   [0;1mSELECT * FROM "trips" WHERE ("trips"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering admin/trips/show
+Rendered shared/_header (1.5ms)
+Rendered shared/_admin_header (0.9ms)
+Completed in 42ms (View: 28, DB: 1) | 200 OK [http://localhost/admin/trips/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 23:26:22) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 23:26:22) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::TripsController#edit (for 127.0.0.1 at 2010-08-09 23:26:25) [GET]
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"admin/trips"}
+  [4;35;1mTrip Load (0.5ms)[0m   [0mSELECT * FROM "trips" WHERE ("trips"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering admin/trips/edit
+Rendered admin/trips/_form (14.7ms)
+Rendered shared/_header (1.3ms)
+Rendered shared/_admin_header (1.3ms)
+Completed in 46ms (View: 31, DB: 0) | 200 OK [http://localhost/admin/trips/1/edit]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 23:26:25) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 23:26:25) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::TripsController#update (for 127.0.0.1 at 2010-08-09 23:26:27) [PUT]
+  Parameters: {"commit"=>"Save changes", "action"=>"update", "_method"=>"put", "authenticity_token"=>"RzsQ9UZPOknVO6vXlabxONU+WI3qPfPs6TV/3C+R6hQ=", "id"=>"1", "trip"=>{"title"=>"test", "date"=>"test", "passengers"=>"1"}, "controller"=>"admin/trips"}
+  [4;36;1mTrip Load (0.5ms)[0m   [0;1mSELECT * FROM "trips" WHERE ("trips"."id" = 1) [0m
+  [4;35;1mTrip Update (0.3ms)[0m   [0mUPDATE "trips" SET "passengers" = 1, "updated_at" = '2010-08-10 06:26:28' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/admin/trips/1
+Completed in 141ms (DB: 1) | 302 Found [http://localhost/admin/trips/1]
+
+
+Processing Admin::TripsController#show (for 127.0.0.1 at 2010-08-09 23:26:28) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"admin/trips"}
+  [4;36;1mTrip Load (0.4ms)[0m   [0;1mSELECT * FROM "trips" WHERE ("trips"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering admin/trips/show
+Rendered shared/_header (1.0ms)
+Rendered shared/_admin_header (0.9ms)
+Completed in 35ms (View: 21, DB: 0) | 200 OK [http://localhost/admin/trips/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 23:26:28) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 23:26:28) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::TripsController#show (for 127.0.0.1 at 2010-08-09 23:26:30) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"admin/trips"}
+  [4;35;1mTrip Load (0.5ms)[0m   [0mSELECT * FROM "trips" WHERE ("trips"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering admin/trips/show
+Rendered shared/_header (1.0ms)
+Rendered shared/_admin_header (1.4ms)
+Completed in 43ms (View: 25, DB: 1) | 200 OK [http://localhost/admin/trips/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 23:26:30) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 23:26:30) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::TripsController#destroy (for 127.0.0.1 at 2010-08-09 23:26:35) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "authenticity_token"=>"RzsQ9UZPOknVO6vXlabxONU+WI3qPfPs6TV/3C+R6hQ=", "id"=>"1", "controller"=>"admin/trips"}
+  [4;36;1mTrip Load (0.5ms)[0m   [0;1mSELECT * FROM "trips" WHERE ("trips"."id" = 1) [0m
+  [4;35;1mTrip Destroy (0.4ms)[0m   [0mDELETE FROM "trips" WHERE "id" = 1[0m
+Redirected to http://localhost:3000/admin/trips
+Completed in 113ms (DB: 1) | 302 Found [http://localhost/admin/trips/1]
+
+
+Processing Admin::TripsController#index (for 127.0.0.1 at 2010-08-09 23:26:35) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/trips"}
+  [4;36;1mTrip Load (0.6ms)[0m   [0;1mSELECT * FROM "trips" [0m
+Rendering template within layouts/application
+Rendering admin/trips/index
+Rendered shared/_header (1.1ms)
+Rendered shared/_admin_header (1.0ms)
+Completed in 104ms (View: 91, DB: 1) | 200 OK [http://localhost/admin/trips]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 23:26:35) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 23:26:35) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ReservationsController#new (for 127.0.0.1 at 2010-08-09 23:29:47) [GET]
+  Parameters: {"action"=>"new", "controller"=>"reservations"}
+  [4;35;1mCategory Load (0.9ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/application
+Rendering reservations/new
+Rendered reservations/_user_info (6.7ms)
+Rendered reservations/_second (127.4ms)
+Rendered shared/_header (3.4ms)
+
+ActionView::TemplateError (undefined local variable or method `admin_calenders_path' for #<ActionView::Base:0xb6244044>) on line #4 of app/views/shared/_admin_header.html.erb:
+1: <%= link_to 'Admin:Home', admin_path %> |
+2: <%= link_to 'Admin:Trips', admin_users_path %> |
+3: <%= link_to 'Admin:Calender', admin_trips_path %> |
+4: <%= link_to 'Admin:Users', admin_calenders_path %> |
+5: <%= link_to 'Admin:Events', admin_events_path %> |
+6: <%= link_to 'Admin:Categories', admin_categories_path %> |
+7: <%= link_to 'Admin:Reservations', admin_reservations_path %> |
+
+    app/views/shared/_admin_header.html.erb:4
+    app/views/layouts/application.html.erb:23
+
+Rendered rescues/_trace (97.1ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ReservationsController#new (for 127.0.0.1 at 2010-08-09 23:30:14) [GET]
+  Parameters: {"action"=>"new", "controller"=>"reservations"}
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/application
+Rendering reservations/new
+Rendered reservations/_user_info (5.1ms)
+Rendered reservations/_second (115.5ms)
+Rendered shared/_header (1.2ms)
+
+ActionView::TemplateError (undefined local variable or method `admin_calenders_path' for #<ActionView::Base:0xb6eaa8b0>) on line #4 of app/views/shared/_admin_header.html.erb:
+1: <%= link_to 'Admin:Home', admin_path %> |
+2: <%= link_to 'Admin:Users', admin_users_path %> |
+3: <%= link_to 'Admin:Trips', admin_trips_path %> |
+4: <%= link_to 'Admin:Calenders', admin_calenders_path %> |
+5: <%= link_to 'Admin:Events', admin_events_path %> |
+6: <%= link_to 'Admin:Categories', admin_categories_path %> |
+7: <%= link_to 'Admin:Reservations', admin_reservations_path %> |
+
+    app/views/shared/_admin_header.html.erb:4
+    app/views/layouts/application.html.erb:23
+
+Rendered rescues/_trace (92.2ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ReservationsController#new (for 127.0.0.1 at 2010-08-09 23:30:54) [GET]
+  Parameters: {"action"=>"new", "controller"=>"reservations"}
+  [4;35;1mCategory Load (1.1ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/application
+Rendering reservations/new
+Rendered reservations/_user_info (6.2ms)
+Rendered reservations/_second (36.9ms)
+Rendered shared/_header (1.1ms)
+Rendered shared/_admin_header (2.4ms)
+Completed in 178ms (View: 142, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 23:30:54) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 23:30:55) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CalendersController#index (for 127.0.0.1 at 2010-08-09 23:30:57) [GET]
+  Parameters: {"action"=>"index", "controller"=>"calenders"}
+  [4;36;1mCalender Load (1.0ms)[0m   [0;1mSELECT * FROM "calenders" [0m
+Rendering template within layouts/application
+Rendering calenders/index
+Rendered shared/_header (1.2ms)
+Rendered shared/_admin_header (1.0ms)
+Completed in 145ms (View: 134, DB: 1) | 200 OK [http://localhost/calenders]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 23:30:58) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 23:30:58) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CalendersController#index (for 127.0.0.1 at 2010-08-09 23:31:12) [GET]
+  Parameters: {"action"=>"index", "controller"=>"calenders"}
+  [4;35;1mCalender Load (1.0ms)[0m   [0mSELECT * FROM "calenders" [0m
+Rendering template within layouts/application
+Rendering calenders/index
+Rendered shared/_header (3.3ms)
+Rendered shared/_admin_header (1.2ms)
+Completed in 93ms (View: 82, DB: 1) | 200 OK [http://localhost/calenders]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 23:31:13) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 23:31:13) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CalendersController#index (for 127.0.0.1 at 2010-08-09 23:31:17) [GET]
+  Parameters: {"action"=>"index", "controller"=>"calenders"}
+  [4;36;1mCalender Load (1.0ms)[0m   [0;1mSELECT * FROM "calenders" [0m
+Rendering template within layouts/application
+Rendering calenders/index
+Rendered shared/_header (1.1ms)
+Rendered shared/_admin_header (1.2ms)
+Completed in 87ms (View: 75, DB: 1) | 200 OK [http://localhost/calenders]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 23:31:17) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 23:31:18) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ReservationsController#new (for 127.0.0.1 at 2010-08-10 00:08:49) [GET]
+  Parameters: {"action"=>"new", "controller"=>"reservations"}
+  [4;35;1mCategory Load (0.9ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/application
+Rendering reservations/new
+Rendered reservations/_user_info (4.2ms)
+Rendered reservations/_second (29.7ms)
+Rendered shared/_header (1.2ms)
+Rendered shared/_admin_header (1.0ms)
+Completed in 71ms (View: 39, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:08:49) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:08:50) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::TripsController#index (for 127.0.0.1 at 2010-08-10 00:10:51) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/trips"}
+  [4;36;1mTrip Load (0.6ms)[0m   [0;1mSELECT * FROM "trips" [0m
+Rendering template within layouts/application
+Rendering admin/trips/index
+Rendered shared/_header (1.1ms)
+Rendered shared/_admin_header (1.0ms)
+Completed in 28ms (View: 17, DB: 1) | 200 OK [http://localhost/admin/trips]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:10:51) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:10:51) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::ReservationsController#index (for 127.0.0.1 at 2010-08-10 00:10:59) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/reservations"}
+  [4;35;1mReservation Load (1.7ms)[0m   [0mSELECT * FROM "reservations" [0m
+Rendering template within layouts/application
+Rendering admin/reservations/index
+Rendered shared/_header (1.2ms)
+Rendered shared/_admin_header (1.0ms)
+Completed in 61ms (View: 41, DB: 2) | 200 OK [http://localhost/admin/reservations]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:10:59) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:11:00) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::ReservationsController#edit (for 127.0.0.1 at 2010-08-10 00:11:01) [GET]
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"admin/reservations"}
+  [4;36;1mReservation Load (0.8ms)[0m   [0;1mSELECT * FROM "reservations" WHERE ("reservations"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering admin/reservations/edit
+Rendered shared/_header (1.2ms)
+Rendered shared/_admin_header (1.0ms)
+Completed in 94ms (View: 68, DB: 1) | 200 OK [http://localhost/admin/reservations/1/edit]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:11:01) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:11:02) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::ReservationsController#edit (for 127.0.0.1 at 2010-08-10 00:11:19) [GET]
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"admin/reservations"}
+  [4;35;1mReservation Load (0.9ms)[0m   [0mSELECT * FROM "reservations" WHERE ("reservations"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering admin/reservations/edit
+Rendered shared/_header (2.4ms)
+Rendered shared/_admin_header (1.1ms)
+Completed in 90ms (View: 65, DB: 1) | 200 OK [http://localhost/admin/reservations/1/edit]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:11:19) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:11:19) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::ReservationsController#index (for 127.0.0.1 at 2010-08-10 00:11:33) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/reservations"}
+  [4;36;1mReservation Load (1.5ms)[0m   [0;1mSELECT * FROM "reservations" [0m
+Rendering template within layouts/application
+Rendering admin/reservations/index
+Rendered shared/_header (1.2ms)
+Rendered shared/_admin_header (1.0ms)
+Completed in 47ms (View: 28, DB: 2) | 200 OK [http://localhost/admin/reservations]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:11:33) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:11:33) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ReservationsController#new (for 127.0.0.1 at 2010-08-10 00:11:38) [GET]
+  Parameters: {"action"=>"new", "controller"=>"reservations"}
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/application
+Rendering reservations/new
+Rendered reservations/_user_info (4.8ms)
+Rendered reservations/_second (33.3ms)
+Rendered shared/_header (1.2ms)
+Rendered shared/_admin_header (1.5ms)
+Completed in 79ms (View: 44, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:11:39) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:11:39) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ReservationsController#create (for 127.0.0.1 at 2010-08-10 00:11:43) [POST]
+  Parameters: {"back_button"=>"Back", "reservation"=>{"city"=>"", "address"=>"", "zipcode"=>"", "date"=>"August 5, 2010 6:03 PM", "note"=>"", "phone"=>"", "last_name"=>"", "email"=>"", "first_name"=>""}, "action"=>"create", "authenticity_token"=>"RzsQ9UZPOknVO6vXlabxONU+WI3qPfPs6TV/3C+R6hQ=", "controller"=>"reservations"}
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mEvent Load (1.3ms)[0m   [0mSELECT * FROM "events" WHERE ("events"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering reservations/new
+  [4;36;1mEvent Load (2.1ms)[0m   [0;1mSELECT * FROM "events" INNER JOIN "categories_events" ON "events".id = "categories_events".event_id WHERE ("categories_events".category_id = 1 ) [0m
+  [4;35;1mEvent Load (1.9ms)[0m   [0mSELECT * FROM "events" INNER JOIN "categories_events" ON "events".id = "categories_events".event_id WHERE ("categories_events".category_id = 2 ) [0m
+Rendered reservations/_first (29.7ms)
+Rendered shared/_header (1.2ms)
+Rendered shared/_admin_header (1.3ms)
+Completed in 99ms (View: 44, DB: 6) | 200 OK [http://localhost/reservations]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:11:43) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:11:43) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ReservationsController#create (for 127.0.0.1 at 2010-08-10 00:11:46) [POST]
+  Parameters: {"reservation"=>{"event_id"=>"1", "type_of"=>"round_trip_(To)"}, "action"=>"create", "authenticity_token"=>"RzsQ9UZPOknVO6vXlabxONU+WI3qPfPs6TV/3C+R6hQ=", "controller"=>"reservations", "next_button"=>"Next"}
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mEvent Load (1.3ms)[0m   [0mSELECT * FROM "events" WHERE ("events"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering reservations/new
+Rendered reservations/_second (12.1ms)
+Rendered shared/_header (1.2ms)
+Rendered shared/_admin_header (1.0ms)
+Completed in 73ms (View: 24, DB: 2) | 200 OK [http://localhost/reservations]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:11:46) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:11:47) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ReservationsController#create (for 127.0.0.1 at 2010-08-10 00:11:50) [POST]
+  Parameters: {"back_button"=>"Back", "action"=>"create", "authenticity_token"=>"RzsQ9UZPOknVO6vXlabxONU+WI3qPfPs6TV/3C+R6hQ=", "controller"=>"reservations"}
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mEvent Load (1.2ms)[0m   [0mSELECT * FROM "events" WHERE ("events"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering reservations/new
+  [4;36;1mEvent Load (1.9ms)[0m   [0;1mSELECT * FROM "events" INNER JOIN "categories_events" ON "events".id = "categories_events".event_id WHERE ("categories_events".category_id = 1 ) [0m
+  [4;35;1mEvent Load (2.0ms)[0m   [0mSELECT * FROM "events" INNER JOIN "categories_events" ON "events".id = "categories_events".event_id WHERE ("categories_events".category_id = 2 ) [0m
+Rendered reservations/_first (28.6ms)
+Rendered shared/_header (1.2ms)
+Rendered shared/_admin_header (1.0ms)
+Completed in 84ms (View: 35, DB: 6) | 200 OK [http://localhost/reservations]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:11:50) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:11:50) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ReservationsController#create (for 127.0.0.1 at 2010-08-10 00:11:54) [POST]
+  Parameters: {"reservation"=>{"event_id"=>"1", "type_of"=>"to"}, "action"=>"create", "authenticity_token"=>"RzsQ9UZPOknVO6vXlabxONU+WI3qPfPs6TV/3C+R6hQ=", "controller"=>"reservations", "next_button"=>"Next"}
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mEvent Load (1.4ms)[0m   [0mSELECT * FROM "events" WHERE ("events"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering reservations/new
+Rendered reservations/_second (12.7ms)
+Rendered shared/_header (1.3ms)
+Rendered shared/_admin_header (1.0ms)
+Completed in 144ms (View: 26, DB: 2) | 200 OK [http://localhost/reservations]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:11:54) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:11:55) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ReservationsController#create (for 127.0.0.1 at 2010-08-10 00:11:57) [POST]
+  Parameters: {"back_button"=>"Back", "action"=>"create", "authenticity_token"=>"RzsQ9UZPOknVO6vXlabxONU+WI3qPfPs6TV/3C+R6hQ=", "controller"=>"reservations"}
+  [4;36;1mCategory Load (0.9ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mEvent Load (1.7ms)[0m   [0mSELECT * FROM "events" WHERE ("events"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering reservations/new
+  [4;36;1mEvent Load (2.0ms)[0m   [0;1mSELECT * FROM "events" INNER JOIN "categories_events" ON "events".id = "categories_events".event_id WHERE ("categories_events".category_id = 1 ) [0m
+  [4;35;1mEvent Load (17.9ms)[0m   [0mSELECT * FROM "events" INNER JOIN "categories_events" ON "events".id = "categories_events".event_id WHERE ("categories_events".category_id = 2 ) [0m
+Rendered reservations/_first (102.0ms)
+Rendered shared/_header (1.3ms)
+Rendered shared/_admin_header (1.6ms)
+Completed in 160ms (View: 93, DB: 23) | 200 OK [http://localhost/reservations]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:11:57) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:11:57) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::EventsController#index (for 127.0.0.1 at 2010-08-10 00:12:00) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/events"}
+  [4;36;1mEvent Load (3.3ms)[0m   [0;1mSELECT * FROM "events" [0m
+Rendering template within layouts/application
+Rendering admin/events/index
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT "categories".id FROM "categories" INNER JOIN "categories_events" ON "categories".id = "categories_events".category_id WHERE ("categories_events".event_id = 1 ) [0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT "categories".id FROM "categories" INNER JOIN "categories_events" ON "categories".id = "categories_events".category_id WHERE ("categories_events".event_id = 2 ) [0m
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT "categories".id FROM "categories" INNER JOIN "categories_events" ON "categories".id = "categories_events".category_id WHERE ("categories_events".event_id = 3 ) [0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT "categories".id FROM "categories" INNER JOIN "categories_events" ON "categories".id = "categories_events".category_id WHERE ("categories_events".event_id = 4 ) [0m
+Rendered shared/_header (1.2ms)
+Rendered shared/_admin_header (1.0ms)
+Completed in 87ms (View: 69, DB: 5) | 200 OK [http://localhost/admin/events]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:12:01) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:12:01) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::EventsController#edit (for 127.0.0.1 at 2010-08-10 00:12:03) [GET]
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"admin/events"}
+  [4;35;1mEvent Load (1.2ms)[0m   [0mSELECT * FROM "events" WHERE ("events"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering admin/events/edit
+  [4;36;1mCategory Load (0.6ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT "categories".id FROM "categories" INNER JOIN "categories_events" ON "categories".id = "categories_events".category_id WHERE ("categories"."id" = 1) AND ("categories_events".event_id = 1 ) LIMIT 1[0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT "categories".id FROM "categories" INNER JOIN "categories_events" ON "categories".id = "categories_events".category_id WHERE ("categories"."id" = 2) AND ("categories_events".event_id = 1 ) LIMIT 1[0m
+Rendered admin/events/_form (152.2ms)
+Rendered shared/_header (1.7ms)
+Rendered shared/_admin_header (1.1ms)
+Completed in 199ms (View: 174, DB: 2) | 200 OK [http://localhost/admin/events/1/edit]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:12:03) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:12:04) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::EventsController#update (for 127.0.0.1 at 2010-08-10 00:12:23) [PUT]
+  Parameters: {"commit"=>"Save changes", "action"=>"update", "_method"=>"put", "authenticity_token"=>"RzsQ9UZPOknVO6vXlabxONU+WI3qPfPs6TV/3C+R6hQ=", "id"=>"1", "event"=>{"time_title_show"=>"1", "date_title"=>"Date: ", "price"=>"", "email_title"=>"Email: ", "first_name_title"=>"First Name: ", "reservation_top_html"=>"sfsf", "image_file_name"=>"", "note_title"=>"Note: ", "title"=>"Event 1", "phone_title_show"=>"0", "city_title_show"=>"1", "address_title"=>"Address: ", "title_show"=>"0", "purchaseable"=>"0", "payment_top_html"=>"sdfsf", "last_name_title_show"=>"0", "last_name_title"=>"Last Name: ", "city_title"=>"City: ", "address_title_show"=>"1", "time_title"=>"Time: ", "category_ids"=>["1"], "note_title_show"=>"0", "phone_title"=>"Phone: ", "email_title_show"=>"0", "first_name_title_show"=>"0", "zipcode_title"=>"Zipcode: ", "zipcode_title_show"=>"1", "date_title_show"=>"1", "type_title"=>"to"}, "controller"=>"admin/events"}
+  [4;35;1mEvent Load (1.3ms)[0m   [0mSELECT * FROM "events" WHERE ("events"."id" = 1) [0m
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mCategory Load (0.5ms)[0m   [0mSELECT * FROM "categories" INNER JOIN "categories_events" ON "categories".id = "categories_events".category_id WHERE ("categories_events".event_id = 1 ) [0m
+  [4;36;1mEvent Update (0.4ms)[0m   [0;1mUPDATE "events" SET "updated_at" = '2010-08-10 07:12:23', "note_title_show" = 'f', "zipcode_title_show" = 't', "phone_title_show" = 'f', "time_title_show" = 't', "type_title" = 'to', "email_title_show" = 'f', "purchaseable" = 'f', "city_title_show" = 't', "last_name_title_show" = 'f', "reservation_top_html" = 'sfsf', "image_file_name" = '', "date_title_show" = 't', "first_name_title_show" = 'f', "payment_top_html" = 'sdfsf', "address_title_show" = 't', "title_show" = 'f' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/admin/events/1
+Completed in 154ms (DB: 2) | 302 Found [http://localhost/admin/events/1]
+
+
+Processing Admin::EventsController#show (for 127.0.0.1 at 2010-08-10 00:12:23) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"admin/events"}
+  [4;35;1mEvent Load (1.4ms)[0m   [0mSELECT * FROM "events" WHERE ("events"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering admin/events/show
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" INNER JOIN "categories_events" ON "categories".id = "categories_events".category_id WHERE ("categories_events".event_id = 1 ) [0m
+Rendered shared/_header (1.2ms)
+Rendered shared/_admin_header (1.0ms)
+Completed in 68ms (View: 43, DB: 2) | 200 OK [http://localhost/admin/events/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:12:24) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:12:24) [GET]
+  Parameters: {"1281325313"=>nil}
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:12:24) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::ReservationsController#index (for 127.0.0.1 at 2010-08-10 00:12:28) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/reservations"}
+  [4;35;1mReservation Load (1.7ms)[0m   [0mSELECT * FROM "reservations" [0m
+Rendering template within layouts/application
+Rendering admin/reservations/index
+Rendered shared/_header (1.2ms)
+Rendered shared/_admin_header (1.1ms)
+Completed in 51ms (View: 30, DB: 2) | 200 OK [http://localhost/admin/reservations]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:12:29) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:12:30) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::ReservationsController#edit (for 127.0.0.1 at 2010-08-10 00:12:40) [GET]
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"admin/reservations"}
+  [4;36;1mReservation Load (0.9ms)[0m   [0;1mSELECT * FROM "reservations" WHERE ("reservations"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering admin/reservations/edit
+Rendered shared/_header (1.2ms)
+Rendered shared/_admin_header (1.1ms)
+Completed in 78ms (View: 52, DB: 1) | 200 OK [http://localhost/admin/reservations/1/edit]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:12:41) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:12:42) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ReservationsController#new (for 127.0.0.1 at 2010-08-10 00:12:46) [GET]
+  Parameters: {"action"=>"new", "controller"=>"reservations"}
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/application
+Rendering reservations/new
+  [4;36;1mEvent Load (2.6ms)[0m   [0;1mSELECT * FROM "events" INNER JOIN "categories_events" ON "events".id = "categories_events".event_id WHERE ("categories_events".category_id = 1 ) [0m
+  [4;35;1mEvent Load (2.0ms)[0m   [0mSELECT * FROM "events" INNER JOIN "categories_events" ON "events".id = "categories_events".event_id WHERE ("categories_events".category_id = 2 ) [0m
+Rendered reservations/_first (35.5ms)
+Rendered shared/_header (1.3ms)
+Rendered shared/_admin_header (1.1ms)
+Completed in 82ms (View: 42, DB: 6) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:12:46) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:12:47) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ReservationsController#create (for 127.0.0.1 at 2010-08-10 00:12:49) [POST]
+  Parameters: {"reservation"=>{"event_id"=>"1", "type_of"=>"to"}, "action"=>"create", "authenticity_token"=>"RzsQ9UZPOknVO6vXlabxONU+WI3qPfPs6TV/3C+R6hQ=", "controller"=>"reservations", "next_button"=>"Next"}
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mEvent Load (1.9ms)[0m   [0mSELECT * FROM "events" WHERE ("events"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering reservations/new
+Rendered reservations/_user_info (6.9ms)
+Rendered reservations/_second (26.2ms)
+Rendered shared/_header (1.2ms)
+Rendered shared/_admin_header (1.1ms)
+Completed in 90ms (View: 38, DB: 3) | 200 OK [http://localhost/reservations]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:12:49) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:12:50) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ReservationsController#create (for 127.0.0.1 at 2010-08-10 00:12:56) [POST]
+  Parameters: {"reservation"=>{"city"=>"", "address"=>"test", "zipcode"=>"", "date"=>"August 5, 2010 6:03 PM", "note"=>"", "phone"=>"", "last_name"=>"", "email"=>"", "first_name"=>""}, "action"=>"create", "authenticity_token"=>"RzsQ9UZPOknVO6vXlabxONU+WI3qPfPs6TV/3C+R6hQ=", "controller"=>"reservations", "next_button"=>"Next"}
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mEvent Load (1.3ms)[0m   [0mSELECT * FROM "events" WHERE ("events"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering reservations/new
+Rendered reservations/_third (18.1ms)
+Rendered shared/_header (1.2ms)
+Rendered shared/_admin_header (1.1ms)
+Completed in 156ms (View: 38, DB: 2) | 200 OK [http://localhost/reservations]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:12:57) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:12:57) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ReservationsController#create (for 127.0.0.1 at 2010-08-10 00:12:59) [POST]
+  Parameters: {"action"=>"create", "authenticity_token"=>"RzsQ9UZPOknVO6vXlabxONU+WI3qPfPs6TV/3C+R6hQ=", "controller"=>"reservations", "next_button"=>"Confirm"}
+  [4;36;1mCategory Load (0.9ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mEvent Load (1.9ms)[0m   [0mSELECT * FROM "events" WHERE ("events"."id" = 1) [0m
+  [4;36;1mReservation Create (0.5ms)[0m   [0;1mINSERT INTO "reservations" ("address", "city", "zipcode_round", "trip_id", "created_at", "event_id", "zipcode", "updated_at", "time", "city_round", "date", "address_round", "last_name", "phone", "note", "time_round", "date_round", "type_of", "first_name", "email") VALUES('test', '', NULL, NULL, '2010-08-10 07:12:59', 1, '', '2010-08-10 07:12:59', NULL, NULL, 'August 5, 2010 6:03 PM', NULL, '', NULL, '', NULL, NULL, 'to', '', '')[0m
+Redirected to http://localhost:3000/reservations/3
+Completed in 257ms (DB: 3) | 302 Found [http://localhost/reservations]
+
+
+Processing ReservationsController#show (for 127.0.0.1 at 2010-08-10 00:12:59) [GET]
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"reservations"}
+  [4;35;1mReservation Load (1.8ms)[0m   [0mSELECT * FROM "reservations" WHERE ("reservations"."id" = 3) [0m
+  [4;36;1mEvent Load (1.3ms)[0m   [0;1mSELECT * FROM "events" WHERE ("events"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering reservations/show
+
+ActionView::TemplateError (undefined method `category_id' for #<Reservation:0xb6430a10>) on line #5 of app/views/reservations/show.html.erb:
+2: 
+3: <p>
+4:   <strong>Category:</strong>
+5:   <%=h @reservation.category_id %>
+6: </p>
+7: <p>
+8:   <strong>Event:</strong>
+
+    app/views/reservations/show.html.erb:5
+
+Rendered rescues/_trace (78.1ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ReservationsController#show (for 127.0.0.1 at 2010-08-10 00:13:13) [GET]
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"reservations"}
+  [4;35;1mReservation Load (0.9ms)[0m   [0mSELECT * FROM "reservations" WHERE ("reservations"."id" = 3) [0m
+  [4;36;1mEvent Load (2.5ms)[0m   [0;1mSELECT * FROM "events" WHERE ("events"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering reservations/show
+Rendered shared/_header (1.2ms)
+Rendered shared/_admin_header (1.1ms)
+Completed in 167ms (View: 41, DB: 3) | 200 OK [http://localhost/reservations/3]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:13:13) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:13:14) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::TripsController#index (for 127.0.0.1 at 2010-08-10 00:13:26) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/trips"}
+  [4;35;1mTrip Load (0.6ms)[0m   [0mSELECT * FROM "trips" [0m
+Rendering template within layouts/application
+Rendering admin/trips/index
+Rendered shared/_header (1.1ms)
+Rendered shared/_admin_header (1.0ms)
+Completed in 26ms (View: 15, DB: 1) | 200 OK [http://localhost/admin/trips]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:13:26) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:13:26) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::ReservationsController#index (for 127.0.0.1 at 2010-08-10 00:13:28) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/reservations"}
+  [4;36;1mReservation Load (1.8ms)[0m   [0;1mSELECT * FROM "reservations" [0m
+Rendering template within layouts/application
+Rendering admin/reservations/index
+Rendered shared/_header (1.2ms)
+Rendered shared/_admin_header (1.0ms)
+Completed in 55ms (View: 34, DB: 2) | 200 OK [http://localhost/admin/reservations]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:13:28) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:13:28) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::ReservationsController#edit (for 127.0.0.1 at 2010-08-10 00:13:31) [GET]
+  Parameters: {"action"=>"edit", "id"=>"3", "controller"=>"admin/reservations"}
+  [4;35;1mReservation Load (0.8ms)[0m   [0mSELECT * FROM "reservations" WHERE ("reservations"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering admin/reservations/edit
+
+ActionView::TemplateError (undefined method `day' for "August 5, 2010 6:03 PM":String) on line #13 of app/views/admin/reservations/edit.html.erb:
+10:   </p>
+11:   <p>
+12:     <%= f.label :date %><br />
+13:     <%= f.date_select :date %>
+14:   </p>
+15:   <p>
+16:     <%= f.label :time %><br />
+
+    app/views/admin/reservations/edit.html.erb:13
+    app/views/admin/reservations/edit.html.erb:1
+
+Rendered rescues/_trace (181.8ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::ReservationsController#edit (for 127.0.0.1 at 2010-08-10 00:14:17) [GET]
+  Parameters: {"action"=>"edit", "id"=>"3", "controller"=>"admin/reservations"}
+  [4;36;1mReservation Load (0.8ms)[0m   [0;1mSELECT * FROM "reservations" WHERE ("reservations"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering admin/reservations/edit
+Rendered shared/_header (1.1ms)
+Rendered shared/_admin_header (1.0ms)
+Completed in 61ms (View: 36, DB: 1) | 200 OK [http://localhost/admin/reservations/3/edit]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:14:17) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:14:18) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::ReservationsController#edit (for 127.0.0.1 at 2010-08-10 00:14:38) [GET]
+  Parameters: {"action"=>"edit", "id"=>"3", "controller"=>"admin/reservations"}
+  [4;35;1mReservation Load (0.8ms)[0m   [0mSELECT * FROM "reservations" WHERE ("reservations"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering admin/reservations/edit
+Rendered shared/_header (1.1ms)
+Rendered shared/_admin_header (1.0ms)
+Completed in 62ms (View: 37, DB: 1) | 200 OK [http://localhost/admin/reservations/3/edit]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:14:38) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:14:39) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::ReservationsController#update (for 127.0.0.1 at 2010-08-10 00:14:42) [PUT]
+  Parameters: {"commit"=>"Save changes", "reservation"=>{"city"=>"", "address"=>"test", "trip_id"=>"1", "event_id"=>"1", "zipcode"=>"", "time"=>"", "date"=>"August 5, 2010 6:03 PM", "note"=>"", "phone"=>"", "last_name"=>"", "email"=>"", "first_name"=>"", "type_of"=>"to"}, "action"=>"update", "_method"=>"put", "authenticity_token"=>"RzsQ9UZPOknVO6vXlabxONU+WI3qPfPs6TV/3C+R6hQ=", "id"=>"3", "controller"=>"admin/reservations"}
+  [4;36;1mReservation Load (0.8ms)[0m   [0;1mSELECT * FROM "reservations" WHERE ("reservations"."id" = 3) [0m
+  [4;35;1mReservation Update (0.4ms)[0m   [0mUPDATE "reservations" SET "updated_at" = '2010-08-10 07:14:42', "trip_id" = 1, "time" = '' WHERE "id" = 3[0m
+Redirected to http://localhost:3000/reservations/3
+Completed in 135ms (DB: 1) | 302 Found [http://localhost/admin/reservations/3]
+
+
+Processing ReservationsController#show (for 127.0.0.1 at 2010-08-10 00:14:42) [GET]
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"reservations"}
+  [4;36;1mReservation Load (0.8ms)[0m   [0;1mSELECT * FROM "reservations" WHERE ("reservations"."id" = 3) [0m
+  [4;35;1mEvent Load (1.3ms)[0m   [0mSELECT * FROM "events" WHERE ("events"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering reservations/show
+Rendered shared/_header (1.1ms)
+Rendered shared/_admin_header (1.6ms)
+Completed in 74ms (View: 32, DB: 2) | 200 OK [http://localhost/reservations/3]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:14:43) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:14:43) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::TripsController#index (for 127.0.0.1 at 2010-08-10 00:14:44) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/trips"}
+  [4;36;1mTrip Load (2.1ms)[0m   [0;1mSELECT * FROM "trips" [0m
+Rendering template within layouts/application
+Rendering admin/trips/index
+Rendered shared/_header (1.2ms)
+Rendered shared/_admin_header (1.1ms)
+Completed in 32ms (View: 18, DB: 2) | 200 OK [http://localhost/admin/trips]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:14:44) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:14:44) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::TripsController#new (for 127.0.0.1 at 2010-08-10 00:14:50) [GET]
+  Parameters: {"action"=>"new", "controller"=>"admin/trips"}
+Rendering template within layouts/application
+Rendering admin/trips/new
+Rendered admin/trips/_form (16.3ms)
+Rendered shared/_header (1.1ms)
+Rendered shared/_admin_header (1.1ms)
+Completed in 40ms (View: 26, DB: 0) | 200 OK [http://localhost/admin/trips/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:14:50) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:14:50) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::TripsController#create (for 127.0.0.1 at 2010-08-10 00:15:08) [POST]
+  Parameters: {"commit"=>"Save changes", "action"=>"create", "authenticity_token"=>"RzsQ9UZPOknVO6vXlabxONU+WI3qPfPs6TV/3C+R6hQ=", "trip"=>{"title"=>"August 10", "date"=>"2010-08-10", "passengers"=>"1"}, "controller"=>"admin/trips"}
+  [4;35;1mTrip Create (0.5ms)[0m   [0mINSERT INTO "trips" ("created_at", "event_id", "title", "updated_at", "date", "passengers", "published_on") VALUES('2010-08-10 07:15:08', NULL, 'August 10', '2010-08-10 07:15:08', '2010-08-10', 1, NULL)[0m
+Redirected to http://localhost:3000/admin/trips/2
+Completed in 136ms (DB: 0) | 302 Found [http://localhost/admin/trips]
+
+
+Processing Admin::TripsController#show (for 127.0.0.1 at 2010-08-10 00:15:08) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"admin/trips"}
+  [4;36;1mTrip Load (0.5ms)[0m   [0;1mSELECT * FROM "trips" WHERE ("trips"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering admin/trips/show
+Rendered shared/_header (1.1ms)
+Rendered shared/_admin_header (1.1ms)
+Completed in 41ms (View: 26, DB: 1) | 200 OK [http://localhost/admin/trips/2]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:15:08) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:15:08) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::ReservationsController#index (for 127.0.0.1 at 2010-08-10 00:15:12) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/reservations"}
+  [4;35;1mReservation Load (2.0ms)[0m   [0mSELECT * FROM "reservations" [0m
+Rendering template within layouts/application
+Rendering admin/reservations/index
+Rendered shared/_header (1.1ms)
+Rendered shared/_admin_header (1.0ms)
+Completed in 56ms (View: 36, DB: 2) | 200 OK [http://localhost/admin/reservations]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:15:12) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:15:12) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::ReservationsController#edit (for 127.0.0.1 at 2010-08-10 00:15:15) [GET]
+  Parameters: {"action"=>"edit", "id"=>"3", "controller"=>"admin/reservations"}
+  [4;36;1mReservation Load (0.9ms)[0m   [0;1mSELECT * FROM "reservations" WHERE ("reservations"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering admin/reservations/edit
+Rendered shared/_header (1.2ms)
+Rendered shared/_admin_header (1.1ms)
+Completed in 52ms (View: 28, DB: 1) | 200 OK [http://localhost/admin/reservations/3/edit]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:15:15) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:15:16) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::ReservationsController#update (for 127.0.0.1 at 2010-08-10 00:15:20) [PUT]
+  Parameters: {"commit"=>"Save changes", "reservation"=>{"city"=>"", "address"=>"test", "trip_id"=>"2", "event_id"=>"1", "zipcode"=>"", "time"=>"", "date"=>"August 5, 2010 6:03 PM", "note"=>"", "phone"=>"", "last_name"=>"", "email"=>"", "first_name"=>"", "type_of"=>"to"}, "action"=>"update", "_method"=>"put", "authenticity_token"=>"RzsQ9UZPOknVO6vXlabxONU+WI3qPfPs6TV/3C+R6hQ=", "id"=>"3", "controller"=>"admin/reservations"}
+  [4;35;1mReservation Load (1.0ms)[0m   [0mSELECT * FROM "reservations" WHERE ("reservations"."id" = 3) [0m
+  [4;36;1mReservation Update (0.3ms)[0m   [0;1mUPDATE "reservations" SET "updated_at" = '2010-08-10 07:15:20', "trip_id" = 2 WHERE "id" = 3[0m
+Redirected to http://localhost:3000/reservations/3
+Completed in 138ms (DB: 1) | 302 Found [http://localhost/admin/reservations/3]
+
+
+Processing ReservationsController#show (for 127.0.0.1 at 2010-08-10 00:15:20) [GET]
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"reservations"}
+  [4;35;1mReservation Load (0.8ms)[0m   [0mSELECT * FROM "reservations" WHERE ("reservations"."id" = 3) [0m
+  [4;36;1mEvent Load (2.6ms)[0m   [0;1mSELECT * FROM "events" WHERE ("events"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering reservations/show
+Rendered shared/_header (1.2ms)
+Rendered shared/_admin_header (1.1ms)
+Completed in 65ms (View: 23, DB: 3) | 200 OK [http://localhost/reservations/3]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:15:20) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:15:21) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::TripsController#index (for 127.0.0.1 at 2010-08-10 00:15:23) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/trips"}
+  [4;35;1mTrip Load (0.9ms)[0m   [0mSELECT * FROM "trips" [0m
+Rendering template within layouts/application
+Rendering admin/trips/index
+
+ActionView::TemplateError (admin_trip_url failed to generate from {:controller=>"admin/trips", :action=>"show"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["admin", "trips", :id] - are they all satisfied?) on line #16 of app/views/admin/trips/index.html.erb:
+13:       <td><%=h trip.passengers %></td>
+14:       <td><%= link_to "Show", admin_trip_path(trip) %></td>
+15:       <td><%= link_to "Edit", edit_admin_trip_path(trip) %></td>
+16:       <td><%= link_to "Destroy", admin_trip_path, :confirm => 'Are you sure?', :method => :delete %></td>
+17:     </tr>
+18:   <% end %>
+19: </table>
+
+    (eval):16:in `admin_trip_path'
+    app/views/admin/trips/index.html.erb:16
+    app/views/admin/trips/index.html.erb:9:in `each'
+    app/views/admin/trips/index.html.erb:9
+
+Rendered rescues/_trace (81.5ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::TripsController#index (for 127.0.0.1 at 2010-08-10 00:15:44) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/trips"}
+  [4;36;1mTrip Load (0.9ms)[0m   [0;1mSELECT * FROM "trips" [0m
+Rendering template within layouts/application
+Rendering admin/trips/index
+Rendered shared/_header (1.2ms)
+Rendered shared/_admin_header (1.0ms)
+Completed in 118ms (View: 33, DB: 1) | 200 OK [http://localhost/admin/trips]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:15:44) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:15:44) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::TripsController#show (for 127.0.0.1 at 2010-08-10 00:15:46) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"admin/trips"}
+  [4;35;1mTrip Load (0.5ms)[0m   [0mSELECT * FROM "trips" WHERE ("trips"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering admin/trips/show
+Rendered shared/_header (1.6ms)
+Rendered shared/_admin_header (8.1ms)
+Completed in 107ms (View: 94, DB: 1) | 200 OK [http://localhost/admin/trips/2]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:15:46) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:15:47) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::TripsController#show (for 127.0.0.1 at 2010-08-10 00:16:56) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"admin/trips"}
+  [4;36;1mTrip Load (0.6ms)[0m   [0;1mSELECT * FROM "trips" WHERE ("trips"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering admin/trips/show
+ERROR: compiling _run_erb_app47views47admin47trips47show46html46erb RAISED compile error
+/home/senthil/rails/playground/paul-k-backup/app/views/admin/trips/show.html.erb:16: syntax error, unexpected ')'
+; @output_buffer.concat(( @trip.reservations.each do |r| ).to_s)
+                                                          ^
+/home/senthil/rails/playground/paul-k-backup/app/views/admin/trips/show.html.erb:27: syntax error, unexpected kENSURE, expecting ')'
+/home/senthil/rails/playground/paul-k-backup/app/views/admin/trips/show.html.erb:29: syntax error, unexpected kEND, expecting ')'
+Function body:           def _run_erb_app47views47admin47trips47show46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ;  title "Admin:Trip" ; @output_buffer.concat "\n\n<p>\n  <strong>Title:</strong>\n  "
+
+
+
+; @output_buffer.concat((h @trip.title ).to_s); @output_buffer.concat "\n</p>\n<p>\n  <strong>Date:</strong>\n  "
+
+
+
+; @output_buffer.concat((h @trip.date ).to_s); @output_buffer.concat "\n</p>\n<p>\n  <strong>Passengers:</strong>\n  "
+
+
+
+; @output_buffer.concat((h @trip.passengers ).to_s); @output_buffer.concat "\n</p>\n\n  "
+
+
+; @output_buffer.concat(( @trip.reservations.each do |r| ).to_s)
+@output_buffer.concat "    "; @output_buffer.concat(( r.title ).to_s); @output_buffer.concat "\n  "
+;  end ; @output_buffer.concat " %>\n\n<p>\n  "
+
+
+; @output_buffer.concat(( link_to "Show", admin_trip_path(@trip) ).to_s); @output_buffer.concat "\n  "
+; @output_buffer.concat(( link_to "Edit", edit_admin_trip_path(@trip) ).to_s); @output_buffer.concat "\n  "
+; @output_buffer.concat(( link_to "Destroy", admin_trip_path(@trip), :confirm => 'Are you sure?', :method => :delete ).to_s); @output_buffer.concat "\n</p>\n\n"
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/senthil/rails/playground/paul-k-backup/app/views/admin/trips/show.html.erb:29:in `compile!'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:348:in `_render_with_layout'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:945:in `render_without_benchmark'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/var/lib/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/var/lib/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1326:in `default_render'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/var/lib/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/var/lib/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130
+/var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+/var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+/var/lib/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+/var/lib/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+/var/lib/gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/var/lib/gems/1.8/gems/rails-2.3.5/lib/rails/rack/debugger.rb:19:in `call'
+/var/lib/gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/var/lib/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+/var/lib/gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/home/senthil/rails/playground/paul-k-backup/app/views/admin/trips/show.html.erb:16: syntax error, unexpected ')'
+; @output_buffer.concat(( @trip.reservations.each do |r| ).to_s)
+                                                          ^
+/home/senthil/rails/playground/paul-k-backup/app/views/admin/trips/show.html.erb:27: syntax error, unexpected kENSURE, expecting ')'
+/home/senthil/rails/playground/paul-k-backup/app/views/admin/trips/show.html.erb:29: syntax error, unexpected kEND, expecting ')') on line #16 of app/views/admin/trips/show.html.erb:
+13:   <%=h @trip.passengers %>
+14: </p>
+15: 
+16:   <%= @trip.reservations.each do |r| -%>
+17:     <%= r.title %>
+18:   <% end -%> %>
+19: 
+
+    app/views/admin/trips/show.html.erb:29:in `compile!'
+
+Rendered rescues/_trace (140.8ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::TripsController#show (for 127.0.0.1 at 2010-08-10 00:17:03) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"admin/trips"}
+  [4;35;1mTrip Load (0.4ms)[0m   [0mSELECT * FROM "trips" WHERE ("trips"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering admin/trips/show
+  [4;36;1mReservation Load (0.9ms)[0m   [0;1mSELECT * FROM "reservations" WHERE ("reservations".trip_id = 2) [0m
+
+ActionView::TemplateError (undefined method `title' for #<Reservation:0xb6338a40>) on line #17 of app/views/admin/trips/show.html.erb:
+14: </p>
+15: 
+16:   <% @trip.reservations.each do |r| -%>
+17:     <%= r.title %>
+18:   <% end -%> %>
+19: 
+20: <p>
+
+    app/views/admin/trips/show.html.erb:17
+    app/views/admin/trips/show.html.erb:16
+
+Rendered rescues/_trace (81.9ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::TripsController#show (for 127.0.0.1 at 2010-08-10 00:17:09) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"admin/trips"}
+  [4;35;1mTrip Load (0.5ms)[0m   [0mSELECT * FROM "trips" WHERE ("trips"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering admin/trips/show
+  [4;36;1mReservation Load (0.9ms)[0m   [0;1mSELECT * FROM "reservations" WHERE ("reservations".trip_id = 2) [0m
+Rendered shared/_header (1.1ms)
+Rendered shared/_admin_header (1.0ms)
+Completed in 64ms (View: 49, DB: 1) | 200 OK [http://localhost/admin/trips/2]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:17:09) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:17:12) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::TripsController#show (for 127.0.0.1 at 2010-08-10 00:17:24) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"admin/trips"}
+  [4;35;1mTrip Load (0.5ms)[0m   [0mSELECT * FROM "trips" WHERE ("trips"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering admin/trips/show
+  [4;36;1mReservation Load (0.9ms)[0m   [0;1mSELECT * FROM "reservations" WHERE ("reservations".trip_id = 2) [0m
+Rendered shared/_header (1.2ms)
+Rendered shared/_admin_header (1.0ms)
+Completed in 67ms (View: 48, DB: 1) | 200 OK [http://localhost/admin/trips/2]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:17:25) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:17:25) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::TripsController#show (for 127.0.0.1 at 2010-08-10 00:18:00) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"admin/trips"}
+  [4;35;1mTrip Load (0.5ms)[0m   [0mSELECT * FROM "trips" WHERE ("trips"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering admin/trips/show
+  [4;36;1mReservation Load (0.9ms)[0m   [0;1mSELECT * FROM "reservations" WHERE ("reservations".trip_id = 2) [0m
+Rendered shared/_header (1.2ms)
+Rendered shared/_admin_header (1.0ms)
+Completed in 139ms (View: 48, DB: 1) | 200 OK [http://localhost/admin/trips/2]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:18:00) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:18:01) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::TripsController#show (for 127.0.0.1 at 2010-08-10 00:18:17) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"admin/trips"}
+  [4;35;1mTrip Load (0.5ms)[0m   [0mSELECT * FROM "trips" WHERE ("trips"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering admin/trips/show
+  [4;36;1mReservation Load (0.9ms)[0m   [0;1mSELECT * FROM "reservations" WHERE ("reservations".trip_id = 2) [0m
+Rendered shared/_header (1.2ms)
+Rendered shared/_admin_header (1.0ms)
+Completed in 128ms (View: 113, DB: 1) | 200 OK [http://localhost/admin/trips/2]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:18:17) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:18:18) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::TripsController#show (for 127.0.0.1 at 2010-08-10 00:18:23) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"admin/trips"}
+  [4;35;1mTrip Load (0.5ms)[0m   [0mSELECT * FROM "trips" WHERE ("trips"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering admin/trips/show
+  [4;36;1mReservation Load (0.9ms)[0m   [0;1mSELECT * FROM "reservations" WHERE ("reservations".trip_id = 2) [0m
+Rendered shared/_header (1.2ms)
+Rendered shared/_admin_header (1.1ms)
+Completed in 131ms (View: 116, DB: 1) | 200 OK [http://localhost/admin/trips/2]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:18:23) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:18:24) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::TripsController#show (for 127.0.0.1 at 2010-08-10 00:18:41) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"admin/trips"}
+  [4;35;1mTrip Load (0.4ms)[0m   [0mSELECT * FROM "trips" WHERE ("trips"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering admin/trips/show
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "reservations" WHERE ("reservations".trip_id = 2) [0m
+  [4;35;1mReservation Load (0.8ms)[0m   [0mSELECT * FROM "reservations" WHERE ("reservations".trip_id = 2) [0m
+Rendered shared/_header (1.2ms)
+Rendered shared/_admin_header (1.1ms)
+Completed in 132ms (View: 117, DB: 2) | 200 OK [http://localhost/admin/trips/2]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:18:42) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:18:42) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::ReservationsController#index (for 127.0.0.1 at 2010-08-10 00:18:46) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/reservations"}
+  [4;36;1mReservation Load (3.0ms)[0m   [0;1mSELECT * FROM "reservations" [0m
+Rendering template within layouts/application
+Rendering admin/reservations/index
+Rendered shared/_header (1.1ms)
+Rendered shared/_admin_header (1.0ms)
+Completed in 57ms (View: 37, DB: 3) | 200 OK [http://localhost/admin/reservations]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:18:46) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:18:46) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CalendersController#index (for 127.0.0.1 at 2010-08-10 00:23:25) [GET]
+  Parameters: {"action"=>"index", "controller"=>"calenders"}
+  [4;35;1mCalender Load (1.0ms)[0m   [0mSELECT * FROM "calenders" [0m
+Rendering template within layouts/application
+Rendering calenders/index
+Rendered shared/_header (1.1ms)
+Rendered shared/_admin_header (1.0ms)
+Completed in 79ms (View: 69, DB: 1) | 200 OK [http://localhost/calenders]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:23:25) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:23:25) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::TripsController#index (for 127.0.0.1 at 2010-08-10 00:24:34) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/trips"}
+  [4;36;1mTrip Load (0.9ms)[0m   [0;1mSELECT * FROM "trips" [0m
+Rendering template within layouts/application
+Rendering admin/trips/index
+Rendered shared/_header (1.1ms)
+Rendered shared/_admin_header (1.0ms)
+Completed in 35ms (View: 24, DB: 1) | 200 OK [http://localhost/admin/trips]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:24:35) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:24:36) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::TripsController#show (for 127.0.0.1 at 2010-08-10 00:24:37) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"admin/trips"}
+  [4;35;1mTrip Load (0.4ms)[0m   [0mSELECT * FROM "trips" WHERE ("trips"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering admin/trips/show
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "reservations" WHERE ("reservations".trip_id = 2) [0m
+  [4;35;1mReservation Load (0.8ms)[0m   [0mSELECT * FROM "reservations" WHERE ("reservations".trip_id = 2) [0m
+Rendered shared/_header (1.1ms)
+Rendered shared/_admin_header (1.0ms)
+Completed in 60ms (View: 44, DB: 2) | 200 OK [http://localhost/admin/trips/2]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:24:38) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:24:38) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CalendersController#index (for 127.0.0.1 at 2010-08-10 00:24:43) [GET]
+  Parameters: {"action"=>"index", "controller"=>"calenders"}
+  [4;36;1mCalender Load (1.0ms)[0m   [0;1mSELECT * FROM "calenders" [0m
+Rendering template within layouts/application
+Rendering calenders/index
+Rendered shared/_header (1.3ms)
+Rendered shared/_admin_header (1.1ms)
+Completed in 82ms (View: 72, DB: 1) | 200 OK [http://localhost/calenders]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:24:43) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:24:44) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CalendersController#index (for 127.0.0.1 at 2010-08-10 00:25:38) [GET]
+  Parameters: {"action"=>"index", "controller"=>"calenders"}
+  [4;35;1mTrip Load (1.0ms)[0m   [0mSELECT * FROM "trips" [0m
+Rendering template within layouts/application
+Rendering calenders/index
+
+ActionView::TemplateError (undefined method `strftime' for nil:NilClass) on line #11 of app/views/calenders/index.html.erb:
+8:   </h2>
+9:   <% calendar_for @articles, :year => @date.year, :month => @date.month do |calendar| %>
+10:     <%= calendar.head('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday') %>
+11:     <% calendar.day(:day_method => :published_on) do |date, articles| %>
+12:       <%= date.day %>
+13:       <ul>
+14:         <% for article in articles %>
+
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:74:in `objects_for_days'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:73:in `each'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:73:in `objects_for_days'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:72:in `each'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:72:in `objects_for_days'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:24
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/table_builder.rb:58:in `capture'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/table_builder.rb:49:in `tag'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:22:in `day'
+    app/views/calenders/index.html.erb:11
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:7
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:7:in `calendar_for'
+    app/views/calenders/index.html.erb:9
+
+Rendered rescues/_trace (101.3ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CalendersController#index (for 127.0.0.1 at 2010-08-10 00:26:45) [GET]
+  Parameters: {"month"=>"2010-08-01", "action"=>"index", "controller"=>"calenders"}
+  [4;36;1mTrip Load (0.9ms)[0m   [0;1mSELECT * FROM "trips" [0m
+Rendering template within layouts/application
+Rendering calenders/index
+
+ActionView::TemplateError (undefined method `strftime' for nil:NilClass) on line #11 of app/views/calenders/index.html.erb:
+8:   </h2>
+9:   <% calendar_for @articles, :year => @date.year, :month => @date.month do |calendar| %>
+10:     <%= calendar.head('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday') %>
+11:     <% calendar.day(:day_method => :published_on) do |date, articles| %>
+12:       <%= date.day %>
+13:       <ul>
+14:         <% for article in articles %>
+
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:74:in `objects_for_days'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:73:in `each'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:73:in `objects_for_days'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:72:in `each'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:72:in `objects_for_days'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:24
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/table_builder.rb:58:in `capture'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/table_builder.rb:49:in `tag'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:22:in `day'
+    app/views/calenders/index.html.erb:11
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:7
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:7:in `calendar_for'
+    app/views/calenders/index.html.erb:9
+
+Rendered rescues/_trace (104.4ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (137.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (94.3ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to InitialSchema (20100802231401)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255), "address" varchar(255), "city" varchar(255), "zipcode" varchar(255), "password_hash" varchar(255), "password_salt" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "url" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "events" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "reservation_top_html" text, "reservation_bottom_html" text, "payment_top_html" text, "payment_bottom_html" text, "image_file_name" varchar(255), "title" varchar(255), "title_show" boolean, "type_title" varchar(255), "type_title_show" boolean, "note_title" varchar(255) DEFAULT 'Note: ', "note_title_show" boolean, "category_ids" integer, "category_ids_show" boolean, "date_title" varchar(255) DEFAULT 'Date: ', "date_title_show" boolean, "time_title" varchar(255) DEFAULT 'Time: ', "time_title_show" boolean, "address_title" varchar(255) DEFAULT 'Address: ', "address_title_show" boolean, "city_title" varchar(255) DEFAULT 'City: ', "city_title_show" boolean, "zipcode_title" varchar(255) DEFAULT 'Zipcode: ', "zipcode_title_show" boolean, "first_name_title" varchar(255) DEFAULT 'First Name: ', "first_name_title_show" boolean, "last_name_title" varchar(255) DEFAULT 'Last Name: ', "last_name_title_show" boolean, "email_title" varchar(255) DEFAULT 'Email: ', "email_title_show" boolean, "phone_title" varchar(255) DEFAULT 'Phone: ', "phone_title_show" boolean, "price" integer, "visible" boolean, "purchaseable" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE TABLE "categories_events" ("event_id" integer, "category_id" integer) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCREATE TABLE "reservations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "trip_id" integer, "event_id" integer, "type_of" varchar(255), "date" varchar(255), "date_round" varchar(255), "time" varchar(255), "time_round" varchar(255), "address" varchar(255), "address_round" varchar(255), "city" varchar(255), "city_round" varchar(255), "zipcode" varchar(255), "zipcode_round" varchar(255), "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255), "phone" integer, "note" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE TABLE "trips" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "event_id" integer, "title" varchar(255), "date" varchar(255), "passengers" integer, "published_on" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCREATE TABLE "calenders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "published_on" date, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mCalender Create (0.2ms)[0m   [0mINSERT INTO "calenders" ("created_at", "title", "updated_at", "published_on") VALUES('2010-08-10 07:26:56', 'Calendar 1', '2010-08-10 07:26:56', '2010-08-09')[0m
+  [4;36;1mCalender Create (0.2ms)[0m   [0;1mINSERT INTO "calenders" ("created_at", "title", "updated_at", "published_on") VALUES('2010-08-10 07:26:56', 'Calendar 2', '2010-08-10 07:26:56', '2010-08-09')[0m
+  [4;35;1mCategory Create (0.2ms)[0m   [0mINSERT INTO "categories" ("created_at", "title", "updated_at", "url") VALUES('2010-08-10 07:26:56', 'Category 1', '2010-08-10 07:26:56', NULL)[0m
+  [4;36;1mCategory Create (0.2ms)[0m   [0;1mINSERT INTO "categories" ("created_at", "title", "updated_at", "url") VALUES('2010-08-10 07:26:56', 'Category 2', '2010-08-10 07:26:56', NULL)[0m
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mEvent Create (0.2ms)[0m   [0;1mINSERT INTO "events" ("type_title_show", "date_title", "time_title_show", "price", "reservation_top_html", "image_file_name", "first_name_title", "email_title", "created_at", "title", "note_title", "reservation_bottom_html", "phone_title_show", "updated_at", "title_show", "address_title", "city_title_show", "payment_top_html", "purchaseable", "time_title", "address_title_show", "city_title", "last_name_title", "last_name_title_show", "category_ids", "category_ids_show", "payment_bottom_html", "note_title_show", "zipcode_title", "first_name_title_show", "email_title_show", "phone_title", "visible", "type_title", "date_title_show", "zipcode_title_show") VALUES(NULL, 'Date: ', NULL, NULL, NULL, NULL, 'First Name: ', 'Email: ', '2010-08-10 07:26:56', 'Event 1', 'Note: ', NULL, NULL, '2010-08-10 07:26:56', NULL, 'Address: ', NULL, NULL, NULL, 'Time: ', NULL, 'City: ', 'Last Name: ', NULL, NULL, NULL, NULL, NULL, 'Zipcode: ', NULL, NULL, 'Phone: ', NULL, NULL, NULL, NULL)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO "categories_events" ("event_id", "category_id") VALUES (1, 1)[0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mEvent Create (0.2ms)[0m   [0mINSERT INTO "events" ("type_title_show", "date_title", "time_title_show", "price", "reservation_top_html", "image_file_name", "first_name_title", "email_title", "created_at", "title", "note_title", "reservation_bottom_html", "phone_title_show", "updated_at", "title_show", "address_title", "city_title_show", "payment_top_html", "purchaseable", "time_title", "address_title_show", "city_title", "last_name_title", "last_name_title_show", "category_ids", "category_ids_show", "payment_bottom_html", "note_title_show", "zipcode_title", "first_name_title_show", "email_title_show", "phone_title", "visible", "type_title", "date_title_show", "zipcode_title_show") VALUES(NULL, 'Date: ', NULL, NULL, NULL, NULL, 'First Name: ', 'Email: ', '2010-08-10 07:26:56', 'Event 2', 'Note: ', NULL, NULL, '2010-08-10 07:26:56', NULL, 'Address: ', NULL, NULL, NULL, 'Time: ', NULL, 'City: ', 'Last Name: ', NULL, NULL, NULL, NULL, NULL, 'Zipcode: ', NULL, NULL, 'Phone: ', NULL, NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO "categories_events" ("event_id", "category_id") VALUES (2, 1)[0m
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;36;1mEvent Create (0.2ms)[0m   [0;1mINSERT INTO "events" ("type_title_show", "date_title", "time_title_show", "price", "reservation_top_html", "image_file_name", "first_name_title", "email_title", "created_at", "title", "note_title", "reservation_bottom_html", "phone_title_show", "updated_at", "title_show", "address_title", "city_title_show", "payment_top_html", "purchaseable", "time_title", "address_title_show", "city_title", "last_name_title", "last_name_title_show", "category_ids", "category_ids_show", "payment_bottom_html", "note_title_show", "zipcode_title", "first_name_title_show", "email_title_show", "phone_title", "visible", "type_title", "date_title_show", "zipcode_title_show") VALUES(NULL, 'Date: ', NULL, NULL, NULL, NULL, 'First Name: ', 'Email: ', '2010-08-10 07:26:56', 'Event 3', 'Note: ', NULL, NULL, '2010-08-10 07:26:56', NULL, 'Address: ', NULL, NULL, NULL, 'Time: ', NULL, 'City: ', 'Last Name: ', NULL, NULL, NULL, NULL, NULL, 'Zipcode: ', NULL, NULL, 'Phone: ', NULL, NULL, NULL, NULL)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO "categories_events" ("event_id", "category_id") VALUES (3, 2)[0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;35;1mEvent Create (0.2ms)[0m   [0mINSERT INTO "events" ("type_title_show", "date_title", "time_title_show", "price", "reservation_top_html", "image_file_name", "first_name_title", "email_title", "created_at", "title", "note_title", "reservation_bottom_html", "phone_title_show", "updated_at", "title_show", "address_title", "city_title_show", "payment_top_html", "purchaseable", "time_title", "address_title_show", "city_title", "last_name_title", "last_name_title_show", "category_ids", "category_ids_show", "payment_bottom_html", "note_title_show", "zipcode_title", "first_name_title_show", "email_title_show", "phone_title", "visible", "type_title", "date_title_show", "zipcode_title_show") VALUES(NULL, 'Date: ', NULL, NULL, NULL, NULL, 'First Name: ', 'Email: ', '2010-08-10 07:26:56', 'Event 4', 'Note: ', NULL, NULL, '2010-08-10 07:26:56', NULL, 'Address: ', NULL, NULL, NULL, 'Time: ', NULL, 'City: ', 'Last Name: ', NULL, NULL, NULL, NULL, NULL, 'Zipcode: ', NULL, NULL, 'Phone: ', NULL, NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO "categories_events" ("event_id", "category_id") VALUES (4, 2)[0m
+  [4;35;1mReservation Create (0.2ms)[0m   [0mINSERT INTO "reservations" ("address", "city", "zipcode_round", "trip_id", "created_at", "event_id", "zipcode", "updated_at", "time", "city_round", "date", "address_round", "last_name", "phone", "note", "time_round", "date_round", "type_of", "first_name", "email") VALUES(NULL, NULL, NULL, NULL, '2010-08-10 07:26:56', 1, NULL, '2010-08-10 07:26:56', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;36;1mReservation Create (0.2ms)[0m   [0;1mINSERT INTO "reservations" ("address", "city", "zipcode_round", "trip_id", "created_at", "event_id", "zipcode", "updated_at", "time", "city_round", "date", "address_round", "last_name", "phone", "note", "time_round", "date_round", "type_of", "first_name", "email") VALUES(NULL, NULL, NULL, NULL, '2010-08-10 07:26:56', 2, NULL, '2010-08-10 07:26:56', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100802231401')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("calenders")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("categories")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("categories_events")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("events")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("reservations")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("trips")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (146.2ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (90.8ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to InitialSchema (20100802231401)
+  [4;36;1mSQL (2.2ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255), "address" varchar(255), "city" varchar(255), "zipcode" varchar(255), "password_hash" varchar(255), "password_salt" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "url" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "events" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "reservation_top_html" text, "reservation_bottom_html" text, "payment_top_html" text, "payment_bottom_html" text, "image_file_name" varchar(255), "title" varchar(255), "title_show" boolean, "type_title" varchar(255), "type_title_show" boolean, "note_title" varchar(255) DEFAULT 'Note: ', "note_title_show" boolean, "category_ids" integer, "category_ids_show" boolean, "date_title" varchar(255) DEFAULT 'Date: ', "date_title_show" boolean, "time_title" varchar(255) DEFAULT 'Time: ', "time_title_show" boolean, "address_title" varchar(255) DEFAULT 'Address: ', "address_title_show" boolean, "city_title" varchar(255) DEFAULT 'City: ', "city_title_show" boolean, "zipcode_title" varchar(255) DEFAULT 'Zipcode: ', "zipcode_title_show" boolean, "first_name_title" varchar(255) DEFAULT 'First Name: ', "first_name_title_show" boolean, "last_name_title" varchar(255) DEFAULT 'Last Name: ', "last_name_title_show" boolean, "email_title" varchar(255) DEFAULT 'Email: ', "email_title_show" boolean, "phone_title" varchar(255) DEFAULT 'Phone: ', "phone_title_show" boolean, "price" integer, "visible" boolean, "purchaseable" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE TABLE "categories_events" ("event_id" integer, "category_id" integer) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCREATE TABLE "reservations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "trip_id" integer, "event_id" integer, "type_of" varchar(255), "date" varchar(255), "date_round" varchar(255), "time" varchar(255), "time_round" varchar(255), "address" varchar(255), "address_round" varchar(255), "city" varchar(255), "city_round" varchar(255), "zipcode" varchar(255), "zipcode_round" varchar(255), "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255), "phone" integer, "note" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE TABLE "trips" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "event_id" integer, "title" varchar(255), "date" varchar(255), "passengers" integer, "published_on" date, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (2.5ms)[0m   [0;1mCREATE TABLE "calenders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "published_on" date, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mCalender Create (0.2ms)[0m   [0mINSERT INTO "calenders" ("created_at", "title", "updated_at", "published_on") VALUES('2010-08-10 07:27:47', 'Calendar 1', '2010-08-10 07:27:47', '2010-08-09')[0m
+  [4;36;1mCalender Create (0.1ms)[0m   [0;1mINSERT INTO "calenders" ("created_at", "title", "updated_at", "published_on") VALUES('2010-08-10 07:27:47', 'Calendar 2', '2010-08-10 07:27:47', '2010-08-09')[0m
+  [4;35;1mCategory Create (0.1ms)[0m   [0mINSERT INTO "categories" ("created_at", "title", "updated_at", "url") VALUES('2010-08-10 07:27:47', 'Category 1', '2010-08-10 07:27:47', NULL)[0m
+  [4;36;1mCategory Create (0.1ms)[0m   [0;1mINSERT INTO "categories" ("created_at", "title", "updated_at", "url") VALUES('2010-08-10 07:27:47', 'Category 2', '2010-08-10 07:27:47', NULL)[0m
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mEvent Create (0.2ms)[0m   [0;1mINSERT INTO "events" ("type_title_show", "date_title", "time_title_show", "price", "reservation_top_html", "image_file_name", "first_name_title", "email_title", "created_at", "title", "note_title", "reservation_bottom_html", "phone_title_show", "updated_at", "title_show", "address_title", "city_title_show", "payment_top_html", "purchaseable", "time_title", "address_title_show", "city_title", "last_name_title", "last_name_title_show", "category_ids", "category_ids_show", "payment_bottom_html", "note_title_show", "zipcode_title", "first_name_title_show", "email_title_show", "phone_title", "visible", "type_title", "date_title_show", "zipcode_title_show") VALUES(NULL, 'Date: ', NULL, NULL, NULL, NULL, 'First Name: ', 'Email: ', '2010-08-10 07:27:47', 'Event 1', 'Note: ', NULL, NULL, '2010-08-10 07:27:47', NULL, 'Address: ', NULL, NULL, NULL, 'Time: ', NULL, 'City: ', 'Last Name: ', NULL, NULL, NULL, NULL, NULL, 'Zipcode: ', NULL, NULL, 'Phone: ', NULL, NULL, NULL, NULL)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO "categories_events" ("event_id", "category_id") VALUES (1, 1)[0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mEvent Create (0.2ms)[0m   [0mINSERT INTO "events" ("type_title_show", "date_title", "time_title_show", "price", "reservation_top_html", "image_file_name", "first_name_title", "email_title", "created_at", "title", "note_title", "reservation_bottom_html", "phone_title_show", "updated_at", "title_show", "address_title", "city_title_show", "payment_top_html", "purchaseable", "time_title", "address_title_show", "city_title", "last_name_title", "last_name_title_show", "category_ids", "category_ids_show", "payment_bottom_html", "note_title_show", "zipcode_title", "first_name_title_show", "email_title_show", "phone_title", "visible", "type_title", "date_title_show", "zipcode_title_show") VALUES(NULL, 'Date: ', NULL, NULL, NULL, NULL, 'First Name: ', 'Email: ', '2010-08-10 07:27:47', 'Event 2', 'Note: ', NULL, NULL, '2010-08-10 07:27:47', NULL, 'Address: ', NULL, NULL, NULL, 'Time: ', NULL, 'City: ', 'Last Name: ', NULL, NULL, NULL, NULL, NULL, 'Zipcode: ', NULL, NULL, 'Phone: ', NULL, NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO "categories_events" ("event_id", "category_id") VALUES (2, 1)[0m
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;36;1mEvent Create (0.2ms)[0m   [0;1mINSERT INTO "events" ("type_title_show", "date_title", "time_title_show", "price", "reservation_top_html", "image_file_name", "first_name_title", "email_title", "created_at", "title", "note_title", "reservation_bottom_html", "phone_title_show", "updated_at", "title_show", "address_title", "city_title_show", "payment_top_html", "purchaseable", "time_title", "address_title_show", "city_title", "last_name_title", "last_name_title_show", "category_ids", "category_ids_show", "payment_bottom_html", "note_title_show", "zipcode_title", "first_name_title_show", "email_title_show", "phone_title", "visible", "type_title", "date_title_show", "zipcode_title_show") VALUES(NULL, 'Date: ', NULL, NULL, NULL, NULL, 'First Name: ', 'Email: ', '2010-08-10 07:27:47', 'Event 3', 'Note: ', NULL, NULL, '2010-08-10 07:27:47', NULL, 'Address: ', NULL, NULL, NULL, 'Time: ', NULL, 'City: ', 'Last Name: ', NULL, NULL, NULL, NULL, NULL, 'Zipcode: ', NULL, NULL, 'Phone: ', NULL, NULL, NULL, NULL)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO "categories_events" ("event_id", "category_id") VALUES (3, 2)[0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;35;1mEvent Create (0.2ms)[0m   [0mINSERT INTO "events" ("type_title_show", "date_title", "time_title_show", "price", "reservation_top_html", "image_file_name", "first_name_title", "email_title", "created_at", "title", "note_title", "reservation_bottom_html", "phone_title_show", "updated_at", "title_show", "address_title", "city_title_show", "payment_top_html", "purchaseable", "time_title", "address_title_show", "city_title", "last_name_title", "last_name_title_show", "category_ids", "category_ids_show", "payment_bottom_html", "note_title_show", "zipcode_title", "first_name_title_show", "email_title_show", "phone_title", "visible", "type_title", "date_title_show", "zipcode_title_show") VALUES(NULL, 'Date: ', NULL, NULL, NULL, NULL, 'First Name: ', 'Email: ', '2010-08-10 07:27:48', 'Event 4', 'Note: ', NULL, NULL, '2010-08-10 07:27:48', NULL, 'Address: ', NULL, NULL, NULL, 'Time: ', NULL, 'City: ', 'Last Name: ', NULL, NULL, NULL, NULL, NULL, 'Zipcode: ', NULL, NULL, 'Phone: ', NULL, NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO "categories_events" ("event_id", "category_id") VALUES (4, 2)[0m
+  [4;35;1mReservation Create (0.3ms)[0m   [0mINSERT INTO "reservations" ("address", "city", "zipcode_round", "trip_id", "created_at", "event_id", "zipcode", "updated_at", "time", "city_round", "date", "address_round", "last_name", "phone", "note", "time_round", "date_round", "type_of", "first_name", "email") VALUES(NULL, NULL, NULL, NULL, '2010-08-10 07:27:48', 1, NULL, '2010-08-10 07:27:48', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;36;1mReservation Create (0.2ms)[0m   [0;1mINSERT INTO "reservations" ("address", "city", "zipcode_round", "trip_id", "created_at", "event_id", "zipcode", "updated_at", "time", "city_round", "date", "address_round", "last_name", "phone", "note", "time_round", "date_round", "type_of", "first_name", "email") VALUES(NULL, NULL, NULL, NULL, '2010-08-10 07:27:48', 2, NULL, '2010-08-10 07:27:48', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100802231401')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("calenders")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("categories")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("categories_events")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("events")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("reservations")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("trips")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("users")[0m
+
+
+Processing CalendersController#index (for 127.0.0.1 at 2010-08-10 00:27:52) [GET]
+  Parameters: {"action"=>"index", "controller"=>"calenders"}
+  [4;35;1mTrip Load (0.6ms)[0m   [0mSELECT * FROM "trips" [0m
+Rendering template within layouts/application
+Rendering calenders/index
+Rendered shared/_header (1.2ms)
+Rendered shared/_admin_header (3.0ms)
+Completed in 157ms (View: 147, DB: 1) | 200 OK [http://localhost/calenders]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:27:52) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:27:52) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::TripsController#index (for 127.0.0.1 at 2010-08-10 00:27:57) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/trips"}
+  [4;36;1mTrip Load (0.6ms)[0m   [0;1mSELECT * FROM "trips" [0m
+Rendering template within layouts/application
+Rendering admin/trips/index
+Rendered shared/_header (1.2ms)
+Rendered shared/_admin_header (1.0ms)
+Completed in 29ms (View: 17, DB: 1) | 200 OK [http://localhost/admin/trips]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:27:58) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:27:58) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (183.4ms)[0m   [0;1mCREATE TABLE "calenders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "published_on" date, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (147.6ms)[0m   [0;1mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "url" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (170.4ms)[0m   [0;1mCREATE TABLE "categories_events" ("event_id" integer, "category_id" integer) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (123.1ms)[0m   [0;1mCREATE TABLE "events" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "reservation_top_html" text, "reservation_bottom_html" text, "payment_top_html" text, "payment_bottom_html" text, "image_file_name" varchar(255), "title" varchar(255), "title_show" boolean, "type_title" varchar(255), "type_title_show" boolean, "note_title" varchar(255) DEFAULT 'Note: ', "note_title_show" boolean, "category_ids" integer, "category_ids_show" boolean, "date_title" varchar(255) DEFAULT 'Date: ', "date_title_show" boolean, "time_title" varchar(255) DEFAULT 'Time: ', "time_title_show" boolean, "address_title" varchar(255) DEFAULT 'Address: ', "address_title_show" boolean, "city_title" varchar(255) DEFAULT 'City: ', "city_title_show" boolean, "zipcode_title" varchar(255) DEFAULT 'Zipcode: ', "zipcode_title_show" boolean, "first_name_title" varchar(255) DEFAULT 'First Name: ', "first_name_title_show" boolean, "last_name_title" varchar(255) DEFAULT 'Last Name: ', "last_name_title_show" boolean, "email_title" varchar(255) DEFAULT 'Email: ', "email_title_show" boolean, "phone_title" varchar(255) DEFAULT 'Phone: ', "phone_title_show" boolean, "price" integer, "visible" boolean, "purchaseable" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (178.1ms)[0m   [0;1mCREATE TABLE "reservations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "trip_id" integer, "event_id" integer, "type_of" varchar(255), "date" varchar(255), "date_round" varchar(255), "time" varchar(255), "time_round" varchar(255), "address" varchar(255), "address_round" varchar(255), "city" varchar(255), "city_round" varchar(255), "zipcode" varchar(255), "zipcode_round" varchar(255), "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255), "phone" integer, "note" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.7ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (145.4ms)[0m   [0;1mCREATE TABLE "trips" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "event_id" integer, "title" varchar(255), "date" varchar(255), "passengers" integer, "published_on" date, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (1.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (164.4ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255), "address" varchar(255), "city" varchar(255), "zipcode" varchar(255), "password_hash" varchar(255), "password_salt" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.8ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (140.7ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (87.8ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (118.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100802231401')[0m
+
+
+Processing Admin::TripsController#index (for 127.0.0.1 at 2010-08-10 00:28:30) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/trips"}
+  [4;35;1mTrip Load (0.6ms)[0m   [0mSELECT * FROM "trips" [0m
+Rendering template within layouts/application
+Rendering admin/trips/index
+Rendered shared/_header (1.6ms)
+Rendered shared/_admin_header (1.0ms)
+Completed in 29ms (View: 18, DB: 1) | 200 OK [http://localhost/admin/trips]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:28:30) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:28:30) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CalendersController#index (for 127.0.0.1 at 2010-08-10 00:28:32) [GET]
+  Parameters: {"action"=>"index", "controller"=>"calenders"}
+  [4;36;1mTrip Load (0.6ms)[0m   [0;1mSELECT * FROM "trips" [0m
+Rendering template within layouts/application
+Rendering calenders/index
+Rendered shared/_header (1.2ms)
+Rendered shared/_admin_header (1.1ms)
+Completed in 76ms (View: 64, DB: 1) | 200 OK [http://localhost/calenders]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:28:32) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:28:33) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::TripsController#index (for 127.0.0.1 at 2010-08-10 00:28:42) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/trips"}
+  [4;35;1mTrip Load (0.7ms)[0m   [0mSELECT * FROM "trips" [0m
+Rendering template within layouts/application
+Rendering admin/trips/index
+Rendered shared/_header (1.2ms)
+Rendered shared/_admin_header (1.0ms)
+Completed in 29ms (View: 16, DB: 1) | 200 OK [http://localhost/admin/trips]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:28:43) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:28:43) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (131.4ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (81.1ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to InitialSchema (20100802231401)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255), "address" varchar(255), "city" varchar(255), "zipcode" varchar(255), "password_hash" varchar(255), "password_salt" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "url" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "events" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "reservation_top_html" text, "reservation_bottom_html" text, "payment_top_html" text, "payment_bottom_html" text, "image_file_name" varchar(255), "title" varchar(255), "title_show" boolean, "type_title" varchar(255), "type_title_show" boolean, "note_title" varchar(255) DEFAULT 'Note: ', "note_title_show" boolean, "category_ids" integer, "category_ids_show" boolean, "date_title" varchar(255) DEFAULT 'Date: ', "date_title_show" boolean, "time_title" varchar(255) DEFAULT 'Time: ', "time_title_show" boolean, "address_title" varchar(255) DEFAULT 'Address: ', "address_title_show" boolean, "city_title" varchar(255) DEFAULT 'City: ', "city_title_show" boolean, "zipcode_title" varchar(255) DEFAULT 'Zipcode: ', "zipcode_title_show" boolean, "first_name_title" varchar(255) DEFAULT 'First Name: ', "first_name_title_show" boolean, "last_name_title" varchar(255) DEFAULT 'Last Name: ', "last_name_title_show" boolean, "email_title" varchar(255) DEFAULT 'Email: ', "email_title_show" boolean, "phone_title" varchar(255) DEFAULT 'Phone: ', "phone_title_show" boolean, "price" integer, "visible" boolean, "purchaseable" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE TABLE "categories_events" ("event_id" integer, "category_id" integer) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCREATE TABLE "reservations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "trip_id" integer, "event_id" integer, "type_of" varchar(255), "date" varchar(255), "date_round" varchar(255), "time" varchar(255), "time_round" varchar(255), "address" varchar(255), "address_round" varchar(255), "city" varchar(255), "city_round" varchar(255), "zipcode" varchar(255), "zipcode_round" varchar(255), "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255), "phone" integer, "note" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE TABLE "trips" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "event_id" integer, "title" varchar(255), "date" varchar(255), "passengers" integer, "published_on" date, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCREATE TABLE "calenders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "published_on" date, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mTrip Create (0.2ms)[0m   [0mINSERT INTO "trips" ("created_at", "event_id", "title", "updated_at", "date", "passengers", "published_on") VALUES('2010-08-10 07:28:50', NULL, 'Calendar 1', '2010-08-10 07:28:50', NULL, NULL, '2010-08-09')[0m
+  [4;36;1mTrip Create (0.2ms)[0m   [0;1mINSERT INTO "trips" ("created_at", "event_id", "title", "updated_at", "date", "passengers", "published_on") VALUES('2010-08-10 07:28:51', NULL, 'Calendar 2', '2010-08-10 07:28:51', NULL, NULL, '2010-08-09')[0m
+  [4;35;1mCategory Create (0.2ms)[0m   [0mINSERT INTO "categories" ("created_at", "title", "updated_at", "url") VALUES('2010-08-10 07:28:51', 'Category 1', '2010-08-10 07:28:51', NULL)[0m
+  [4;36;1mCategory Create (0.1ms)[0m   [0;1mINSERT INTO "categories" ("created_at", "title", "updated_at", "url") VALUES('2010-08-10 07:28:51', 'Category 2', '2010-08-10 07:28:51', NULL)[0m
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mEvent Create (0.2ms)[0m   [0;1mINSERT INTO "events" ("type_title_show", "date_title", "time_title_show", "price", "reservation_top_html", "image_file_name", "first_name_title", "email_title", "created_at", "title", "note_title", "reservation_bottom_html", "phone_title_show", "updated_at", "title_show", "address_title", "city_title_show", "payment_top_html", "purchaseable", "time_title", "address_title_show", "city_title", "last_name_title", "last_name_title_show", "category_ids", "category_ids_show", "payment_bottom_html", "note_title_show", "zipcode_title", "first_name_title_show", "email_title_show", "phone_title", "visible", "type_title", "date_title_show", "zipcode_title_show") VALUES(NULL, 'Date: ', NULL, NULL, NULL, NULL, 'First Name: ', 'Email: ', '2010-08-10 07:28:51', 'Event 1', 'Note: ', NULL, NULL, '2010-08-10 07:28:51', NULL, 'Address: ', NULL, NULL, NULL, 'Time: ', NULL, 'City: ', 'Last Name: ', NULL, NULL, NULL, NULL, NULL, 'Zipcode: ', NULL, NULL, 'Phone: ', NULL, NULL, NULL, NULL)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO "categories_events" ("event_id", "category_id") VALUES (1, 1)[0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mEvent Create (0.2ms)[0m   [0mINSERT INTO "events" ("type_title_show", "date_title", "time_title_show", "price", "reservation_top_html", "image_file_name", "first_name_title", "email_title", "created_at", "title", "note_title", "reservation_bottom_html", "phone_title_show", "updated_at", "title_show", "address_title", "city_title_show", "payment_top_html", "purchaseable", "time_title", "address_title_show", "city_title", "last_name_title", "last_name_title_show", "category_ids", "category_ids_show", "payment_bottom_html", "note_title_show", "zipcode_title", "first_name_title_show", "email_title_show", "phone_title", "visible", "type_title", "date_title_show", "zipcode_title_show") VALUES(NULL, 'Date: ', NULL, NULL, NULL, NULL, 'First Name: ', 'Email: ', '2010-08-10 07:28:51', 'Event 2', 'Note: ', NULL, NULL, '2010-08-10 07:28:51', NULL, 'Address: ', NULL, NULL, NULL, 'Time: ', NULL, 'City: ', 'Last Name: ', NULL, NULL, NULL, NULL, NULL, 'Zipcode: ', NULL, NULL, 'Phone: ', NULL, NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO "categories_events" ("event_id", "category_id") VALUES (2, 1)[0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;36;1mEvent Create (0.2ms)[0m   [0;1mINSERT INTO "events" ("type_title_show", "date_title", "time_title_show", "price", "reservation_top_html", "image_file_name", "first_name_title", "email_title", "created_at", "title", "note_title", "reservation_bottom_html", "phone_title_show", "updated_at", "title_show", "address_title", "city_title_show", "payment_top_html", "purchaseable", "time_title", "address_title_show", "city_title", "last_name_title", "last_name_title_show", "category_ids", "category_ids_show", "payment_bottom_html", "note_title_show", "zipcode_title", "first_name_title_show", "email_title_show", "phone_title", "visible", "type_title", "date_title_show", "zipcode_title_show") VALUES(NULL, 'Date: ', NULL, NULL, NULL, NULL, 'First Name: ', 'Email: ', '2010-08-10 07:28:51', 'Event 3', 'Note: ', NULL, NULL, '2010-08-10 07:28:51', NULL, 'Address: ', NULL, NULL, NULL, 'Time: ', NULL, 'City: ', 'Last Name: ', NULL, NULL, NULL, NULL, NULL, 'Zipcode: ', NULL, NULL, 'Phone: ', NULL, NULL, NULL, NULL)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO "categories_events" ("event_id", "category_id") VALUES (3, 2)[0m
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;35;1mEvent Create (0.2ms)[0m   [0mINSERT INTO "events" ("type_title_show", "date_title", "time_title_show", "price", "reservation_top_html", "image_file_name", "first_name_title", "email_title", "created_at", "title", "note_title", "reservation_bottom_html", "phone_title_show", "updated_at", "title_show", "address_title", "city_title_show", "payment_top_html", "purchaseable", "time_title", "address_title_show", "city_title", "last_name_title", "last_name_title_show", "category_ids", "category_ids_show", "payment_bottom_html", "note_title_show", "zipcode_title", "first_name_title_show", "email_title_show", "phone_title", "visible", "type_title", "date_title_show", "zipcode_title_show") VALUES(NULL, 'Date: ', NULL, NULL, NULL, NULL, 'First Name: ', 'Email: ', '2010-08-10 07:28:51', 'Event 4', 'Note: ', NULL, NULL, '2010-08-10 07:28:51', NULL, 'Address: ', NULL, NULL, NULL, 'Time: ', NULL, 'City: ', 'Last Name: ', NULL, NULL, NULL, NULL, NULL, 'Zipcode: ', NULL, NULL, 'Phone: ', NULL, NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO "categories_events" ("event_id", "category_id") VALUES (4, 2)[0m
+  [4;35;1mReservation Create (0.2ms)[0m   [0mINSERT INTO "reservations" ("address", "city", "zipcode_round", "trip_id", "created_at", "event_id", "zipcode", "updated_at", "time", "city_round", "date", "address_round", "last_name", "phone", "note", "time_round", "date_round", "type_of", "first_name", "email") VALUES(NULL, NULL, NULL, NULL, '2010-08-10 07:28:51', 1, NULL, '2010-08-10 07:28:51', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;36;1mReservation Create (0.1ms)[0m   [0;1mINSERT INTO "reservations" ("address", "city", "zipcode_round", "trip_id", "created_at", "event_id", "zipcode", "updated_at", "time", "city_round", "date", "address_round", "last_name", "phone", "note", "time_round", "date_round", "type_of", "first_name", "email") VALUES(NULL, NULL, NULL, NULL, '2010-08-10 07:28:51', 2, NULL, '2010-08-10 07:28:51', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100802231401')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("calenders")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("categories")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("categories_events")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("events")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("reservations")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("trips")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("users")[0m
+
+
+Processing Admin::TripsController#index (for 127.0.0.1 at 2010-08-10 00:28:53) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/trips"}
+  [4;36;1mTrip Load (1.1ms)[0m   [0;1mSELECT * FROM "trips" [0m
+Rendering template within layouts/application
+Rendering admin/trips/index
+Rendered shared/_header (1.1ms)
+Rendered shared/_admin_header (1.0ms)
+Completed in 45ms (View: 32, DB: 1) | 200 OK [http://localhost/admin/trips]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:28:53) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:28:54) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CalendersController#index (for 127.0.0.1 at 2010-08-10 00:28:57) [GET]
+  Parameters: {"action"=>"index", "controller"=>"calenders"}
+  [4;35;1mTrip Load (1.2ms)[0m   [0mSELECT * FROM "trips" [0m
+Rendering template within layouts/application
+Rendering calenders/index
+
+ActionView::TemplateError (undefined method `trip_path' for #<ActionView::Base:0xb65f9284>) on line #15 of app/views/calenders/index.html.erb:
+12:       <%= date.day %>
+13:       <ul>
+14:         <% for article in articles %>
+15:           <li><%= link_to h(article.title), article %></li>
+16:         <% end %>
+17:       </ul>
+18:     <% end %>
+
+    app/views/calenders/index.html.erb:15
+    app/views/calenders/index.html.erb:14:in `each'
+    app/views/calenders/index.html.erb:14
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:27
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/table_builder.rb:58:in `capture'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:27
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:26:in `map'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:26
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/table_builder.rb:58:in `capture'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/table_builder.rb:49:in `tag'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/table_builder.rb:35:in `r'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:25
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:24:in `each'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:24:in `each_slice'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:24
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/table_builder.rb:58:in `capture'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/table_builder.rb:49:in `tag'
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:22:in `day'
+    app/views/calenders/index.html.erb:11
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:7
+    /var/lib/gems/1.8/gems/table_builder-0.2.3/lib/table_builder/calendar_helper.rb:7:in `calendar_for'
+    app/views/calenders/index.html.erb:9
+
+Rendered rescues/_trace (123.0ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CalendersController#index (for 127.0.0.1 at 2010-08-10 00:29:23) [GET]
+  Parameters: {"action"=>"index", "controller"=>"calenders"}
+  [4;36;1mTrip Load (1.2ms)[0m   [0;1mSELECT * FROM "trips" [0m
+Rendering template within layouts/application
+Rendering calenders/index
+Rendered shared/_header (1.3ms)
+Rendered shared/_admin_header (1.0ms)
+Completed in 89ms (View: 77, DB: 1) | 200 OK [http://localhost/calenders]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:29:24) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CalendersController#index (for 127.0.0.1 at 2010-08-10 00:29:24) [GET]
+  Parameters: {"action"=>"index", "controller"=>"calenders"}
+  [4;35;1mTrip Load (1.1ms)[0m   [0mSELECT * FROM "trips" [0m
+Rendering template within layouts/application
+Rendering calenders/index
+Rendered shared/_header (1.2ms)
+Rendered shared/_admin_header (1.0ms)
+Completed in 94ms (View: 79, DB: 1) | 200 OK [http://localhost/calenders]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:29:24) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 00:29:24) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)

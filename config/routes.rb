@@ -3,7 +3,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :reservations, :collection => { :dump_csv => :get }
 
-  map.resources :categories, :sessions, :users, :calenders
+  map.resources :categories, :sessions, :users
 
   map.signup '/signup', :controller => 'users', :action => 'new'
 

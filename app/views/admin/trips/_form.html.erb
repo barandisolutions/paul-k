@@ -1,4 +1,4 @@
-<% form_for @admin/trip do |f| %>
+<% form_for [:admin, @trip] do |f| %>
   <%= f.error_messages %>
   <p>
     <%= f.label :title %><br />
@@ -12,9 +12,6 @@
     <%= f.label :passengers %><br />
     <%= f.text_field :passengers %>
   </p>
-  <p>
-    <%= f.label :address %><br />
-    <%= f.text_field :address %>
-  </p>
   <p><%= f.submit %></p>
 <% end %>
+

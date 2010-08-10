@@ -86,21 +86,21 @@ class InitialSchema < ActiveRecord::Migration
 
     create_table :trips do |t|
       t.integer :event_id
-      t.string :title
-      t.string :date
+      t.string  :title
+      t.string  :date
       t.integer :passengers
-      t.string :published_on
+      t.date    :published_on
       t.timestamps
     end
 
     create_table :calenders do |t|
-      t.string :title
-      t.date :published_on
+      t.string  :title
+      t.date    :published_on
       t.timestamps
     end
 
-    Calender.create!(:title => "Calendar 1", :published_on => "2010-08-09")
-    Calender.create!(:title => "Calendar 2", :published_on => "2010-08-09")
+    Trip.create!(:title => "Calendar 1", :published_on => "2010-08-09")
+    Trip.create!(:title => "Calendar 2", :published_on => "2010-08-09")
 
     Category.create!(:title => "Category 1")
     Category.create!(:title => "Category 2")

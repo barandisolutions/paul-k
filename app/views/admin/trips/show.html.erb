@@ -1,24 +1,33 @@
-<% title "Admin/Trip" %>
+<% title "Admin:Trip" %>
 
 <p>
   <strong>Title:</strong>
-  <%=h @admin/trip.title %>
+  <%=h @trip.title %>
 </p>
 <p>
   <strong>Date:</strong>
-  <%=h @admin/trip.date %>
+  <%=h @trip.date %>
 </p>
 <p>
   <strong>Passengers:</strong>
-  <%=h @admin/trip.passengers %>
-</p>
-<p>
-  <strong>Address:</strong>
-  <%=h @admin/trip.address %>
+  <%=h @trip.passengers %>
 </p>
 
+<h3>Reservations: <%=@trip.reservations.count %></h3>
+  <% @trip.reservations.each do |r| -%>
+    <p>
+      <strong>Id:</strong>
+      <%=h r.id %>
+    </p>
+    <p>
+      <strong>Date:</strong>
+      <%=h r.date %>
+    </p>
+  <% end -%>
+
 <p>
-  <%= link_to "Edit", edit_admin/trip_path(@admin/trip) %> |
-  <%= link_to "Destroy", @admin/trip, :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "View All", admin/trips_path %>
+  <%= link_to "Show", admin_trip_path(@trip) %>
+  <%= link_to "Edit", edit_admin_trip_path(@trip) %>
+  <%= link_to "Destroy", admin_trip_path(@trip), :confirm => 'Are you sure?', :method => :delete %>
 </p>
+

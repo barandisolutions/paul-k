@@ -1,44 +1,45 @@
 class Admin::TripsController < ApplicationController
   def index
-    @admin/trips = Admin::Trip.all
+    @trips = Trip.all
   end
-  
+
   def show
-    @admin/trip = Admin::Trip.find(params[:id])
+    @trip = Trip.find(params[:id])
   end
-  
+
   def new
-    @admin/trip = Admin::Trip.new
+    @trip = Trip.new
   end
-  
+
   def create
-    @admin/trip = Admin::Trip.new(params[:admin/trip])
-    if @admin/trip.save
-      flash[:notice] = "Successfully created admin/trip."
-      redirect_to @admin/trip
+    @trip = Trip.new(params[:trip])
+    if @trip.save
+      flash[:notice] = "Successfully created trip."
+      redirect_to admin_trip_path(@trip)
     else
       render :action => 'new'
     end
   end
-  
+
   def edit
-    @admin/trip = Admin::Trip.find(params[:id])
+    @trip = Trip.find(params[:id])
   end
-  
+
   def update
-    @admin/trip = Admin::Trip.find(params[:id])
-    if @admin/trip.update_attributes(params[:admin/trip])
-      flash[:notice] = "Successfully updated admin/trip."
-      redirect_to @admin/trip
+    @trip = Trip.find(params[:id])
+    if @trip.update_attributes(params[:trip])
+      flash[:notice] = "Successfully updated trip."
+      redirect_to admin_trip_path(@trip)
     else
       render :action => 'edit'
     end
   end
-  
+
   def destroy
-    @admin/trip = Admin::Trip.find(params[:id])
-    @admin/trip.destroy
-    flash[:notice] = "Successfully destroyed admin/trip."
-    redirect_to admin/trips_url
+    @trip = Trip.find(params[:id])
+    @trip.destroy
+    flash[:notice] = "Successfully destroyed trip."
+    redirect_to admin_trips_url
   end
 end
+

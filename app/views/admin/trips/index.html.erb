@@ -1,23 +1,22 @@
-<% title "Admin/Trips" %>
+<% title "Admin:Trips" %>
 
 <table>
   <tr>
     <th>Title</th>
     <th>Date</th>
     <th>Passengers</th>
-    <th>Address</th>
   </tr>
-  <% for admin/trip in @admin/trips %>
+  <% for trip in @trips %>
     <tr>
-      <td><%=h admin/trip.title %></td>
-      <td><%=h admin/trip.date %></td>
-      <td><%=h admin/trip.passengers %></td>
-      <td><%=h admin/trip.address %></td>
-      <td><%= link_to "Show", admin/trip %></td>
-      <td><%= link_to "Edit", edit_admin/trip_path(admin/trip) %></td>
-      <td><%= link_to "Destroy", admin/trip, :confirm => 'Are you sure?', :method => :delete %></td>
+      <td><%=h trip.title %></td>
+      <td><%=h trip.date %></td>
+      <td><%=h trip.passengers %></td>
+      <td><%= link_to "Show", admin_trip_path(trip) %></td>
+      <td><%= link_to "Edit", edit_admin_trip_path(trip) %></td>
+      <td><%= link_to "Destroy", admin_trip_path(trip), :confirm => 'Are you sure?', :method => :delete %></td>
     </tr>
   <% end %>
 </table>
 
-<p><%= link_to "New Admin/Trip", new_admin/trip_path %></p>
+<p><%= link_to "New Trip", new_admin_trip_path %></p>
+

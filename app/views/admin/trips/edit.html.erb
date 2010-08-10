@@ -1,8 +1,9 @@
-<% title "Edit Admin/Trip" %>
+<% title "Edit Admin:Trip" %>
 
 <%= render :partial => 'form' %>
 
 <p>
-  <%= link_to "Show", @admin/trip %> |
-  <%= link_to "View All", admin/trips_path %>
+  <%= link_to "Show", admin_trip_path(@trip) %> |
+  <%= link_to "View All", admin_trips_path %>
 </p>
+

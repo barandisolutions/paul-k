@@ -97,7 +97,7 @@ ActiveRecord::Schema.define(:version => 20100802231401) do
     t.string   "title"
     t.string   "date"
     t.integer  "passengers"
-    t.string   "published_on"
+    t.date     "published_on"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
