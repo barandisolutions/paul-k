@@ -10,13 +10,19 @@ class ReservationsController < ApplicationController
     session[:reservation_params] ||= {}
     @reservation = Reservation.new(session[:reservation_params])
     @reservation.current_step = session[:reservation_step]
+    @event = session[:event] if @event.nil?
   end
 
   def create
     @categories = Category.all
     session[:reservation_params].deep_merge!(params[:reservation]) if params[:reservation] && session[:reservation_params]
     @reservation = Reservation.new(session[:reservation_params])
-    @event = Event.find(@reservation.event_id) if @reservation.event_id
+    if @reservation.event_id
+      @event = Event.find(@reservation.event_id)
+      session[:event] = @event
+    else
+      @event = session[:event]
+    end
     @reservation.current_step = session[:reservation_step]
     if @reservation.valid?
       if params[:back_button]

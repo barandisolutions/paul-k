@@ -69,3 +69,37 @@
   <%= f.submit 'Back', :name => "back_button" %>
 <% end -%>
 
+<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="return" value="<%= root_url %>">
+<input type="hidden" name="cmd" value="_xclick">
+<input type="hidden" name="business" value="senthi_1280964269_biz@gmail.com">
+<input type="hidden" name="lc" value="US">
+<input type="hidden" name="item_name" value="Commencement Connections Syracuse Airport Shuttle Ticket(s)">
+<input type="hidden" name="button_subtype" value="products">
+<input type="hidden" name="currency_code" value="USD">
+<input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHostedGuest">
+
+<input type="hidden" name="on0" value="Type of Ticket(s)">Please Confirm your order:<br/>
+<strong><%= @event.title %>: $<%= @event.price %></strong><br/><br/>
+
+<input type="hidden" name="os0" value="<%= @event.title %>">
+<input type="hidden" name="currency_code" value="USD">
+<input type="hidden" name="option_select0" value="<%= @event.title %>">
+<input type="hidden" name="option_amount0" value="<%= @event.price %>">
+Number of tickets:&nbsp;<select name="quantity">
+<option value="1" selected>1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+</select>
+<input type="hidden" name="option_index" value="0"><br/>
+<input type="image" src="https://www.paypal.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+
