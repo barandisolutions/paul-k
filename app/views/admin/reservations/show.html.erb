@@ -1,10 +1,6 @@
 <% title "Reservation" %>
 
 <p>
-  <strong>Category:</strong>
-  <%=h @reservation.category_id %>
-</p>
-<p>
   <strong>Event:</strong>
   <%= link_to @event.title, admin_event_path(@event) %>
 </p>
