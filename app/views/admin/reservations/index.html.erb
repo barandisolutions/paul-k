@@ -2,7 +2,6 @@
 
 <table>
   <tr>
-    <th>Category</th>
     <th>Event</th>
     <th>Type Of</th>
     <th>Date</th>
@@ -18,7 +17,6 @@
   </tr>
   <% for reservation in @reservations %>
     <tr>
-      <td><%=h reservation.category_id %></td>
       <td><%=h reservation.event_id %></td>
       <td><%=h reservation.type_of %></td>
       <td><%=h reservation.date %></td>

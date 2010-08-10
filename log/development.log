@@ -33039,3 +33039,28 @@ ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" wit
   
 
 Rendering rescues/layout (not_found)
+
+
+Processing Admin::ReservationsController#index (for 127.0.0.1 at 2010-08-09 22:05:41) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/reservations"}
+  [4;35;1mReservation Load (1.5ms)[0m   [0mSELECT * FROM "reservations" [0m
+Rendering template within layouts/application
+Rendering admin/reservations/index
+
+ActionView::TemplateError (undefined method `category_id' for #<Reservation:0xb6ad7e54>) on line #21 of app/views/admin/reservations/index.html.erb:
+18:   </tr>
+19:   <% for reservation in @reservations %>
+20:     <tr>
+21:       <td><%=h reservation.category_id %></td>
+22:       <td><%=h reservation.event_id %></td>
+23:       <td><%=h reservation.type_of %></td>
+24:       <td><%=h reservation.date %></td>
+
+    app/views/admin/reservations/index.html.erb:21
+    app/views/admin/reservations/index.html.erb:19:in `each'
+    app/views/admin/reservations/index.html.erb:19
+    app/controllers/admin/reservations_controller.rb:5:in `index'
+
+Rendered rescues/_trace (171.2ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
