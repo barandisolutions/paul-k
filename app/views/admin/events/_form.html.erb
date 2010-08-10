@@ -1,6 +1,17 @@
 <% form_for [:admin, @event] do |f| %>
   <%= f.error_messages %>
-
+  <p>
+    <%= f.label :image_file_name %><br />
+    <%= f.text_field :image_file_name %>
+  </p>
+  <p>
+    <%= f.label :payment_top_html %><br />
+    <%= f.text_field :payment_top_html %>
+  </p>
+  <p>
+    <%= f.label :reservation_top_html %><br />
+    <%= f.text_field :reservation_top_html %>
+  </p>
   <p>
     <%= f.label :title %><br />
     <%= f.text_field :title %>

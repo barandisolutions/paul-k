@@ -32422,3 +32422,620 @@ Migrating to InitialSchema (20100802231401)
   [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("reservations")[0m
   [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("trips")[0m
   [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (169.4ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (206.3ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to InitialSchema (20100802231401)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255), "address" varchar(255), "city" varchar(255), "zipcode" varchar(255), "password_hash" varchar(255), "password_salt" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "url" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "events" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "reservation_top_html" text, "reservation_bottom_html" text, "payment_top_html" text, "payment_bottom_html" text, "image_file_name" varchar(255), "title" varchar(255), "title_show" boolean, "type_title" varchar(255), "type_title_show" boolean, "note_title" varchar(255) DEFAULT 'Note: ', "note_title_show" boolean, "category_ids" integer, "category_ids_show" boolean, "date_title" varchar(255) DEFAULT 'Date: ', "date_title_show" boolean, "time_title" varchar(255) DEFAULT 'Time: ', "time_title_show" boolean, "address_title" varchar(255) DEFAULT 'Address: ', "address_title_show" boolean, "city_title" varchar(255) DEFAULT 'City: ', "city_title_show" boolean, "zipcode_title" varchar(255) DEFAULT 'Zipcode: ', "zipcode_title_show" boolean, "first_name_title" varchar(255) DEFAULT 'First Name: ', "first_name_title_show" boolean, "last_name_title" varchar(255) DEFAULT 'Last Name: ', "last_name_title_show" boolean, "email_title" varchar(255) DEFAULT 'Email: ', "email_title_show" boolean, "phone_title" varchar(255) DEFAULT 'Phone: ', "phone_title_show" boolean, "price" integer, "visible" boolean, "purchaseable" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE TABLE "categories_events" ("event_id" integer, "category_id" integer) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCREATE TABLE "reservations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "trip_id" integer, "event_id" integer, "type_of" varchar(255), "date" varchar(255), "date_round" varchar(255), "time" varchar(255), "time_round" varchar(255), "address" varchar(255), "address_round" varchar(255), "city" varchar(255), "city_round" varchar(255), "zipcode" varchar(255), "zipcode_round" varchar(255), "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255), "phone" integer, "note" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCREATE TABLE "trips" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "event_id" integer, "title" varchar(255), "date" varchar(255), "passengers" integer, "published_on" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mCategory Create (0.2ms)[0m   [0;1mINSERT INTO "categories" ("created_at", "title", "updated_at", "url") VALUES('2010-08-10 04:55:21', 'Category 1', '2010-08-10 04:55:21', NULL)[0m
+  [4;35;1mCategory Create (0.2ms)[0m   [0mINSERT INTO "categories" ("created_at", "title", "updated_at", "url") VALUES('2010-08-10 04:55:21', 'Category 2', '2010-08-10 04:55:21', NULL)[0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mEvent Create (0.2ms)[0m   [0mINSERT INTO "events" ("type_title_show", "date_title", "time_title_show", "price", "reservation_top_html", "image_file_name", "first_name_title", "email_title", "created_at", "title", "note_title", "reservation_bottom_html", "phone_title_show", "updated_at", "title_show", "address_title", "city_title_show", "payment_top_html", "purchaseable", "time_title", "address_title_show", "city_title", "last_name_title", "last_name_title_show", "category_ids", "category_ids_show", "payment_bottom_html", "note_title_show", "zipcode_title", "first_name_title_show", "email_title_show", "phone_title", "visible", "type_title", "date_title_show", "zipcode_title_show") VALUES(NULL, 'Date: ', NULL, NULL, NULL, NULL, 'First Name: ', 'Email: ', '2010-08-10 04:55:21', 'Event 1', 'Note: ', NULL, NULL, '2010-08-10 04:55:21', NULL, 'Address: ', NULL, NULL, NULL, 'Time: ', NULL, 'City: ', 'Last Name: ', NULL, NULL, NULL, NULL, NULL, 'Zipcode: ', NULL, NULL, 'Phone: ', NULL, NULL, NULL, NULL)[0m
+  [4;36;1mSQL (18.7ms)[0m   [0;1mINSERT INTO "categories_events" ("event_id", "category_id") VALUES (1, 1)[0m
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mEvent Create (0.2ms)[0m   [0;1mINSERT INTO "events" ("type_title_show", "date_title", "time_title_show", "price", "reservation_top_html", "image_file_name", "first_name_title", "email_title", "created_at", "title", "note_title", "reservation_bottom_html", "phone_title_show", "updated_at", "title_show", "address_title", "city_title_show", "payment_top_html", "purchaseable", "time_title", "address_title_show", "city_title", "last_name_title", "last_name_title_show", "category_ids", "category_ids_show", "payment_bottom_html", "note_title_show", "zipcode_title", "first_name_title_show", "email_title_show", "phone_title", "visible", "type_title", "date_title_show", "zipcode_title_show") VALUES(NULL, 'Date: ', NULL, NULL, NULL, NULL, 'First Name: ', 'Email: ', '2010-08-10 04:55:21', 'Event 2', 'Note: ', NULL, NULL, '2010-08-10 04:55:21', NULL, 'Address: ', NULL, NULL, NULL, 'Time: ', NULL, 'City: ', 'Last Name: ', NULL, NULL, NULL, NULL, NULL, 'Zipcode: ', NULL, NULL, 'Phone: ', NULL, NULL, NULL, NULL)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO "categories_events" ("event_id", "category_id") VALUES (2, 1)[0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;35;1mEvent Create (0.2ms)[0m   [0mINSERT INTO "events" ("type_title_show", "date_title", "time_title_show", "price", "reservation_top_html", "image_file_name", "first_name_title", "email_title", "created_at", "title", "note_title", "reservation_bottom_html", "phone_title_show", "updated_at", "title_show", "address_title", "city_title_show", "payment_top_html", "purchaseable", "time_title", "address_title_show", "city_title", "last_name_title", "last_name_title_show", "category_ids", "category_ids_show", "payment_bottom_html", "note_title_show", "zipcode_title", "first_name_title_show", "email_title_show", "phone_title", "visible", "type_title", "date_title_show", "zipcode_title_show") VALUES(NULL, 'Date: ', NULL, NULL, NULL, NULL, 'First Name: ', 'Email: ', '2010-08-10 04:55:21', 'Event 3', 'Note: ', NULL, NULL, '2010-08-10 04:55:21', NULL, 'Address: ', NULL, NULL, NULL, 'Time: ', NULL, 'City: ', 'Last Name: ', NULL, NULL, NULL, NULL, NULL, 'Zipcode: ', NULL, NULL, 'Phone: ', NULL, NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO "categories_events" ("event_id", "category_id") VALUES (3, 2)[0m
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+  [4;36;1mEvent Create (0.2ms)[0m   [0;1mINSERT INTO "events" ("type_title_show", "date_title", "time_title_show", "price", "reservation_top_html", "image_file_name", "first_name_title", "email_title", "created_at", "title", "note_title", "reservation_bottom_html", "phone_title_show", "updated_at", "title_show", "address_title", "city_title_show", "payment_top_html", "purchaseable", "time_title", "address_title_show", "city_title", "last_name_title", "last_name_title_show", "category_ids", "category_ids_show", "payment_bottom_html", "note_title_show", "zipcode_title", "first_name_title_show", "email_title_show", "phone_title", "visible", "type_title", "date_title_show", "zipcode_title_show") VALUES(NULL, 'Date: ', NULL, NULL, NULL, NULL, 'First Name: ', 'Email: ', '2010-08-10 04:55:21', 'Event 4', 'Note: ', NULL, NULL, '2010-08-10 04:55:21', NULL, 'Address: ', NULL, NULL, NULL, 'Time: ', NULL, 'City: ', 'Last Name: ', NULL, NULL, NULL, NULL, NULL, 'Zipcode: ', NULL, NULL, 'Phone: ', NULL, NULL, NULL, NULL)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO "categories_events" ("event_id", "category_id") VALUES (4, 2)[0m
+  [4;36;1mReservation Create (0.2ms)[0m   [0;1mINSERT INTO "reservations" ("address", "city", "zipcode_round", "trip_id", "created_at", "event_id", "zipcode", "updated_at", "time", "city_round", "date", "address_round", "last_name", "phone", "note", "time_round", "date_round", "type_of", "first_name", "email") VALUES(NULL, NULL, NULL, NULL, '2010-08-10 04:55:21', 1, NULL, '2010-08-10 04:55:21', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;35;1mReservation Create (0.2ms)[0m   [0mINSERT INTO "reservations" ("address", "city", "zipcode_round", "trip_id", "created_at", "event_id", "zipcode", "updated_at", "time", "city_round", "date", "address_round", "last_name", "phone", "note", "time_round", "date_round", "type_of", "first_name", "email") VALUES(NULL, NULL, NULL, NULL, '2010-08-10 04:55:21', 2, NULL, '2010-08-10 04:55:21', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100802231401')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("categories")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("categories_events")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mPRAGMA index_list("events")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("reservations")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("trips")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("users")[0m
+
+
+Processing ReservationsController#new (for 127.0.0.1 at 2010-08-09 21:57:44) [GET]
+  Parameters: {"action"=>"new", "controller"=>"reservations"}
+  [4;36;1mCategory Load (0.9ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/application
+Rendering reservations/new
+Rendered reservations/_third (19.5ms)
+Rendered shared/_header (1.1ms)
+Completed in 57ms (View: 26, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 21:57:44) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ReservationsController#create (for 127.0.0.1 at 2010-08-09 21:57:48) [POST]
+  Parameters: {"back_button"=>"Back", "action"=>"create", "authenticity_token"=>"RzsQ9UZPOknVO6vXlabxONU+WI3qPfPs6TV/3C+R6hQ=", "controller"=>"reservations"}
+  [4;35;1mCategory Load (0.9ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mEvent Load (1.3ms)[0m   [0;1mSELECT * FROM "events" WHERE ("events"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering reservations/new
+Rendered reservations/_second (10.8ms)
+Rendered shared/_header (1.0ms)
+Completed in 64ms (View: 18, DB: 2) | 200 OK [http://localhost/reservations]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 21:57:48) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ReservationsController#create (for 127.0.0.1 at 2010-08-09 21:57:50) [POST]
+  Parameters: {"back_button"=>"Back", "action"=>"create", "authenticity_token"=>"RzsQ9UZPOknVO6vXlabxONU+WI3qPfPs6TV/3C+R6hQ=", "controller"=>"reservations"}
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mEvent Load (1.6ms)[0m   [0;1mSELECT * FROM "events" WHERE ("events"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering reservations/new
+  [4;35;1mEvent Load (4.8ms)[0m   [0mSELECT * FROM "events" INNER JOIN "categories_events" ON "events".id = "categories_events".event_id WHERE ("categories_events".category_id = 1 ) [0m
+  [4;36;1mEvent Load (2.2ms)[0m   [0;1mSELECT * FROM "events" INNER JOIN "categories_events" ON "events".id = "categories_events".event_id WHERE ("categories_events".category_id = 2 ) [0m
+Rendered reservations/_first (108.9ms)
+Rendered shared/_header (1.2ms)
+Completed in 165ms (View: 111, DB: 10) | 200 OK [http://localhost/reservations]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 21:57:50) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 21:57:50) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ReservationsController#create (for 127.0.0.1 at 2010-08-09 21:57:54) [POST]
+  Parameters: {"reservation"=>{"event_id"=>"1", "type_of"=>"to"}, "action"=>"create", "authenticity_token"=>"RzsQ9UZPOknVO6vXlabxONU+WI3qPfPs6TV/3C+R6hQ=", "controller"=>"reservations", "next_button"=>"Next"}
+  [4;35;1mCategory Load (0.9ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mEvent Load (1.3ms)[0m   [0;1mSELECT * FROM "events" WHERE ("events"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering reservations/new
+Rendered reservations/_second (11.4ms)
+Rendered shared/_header (1.0ms)
+Completed in 67ms (View: 19, DB: 2) | 200 OK [http://localhost/reservations]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 21:57:55) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ReservationsController#create (for 127.0.0.1 at 2010-08-09 21:57:57) [POST]
+  Parameters: {"back_button"=>"Back", "action"=>"create", "authenticity_token"=>"RzsQ9UZPOknVO6vXlabxONU+WI3qPfPs6TV/3C+R6hQ=", "controller"=>"reservations"}
+  [4;35;1mCategory Load (0.9ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mEvent Load (1.2ms)[0m   [0;1mSELECT * FROM "events" WHERE ("events"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering reservations/new
+  [4;35;1mEvent Load (1.9ms)[0m   [0mSELECT * FROM "events" INNER JOIN "categories_events" ON "events".id = "categories_events".event_id WHERE ("categories_events".category_id = 1 ) [0m
+  [4;36;1mEvent Load (1.9ms)[0m   [0;1mSELECT * FROM "events" INNER JOIN "categories_events" ON "events".id = "categories_events".event_id WHERE ("categories_events".category_id = 2 ) [0m
+Rendered reservations/_first (31.3ms)
+Rendered shared/_header (1.0ms)
+Completed in 91ms (View: 34, DB: 6) | 200 OK [http://localhost/reservations]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 21:57:58) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing AdminController#login (for 127.0.0.1 at 2010-08-09 21:58:02) [GET]
+  Parameters: {"action"=>"login", "controller"=>"admin"}
+Rendering template within layouts/application
+Rendering admin/login
+Rendered shared/_header (1.7ms)
+Completed in 112ms (View: 100, DB: 0) | 200 OK [http://localhost/admin/login]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 21:58:04) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing AdminController#login (for 127.0.0.1 at 2010-08-09 21:58:07) [POST]
+  Parameters: {"commit"=>"Login", "action"=>"login", "authenticity_token"=>"RzsQ9UZPOknVO6vXlabxONU+WI3qPfPs6TV/3C+R6hQ=", "username"=>"admin", "controller"=>"admin", "password"=>"[FILTERED]"}
+Redirected to http://localhost:3000/admin
+Completed in 15ms (DB: 0) | 302 Found [http://localhost/admin/login]
+
+
+Processing AdminController#index (for 127.0.0.1 at 2010-08-09 21:58:07) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin"}
+Rendering template within layouts/application
+Rendering admin/index
+Rendered shared/_header (1.8ms)
+Rendered shared/_admin_header (1.6ms)
+Completed in 53ms (View: 39, DB: 0) | 200 OK [http://localhost/admin]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 21:58:07) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::EventsController#index (for 127.0.0.1 at 2010-08-09 21:58:11) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/events"}
+  [4;35;1mEvent Load (5.0ms)[0m   [0mSELECT * FROM "events" [0m
+Rendering template within layouts/application
+Rendering admin/events/index
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT "categories".id FROM "categories" INNER JOIN "categories_events" ON "categories".id = "categories_events".category_id WHERE ("categories_events".event_id = 1 ) [0m
+  [4;35;1mCategory Load (0.6ms)[0m   [0mSELECT "categories".id FROM "categories" INNER JOIN "categories_events" ON "categories".id = "categories_events".category_id WHERE ("categories_events".event_id = 2 ) [0m
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT "categories".id FROM "categories" INNER JOIN "categories_events" ON "categories".id = "categories_events".category_id WHERE ("categories_events".event_id = 3 ) [0m
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT "categories".id FROM "categories" INNER JOIN "categories_events" ON "categories".id = "categories_events".category_id WHERE ("categories_events".event_id = 4 ) [0m
+Rendered shared/_header (1.0ms)
+Rendered shared/_admin_header (0.9ms)
+Completed in 86ms (View: 61, DB: 7) | 200 OK [http://localhost/admin/events]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 21:58:12) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::EventsController#edit (for 127.0.0.1 at 2010-08-09 21:58:15) [GET]
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"admin/events"}
+  [4;36;1mEvent Load (1.3ms)[0m   [0;1mSELECT * FROM "events" WHERE ("events"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering admin/events/edit
+  [4;35;1mCategory Load (0.6ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mCategory Load (0.3ms)[0m   [0;1mSELECT "categories".id FROM "categories" INNER JOIN "categories_events" ON "categories".id = "categories_events".category_id WHERE ("categories"."id" = 1) AND ("categories_events".event_id = 1 ) LIMIT 1[0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT "categories".id FROM "categories" INNER JOIN "categories_events" ON "categories".id = "categories_events".category_id WHERE ("categories"."id" = 2) AND ("categories_events".event_id = 1 ) LIMIT 1[0m
+Rendered admin/events/_form (71.4ms)
+Rendered shared/_header (1.0ms)
+Rendered shared/_admin_header (0.9ms)
+Completed in 104ms (View: 79, DB: 2) | 200 OK [http://localhost/admin/events/1/edit]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 21:58:15) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::EventsController#edit (for 127.0.0.1 at 2010-08-09 22:00:05) [GET]
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"admin/events"}
+  [4;36;1mEvent Load (1.3ms)[0m   [0;1mSELECT * FROM "events" WHERE ("events"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering admin/events/edit
+  [4;35;1mCategory Load (0.7ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT "categories".id FROM "categories" INNER JOIN "categories_events" ON "categories".id = "categories_events".category_id WHERE ("categories"."id" = 1) AND ("categories_events".event_id = 1 ) LIMIT 1[0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT "categories".id FROM "categories" INNER JOIN "categories_events" ON "categories".id = "categories_events".category_id WHERE ("categories"."id" = 2) AND ("categories_events".event_id = 1 ) LIMIT 1[0m
+Rendered admin/events/_form (68.7ms)
+Rendered shared/_header (1.0ms)
+Rendered shared/_admin_header (1.0ms)
+Completed in 109ms (View: 83, DB: 3) | 200 OK [http://localhost/admin/events/1/edit]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 22:00:06) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::EventsController#update (for 127.0.0.1 at 2010-08-09 22:01:27) [PUT]
+  Parameters: {"commit"=>"Save changes", "action"=>"update", "_method"=>"put", "authenticity_token"=>"RzsQ9UZPOknVO6vXlabxONU+WI3qPfPs6TV/3C+R6hQ=", "id"=>"1", "event"=>{"time_title_show"=>"0", "date_title"=>"Date: ", "price"=>"", "email_title"=>"Email: ", "first_name_title"=>"First Name: ", "reservation_top_html"=>"", "image_file_name"=>"/home/senthil/rails/playground/paul-k-backup/public/images/rails.png", "note_title"=>"Note: ", "title"=>"Event 1", "phone_title_show"=>"0", "city_title_show"=>"0", "address_title"=>"Address: ", "title_show"=>"0", "purchaseable"=>"0", "payment_top_html"=>"", "last_name_title_show"=>"0", "last_name_title"=>"Last Name: ", "city_title"=>"City: ", "address_title_show"=>"0", "time_title"=>"Time: ", "category_ids"=>["1"], "note_title_show"=>"0", "phone_title"=>"Phone: ", "email_title_show"=>"0", "first_name_title_show"=>"0", "zipcode_title"=>"Zipcode: ", "zipcode_title_show"=>"0", "date_title_show"=>"0", "type_title"=>"to"}, "controller"=>"admin/events"}
+  [4;36;1mEvent Load (1.3ms)[0m   [0;1mSELECT * FROM "events" WHERE ("events"."id" = 1) [0m
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;36;1mCategory Load (0.5ms)[0m   [0;1mSELECT * FROM "categories" INNER JOIN "categories_events" ON "categories".id = "categories_events".category_id WHERE ("categories_events".event_id = 1 ) [0m
+  [4;35;1mEvent Update (0.4ms)[0m   [0mUPDATE "events" SET "updated_at" = '2010-08-10 05:01:27', "note_title_show" = 'f', "zipcode_title_show" = 'f', "phone_title_show" = 'f', "time_title_show" = 'f', "type_title" = 'to', "email_title_show" = 'f', "purchaseable" = 'f', "city_title_show" = 'f', "last_name_title_show" = 'f', "reservation_top_html" = '', "image_file_name" = '/home/senthil/rails/playground/paul-k-backup/public/images/rails.png', "date_title_show" = 'f', "first_name_title_show" = 'f', "payment_top_html" = '', "address_title_show" = 'f', "title_show" = 'f' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/admin/events/1
+Completed in 171ms (DB: 3) | 302 Found [http://localhost/admin/events/1]
+
+
+Processing Admin::EventsController#show (for 127.0.0.1 at 2010-08-09 22:01:28) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"admin/events"}
+  [4;36;1mEvent Load (1.3ms)[0m   [0;1mSELECT * FROM "events" WHERE ("events"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering admin/events/show
+
+ActionView::TemplateError (undefined method `purchasable' for #<Event:0xb6b08928>) on line #8 of app/views/admin/events/show.html.erb:
+5: <% end %>
+6: <br/>
+7: <%= flash[:notice] %>
+8: <% if @event.purchasable %>
+9: 	<%= @event.payment_top_html %>
+10: <% else %>
+11: 	<%= @event.reservation_top_html %>
+
+    app/views/admin/events/show.html.erb:8
+
+Rendered rescues/_trace (84.2ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::EventsController#show (for 127.0.0.1 at 2010-08-09 22:02:03) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"admin/events"}
+  [4;35;1mEvent Load (1.3ms)[0m   [0mSELECT * FROM "events" WHERE ("events"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering admin/events/show
+  [4;36;1mCategory Load (0.5ms)[0m   [0;1mSELECT * FROM "categories" INNER JOIN "categories_events" ON "categories".id = "categories_events".category_id WHERE ("categories_events".event_id = 1 ) [0m
+Rendered shared/_header (1.1ms)
+Rendered shared/_admin_header (0.9ms)
+Completed in 64ms (View: 38, DB: 2) | 200 OK [http://localhost/admin/events/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 22:02:03) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 22:02:03) [GET]
+
+ActionController::RoutingError (No route matches "/home/senthil/rails/playground/paul-k-backup/public/images/rails.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::EventsController#edit (for 127.0.0.1 at 2010-08-09 22:02:14) [GET]
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"admin/events"}
+  [4;35;1mEvent Load (1.6ms)[0m   [0mSELECT * FROM "events" WHERE ("events"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering admin/events/edit
+  [4;36;1mCategory Load (0.5ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT "categories".id FROM "categories" INNER JOIN "categories_events" ON "categories".id = "categories_events".category_id WHERE ("categories"."id" = 1) AND ("categories_events".event_id = 1 ) LIMIT 1[0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT "categories".id FROM "categories" INNER JOIN "categories_events" ON "categories".id = "categories_events".category_id WHERE ("categories"."id" = 2) AND ("categories_events".event_id = 1 ) LIMIT 1[0m
+Rendered admin/events/_form (56.1ms)
+Rendered shared/_header (1.5ms)
+Rendered shared/_admin_header (1.0ms)
+Completed in 90ms (View: 66, DB: 3) | 200 OK [http://localhost/admin/events/1/edit]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 22:02:14) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::EventsController#update (for 127.0.0.1 at 2010-08-09 22:02:23) [PUT]
+  Parameters: {"commit"=>"Save changes", "action"=>"update", "_method"=>"put", "authenticity_token"=>"RzsQ9UZPOknVO6vXlabxONU+WI3qPfPs6TV/3C+R6hQ=", "id"=>"1", "event"=>{"time_title_show"=>"0", "date_title"=>"Date: ", "price"=>"", "email_title"=>"Email: ", "first_name_title"=>"First Name: ", "reservation_top_html"=>"", "image_file_name"=>"public/images/rails.png", "note_title"=>"Note: ", "title"=>"Event 1", "phone_title_show"=>"0", "city_title_show"=>"0", "address_title"=>"Address: ", "title_show"=>"0", "purchaseable"=>"0", "payment_top_html"=>"", "last_name_title_show"=>"0", "last_name_title"=>"Last Name: ", "city_title"=>"City: ", "address_title_show"=>"0", "time_title"=>"Time: ", "category_ids"=>["1"], "note_title_show"=>"0", "phone_title"=>"Phone: ", "email_title_show"=>"0", "first_name_title_show"=>"0", "zipcode_title"=>"Zipcode: ", "zipcode_title_show"=>"0", "date_title_show"=>"0", "type_title"=>"to"}, "controller"=>"admin/events"}
+  [4;35;1mEvent Load (1.3ms)[0m   [0mSELECT * FROM "events" WHERE ("events"."id" = 1) [0m
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mCategory Load (0.5ms)[0m   [0mSELECT * FROM "categories" INNER JOIN "categories_events" ON "categories".id = "categories_events".category_id WHERE ("categories_events".event_id = 1 ) [0m
+  [4;36;1mEvent Update (0.3ms)[0m   [0;1mUPDATE "events" SET "updated_at" = '2010-08-10 05:02:23', "image_file_name" = 'public/images/rails.png' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/admin/events/1
+Completed in 160ms (DB: 2) | 302 Found [http://localhost/admin/events/1]
+
+
+Processing Admin::EventsController#show (for 127.0.0.1 at 2010-08-09 22:02:23) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"admin/events"}
+  [4;35;1mEvent Load (1.3ms)[0m   [0mSELECT * FROM "events" WHERE ("events"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering admin/events/show
+  [4;36;1mCategory Load (0.5ms)[0m   [0;1mSELECT * FROM "categories" INNER JOIN "categories_events" ON "categories".id = "categories_events".category_id WHERE ("categories_events".event_id = 1 ) [0m
+Rendered shared/_header (1.1ms)
+Rendered shared/_admin_header (0.9ms)
+Completed in 54ms (View: 31, DB: 2) | 200 OK [http://localhost/admin/events/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 22:02:23) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 22:02:23) [GET]
+
+ActionController::RoutingError (No route matches "/images/public/images/rails.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::EventsController#show (for 127.0.0.1 at 2010-08-09 22:02:40) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"admin/events"}
+  [4;35;1mEvent Load (1.3ms)[0m   [0mSELECT * FROM "events" WHERE ("events"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering admin/events/show
+  [4;36;1mCategory Load (0.5ms)[0m   [0;1mSELECT * FROM "categories" INNER JOIN "categories_events" ON "categories".id = "categories_events".category_id WHERE ("categories_events".event_id = 1 ) [0m
+Rendered shared/_header (1.1ms)
+Rendered shared/_admin_header (1.0ms)
+Completed in 73ms (View: 45, DB: 2) | 200 OK [http://localhost/admin/events/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 22:02:40) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 22:02:40) [GET]
+
+ActionController::RoutingError (No route matches "/images/public/images/rails.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::EventsController#edit (for 127.0.0.1 at 2010-08-09 22:02:48) [GET]
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"admin/events"}
+  [4;35;1mEvent Load (1.3ms)[0m   [0mSELECT * FROM "events" WHERE ("events"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering admin/events/edit
+  [4;36;1mCategory Load (0.5ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT "categories".id FROM "categories" INNER JOIN "categories_events" ON "categories".id = "categories_events".category_id WHERE ("categories"."id" = 1) AND ("categories_events".event_id = 1 ) LIMIT 1[0m
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT "categories".id FROM "categories" INNER JOIN "categories_events" ON "categories".id = "categories_events".category_id WHERE ("categories"."id" = 2) AND ("categories_events".event_id = 1 ) LIMIT 1[0m
+Rendered admin/events/_form (60.9ms)
+Rendered shared/_header (1.5ms)
+Rendered shared/_admin_header (0.9ms)
+Completed in 98ms (View: 69, DB: 3) | 200 OK [http://localhost/admin/events/1/edit]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 22:02:48) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::EventsController#update (for 127.0.0.1 at 2010-08-09 22:02:53) [PUT]
+  Parameters: {"commit"=>"Save changes", "action"=>"update", "_method"=>"put", "authenticity_token"=>"RzsQ9UZPOknVO6vXlabxONU+WI3qPfPs6TV/3C+R6hQ=", "id"=>"1", "event"=>{"time_title_show"=>"0", "date_title"=>"Date: ", "price"=>"", "email_title"=>"Email: ", "first_name_title"=>"First Name: ", "reservation_top_html"=>"", "image_file_name"=>"images/rails.png", "note_title"=>"Note: ", "title"=>"Event 1", "phone_title_show"=>"0", "city_title_show"=>"0", "address_title"=>"Address: ", "title_show"=>"0", "purchaseable"=>"0", "payment_top_html"=>"", "last_name_title_show"=>"0", "last_name_title"=>"Last Name: ", "city_title"=>"City: ", "address_title_show"=>"0", "time_title"=>"Time: ", "category_ids"=>["1"], "note_title_show"=>"0", "phone_title"=>"Phone: ", "email_title_show"=>"0", "first_name_title_show"=>"0", "zipcode_title"=>"Zipcode: ", "zipcode_title_show"=>"0", "date_title_show"=>"0", "type_title"=>"to"}, "controller"=>"admin/events"}
+  [4;35;1mEvent Load (1.8ms)[0m   [0mSELECT * FROM "events" WHERE ("events"."id" = 1) [0m
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT * FROM "categories" INNER JOIN "categories_events" ON "categories".id = "categories_events".category_id WHERE ("categories_events".event_id = 1 ) [0m
+  [4;36;1mEvent Update (0.4ms)[0m   [0;1mUPDATE "events" SET "updated_at" = '2010-08-10 05:02:53', "image_file_name" = 'images/rails.png' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/admin/events/1
+Completed in 147ms (DB: 3) | 302 Found [http://localhost/admin/events/1]
+
+
+Processing Admin::EventsController#show (for 127.0.0.1 at 2010-08-09 22:02:54) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"admin/events"}
+  [4;35;1mEvent Load (1.4ms)[0m   [0mSELECT * FROM "events" WHERE ("events"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering admin/events/show
+  [4;36;1mCategory Load (0.5ms)[0m   [0;1mSELECT * FROM "categories" INNER JOIN "categories_events" ON "categories".id = "categories_events".category_id WHERE ("categories_events".event_id = 1 ) [0m
+Rendered shared/_header (1.0ms)
+Rendered shared/_admin_header (1.0ms)
+Completed in 57ms (View: 33, DB: 2) | 200 OK [http://localhost/admin/events/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 22:02:54) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 22:02:54) [GET]
+
+ActionController::RoutingError (No route matches "/images/images/rails.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::EventsController#edit (for 127.0.0.1 at 2010-08-09 22:03:12) [GET]
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"admin/events"}
+  [4;35;1mEvent Load (2.0ms)[0m   [0mSELECT * FROM "events" WHERE ("events"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering admin/events/edit
+  [4;36;1mCategory Load (0.6ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mCategory Load (0.4ms)[0m   [0mSELECT "categories".id FROM "categories" INNER JOIN "categories_events" ON "categories".id = "categories_events".category_id WHERE ("categories"."id" = 1) AND ("categories_events".event_id = 1 ) LIMIT 1[0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT "categories".id FROM "categories" INNER JOIN "categories_events" ON "categories".id = "categories_events".category_id WHERE ("categories"."id" = 2) AND ("categories_events".event_id = 1 ) LIMIT 1[0m
+Rendered admin/events/_form (68.2ms)
+Rendered shared/_header (1.1ms)
+Rendered shared/_admin_header (0.9ms)
+Completed in 174ms (View: 80, DB: 3) | 200 OK [http://localhost/admin/events/1/edit]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 22:03:12) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::EventsController#update (for 127.0.0.1 at 2010-08-09 22:03:31) [PUT]
+  Parameters: {"commit"=>"Save changes", "action"=>"update", "_method"=>"put", "authenticity_token"=>"RzsQ9UZPOknVO6vXlabxONU+WI3qPfPs6TV/3C+R6hQ=", "id"=>"1", "event"=>{"time_title_show"=>"0", "date_title"=>"Date: ", "price"=>"", "email_title"=>"Email: ", "first_name_title"=>"First Name: ", "reservation_top_html"=>"", "image_file_name"=>"rails.png", "note_title"=>"Note: ", "title"=>"Event 1", "phone_title_show"=>"0", "city_title_show"=>"0", "address_title"=>"Address: ", "title_show"=>"0", "purchaseable"=>"0", "payment_top_html"=>"", "last_name_title_show"=>"0", "last_name_title"=>"Last Name: ", "city_title"=>"City: ", "address_title_show"=>"0", "time_title"=>"Time: ", "category_ids"=>["1"], "note_title_show"=>"0", "phone_title"=>"Phone: ", "email_title_show"=>"0", "first_name_title_show"=>"0", "zipcode_title"=>"Zipcode: ", "zipcode_title_show"=>"0", "date_title_show"=>"0", "type_title"=>"to"}, "controller"=>"admin/events"}
+  [4;35;1mEvent Load (1.4ms)[0m   [0mSELECT * FROM "events" WHERE ("events"."id" = 1) [0m
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mCategory Load (0.5ms)[0m   [0mSELECT * FROM "categories" INNER JOIN "categories_events" ON "categories".id = "categories_events".category_id WHERE ("categories_events".event_id = 1 ) [0m
+  [4;36;1mEvent Update (0.3ms)[0m   [0;1mUPDATE "events" SET "updated_at" = '2010-08-10 05:03:31', "image_file_name" = 'rails.png' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/admin/events/1
+Completed in 166ms (DB: 3) | 302 Found [http://localhost/admin/events/1]
+
+
+Processing Admin::EventsController#show (for 127.0.0.1 at 2010-08-09 22:03:31) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"admin/events"}
+  [4;35;1mEvent Load (1.4ms)[0m   [0mSELECT * FROM "events" WHERE ("events"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering admin/events/show
+  [4;36;1mCategory Load (0.5ms)[0m   [0;1mSELECT * FROM "categories" INNER JOIN "categories_events" ON "categories".id = "categories_events".category_id WHERE ("categories_events".event_id = 1 ) [0m
+Rendered shared/_header (1.1ms)
+Rendered shared/_admin_header (1.5ms)
+Completed in 142ms (View: 36, DB: 2) | 200 OK [http://localhost/admin/events/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 22:03:32) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::EventsController#edit (for 127.0.0.1 at 2010-08-09 22:03:42) [GET]
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"admin/events"}
+  [4;35;1mEvent Load (1.3ms)[0m   [0mSELECT * FROM "events" WHERE ("events"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering admin/events/edit
+  [4;36;1mCategory Load (0.5ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mCategory Load (0.6ms)[0m   [0mSELECT "categories".id FROM "categories" INNER JOIN "categories_events" ON "categories".id = "categories_events".category_id WHERE ("categories"."id" = 1) AND ("categories_events".event_id = 1 ) LIMIT 1[0m
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT "categories".id FROM "categories" INNER JOIN "categories_events" ON "categories".id = "categories_events".category_id WHERE ("categories"."id" = 2) AND ("categories_events".event_id = 1 ) LIMIT 1[0m
+Rendered admin/events/_form (279.8ms)
+Rendered shared/_header (1.0ms)
+Rendered shared/_admin_header (0.9ms)
+Completed in 313ms (View: 287, DB: 3) | 200 OK [http://localhost/admin/events/1/edit]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 22:03:43) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::EventsController#update (for 127.0.0.1 at 2010-08-09 22:03:48) [PUT]
+  Parameters: {"commit"=>"Save changes", "action"=>"update", "_method"=>"put", "authenticity_token"=>"RzsQ9UZPOknVO6vXlabxONU+WI3qPfPs6TV/3C+R6hQ=", "id"=>"1", "event"=>{"time_title_show"=>"0", "date_title"=>"Date: ", "price"=>"", "email_title"=>"Email: ", "first_name_title"=>"First Name: ", "reservation_top_html"=>"reservate test", "image_file_name"=>"rails.png", "note_title"=>"Note: ", "title"=>"Event 1", "phone_title_show"=>"0", "city_title_show"=>"0", "address_title"=>"Address: ", "title_show"=>"0", "purchaseable"=>"0", "payment_top_html"=>"tes", "last_name_title_show"=>"0", "last_name_title"=>"Last Name: ", "city_title"=>"City: ", "address_title_show"=>"0", "time_title"=>"Time: ", "category_ids"=>["1"], "note_title_show"=>"0", "phone_title"=>"Phone: ", "email_title_show"=>"0", "first_name_title_show"=>"0", "zipcode_title"=>"Zipcode: ", "zipcode_title_show"=>"0", "date_title_show"=>"0", "type_title"=>"to"}, "controller"=>"admin/events"}
+  [4;35;1mEvent Load (1.4ms)[0m   [0mSELECT * FROM "events" WHERE ("events"."id" = 1) [0m
+  [4;36;1mCategory Load (0.4ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+  [4;35;1mCategory Load (0.6ms)[0m   [0mSELECT * FROM "categories" INNER JOIN "categories_events" ON "categories".id = "categories_events".category_id WHERE ("categories_events".event_id = 1 ) [0m
+  [4;36;1mEvent Update (0.4ms)[0m   [0;1mUPDATE "events" SET "updated_at" = '2010-08-10 05:03:48', "reservation_top_html" = 'reservate test', "payment_top_html" = 'tes' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/admin/events/1
+Completed in 154ms (DB: 3) | 302 Found [http://localhost/admin/events/1]
+
+
+Processing Admin::EventsController#show (for 127.0.0.1 at 2010-08-09 22:03:48) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"admin/events"}
+  [4;35;1mEvent Load (1.5ms)[0m   [0mSELECT * FROM "events" WHERE ("events"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering admin/events/show
+  [4;36;1mCategory Load (0.5ms)[0m   [0;1mSELECT * FROM "categories" INNER JOIN "categories_events" ON "categories".id = "categories_events".category_id WHERE ("categories_events".event_id = 1 ) [0m
+Rendered shared/_header (1.0ms)
+Rendered shared/_admin_header (0.9ms)
+Completed in 56ms (View: 32, DB: 2) | 200 OK [http://localhost/admin/events/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 22:03:49) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::EventsController#edit (for 127.0.0.1 at 2010-08-09 22:03:58) [GET]
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"admin/events"}
+  [4;35;1mEvent Load (1.3ms)[0m   [0mSELECT * FROM "events" WHERE ("events"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering admin/events/edit
+  [4;36;1mCategory Load (0.5ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT "categories".id FROM "categories" INNER JOIN "categories_events" ON "categories".id = "categories_events".category_id WHERE ("categories"."id" = 1) AND ("categories_events".event_id = 1 ) LIMIT 1[0m
+  [4;36;1mCategory Load (0.2ms)[0m   [0;1mSELECT "categories".id FROM "categories" INNER JOIN "categories_events" ON "categories".id = "categories_events".category_id WHERE ("categories"."id" = 2) AND ("categories_events".event_id = 1 ) LIMIT 1[0m
+Rendered admin/events/_form (60.6ms)
+Rendered shared/_header (1.0ms)
+Rendered shared/_admin_header (0.9ms)
+Completed in 95ms (View: 68, DB: 2) | 200 OK [http://localhost/admin/events/1/edit]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 22:03:58) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::EventsController#show (for 127.0.0.1 at 2010-08-09 22:04:02) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"admin/events"}
+  [4;35;1mEvent Load (1.5ms)[0m   [0mSELECT * FROM "events" WHERE ("events"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering admin/events/show
+  [4;36;1mCategory Load (0.5ms)[0m   [0;1mSELECT * FROM "categories" INNER JOIN "categories_events" ON "categories".id = "categories_events".category_id WHERE ("categories_events".event_id = 1 ) [0m
+Rendered shared/_header (1.0ms)
+Rendered shared/_admin_header (1.2ms)
+Completed in 127ms (View: 34, DB: 2) | 200 OK [http://localhost/admin/events/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 22:04:02) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-09 22:04:02) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)

@@ -1,5 +1,16 @@
 <% title "Event" %>
 
+<% if @event.image_file_name != nil %>
+	<%= image_tag(@event.image_file_name) %>
+<% end %>
+<br/>
+
+<% if @event.purchaseable %>
+	<%= @event.payment_top_html %>
+<% else %>
+	<%= @event.reservation_top_html %>
+<% end %>
+
 <strong>Type:</strong>
   <%=h @event.type_title %>
 

@@ -20,34 +20,40 @@ class InitialSchema < ActiveRecord::Migration
     end
 
     create_table :events do |t|
-      t.string :title
-      t.boolean :title_show
-      t.string :type_title
-      t.boolean :type_title_show
-      t.string :note_title, :default => 'Note: '
-      t.boolean :note_title_show
-      t.integer :category_ids
-      t.boolean :category_ids_show
-      t.string :date_title, :default => 'Date: '
-      t.boolean :date_title_show
-      t.string :time_title, :default => 'Time: '
-      t.boolean :time_title_show
-      t.string :address_title, :default => 'Address: '
-      t.boolean :address_title_show
-      t.string :city_title, :default => 'City: '
-      t.boolean :city_title_show
-      t.string :zipcode_title, :default => 'Zipcode: '
-      t.boolean :zipcode_title_show
-      t.string :first_name_title, :default => 'First Name: '
-      t.boolean :first_name_title_show
-      t.string :last_name_title, :default => 'Last Name: '
-      t.boolean :last_name_title_show
-      t.string :email_title, :default => 'Email: '
-      t.boolean :email_title_show
-      t.string :phone_title, :default => 'Phone: '
-      t.boolean :phone_title_show
-      t.integer :price
-      t.boolean :purchaseable
+      t.text      :reservation_top_html
+      t.text      :reservation_bottom_html
+      t.text      :payment_top_html
+      t.text      :payment_bottom_html
+      t.string    :image_file_name
+      t.string    :title
+      t.boolean   :title_show
+      t.string    :type_title
+      t.boolean   :type_title_show
+      t.string    :note_title, :default => 'Note: '
+      t.boolean   :note_title_show
+      t.integer   :category_ids
+      t.boolean   :category_ids_show
+      t.string    :date_title, :default => 'Date: '
+      t.boolean   :date_title_show
+      t.string    :time_title, :default => 'Time: '
+      t.boolean   :time_title_show
+      t.string    :address_title, :default => 'Address: '
+      t.boolean   :address_title_show
+      t.string    :city_title, :default => 'City: '
+      t.boolean   :city_title_show
+      t.string    :zipcode_title, :default => 'Zipcode: '
+      t.boolean   :zipcode_title_show
+      t.string:first_name_title, :default => 'First Name: '
+      t.boolean   :first_name_title_show
+      t.string  :last_name_title, :default => 'Last Name: '
+      t.boolean   :last_name_title_show
+      t.string    :email_title, :default => 'Email: '
+      t.boolean   :email_title_show
+      t.string    :phone_title, :default => 'Phone: '
+      t.boolean   :phone_title_show
+      t.integer   :price
+      t.boolean   :visible
+      t.boolean   :purchaseable
       t.timestamps
     end
 
