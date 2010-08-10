@@ -79,6 +79,16 @@ ActiveRecord::Schema.define(:version => 20100802231401) do
     t.datetime "updated_at"
   end
 
+  create_table "trips", :force => true do |t|
+    t.integer  "event_id"
+    t.string   "title"
+    t.string   "date"
+    t.integer  "passengers"
+    t.string   "published_on"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "users", :force => true do |t|
     t.string   "username"
     t.string   "first_name"

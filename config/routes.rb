@@ -1,4 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
+
   map.resources :reservations, :collection => { :dump_csv => :get }
 
   map.resources :categories
@@ -32,12 +33,16 @@ ActionController::Routing::Routes.draw do |map|
 
   map.namespace :admin do |admin|
     admin.resources :users
-    admin.resources :events, :collection => { :dump_csv => :get }
+    admin.resources :events,
+                    :collection => { :dump_csv => :get }
     admin.resources :categories
     admin.resources :reservations
+    admin.resources :trips
   end
 
-  map.admin_reservations '/admin/reservations', :controller => "admin/reservations", :action => "index"
+  map.admin_reservations '/admin/reservations',
+          :controller => "admin/reservations",
+          :action => "index"
 
   map.root :controller => 'reservations', :action => 'new'
 end

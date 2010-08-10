@@ -57,7 +57,7 @@ class InitialSchema < ActiveRecord::Migration
     end
 
     create_table :reservations do |t|
-      t.integer :category_id
+      t.integer :trip_id
       t.integer :event_id
       t.string :type_of
       t.string :date
@@ -75,6 +75,15 @@ class InitialSchema < ActiveRecord::Migration
       t.string :email
       t.integer :phone
       t.text :note
+      t.timestamps
+    end
+
+    create_table :trips do |t|
+      t.integer :event_id
+      t.string :title
+      t.string :date
+      t.integer :passengers
+      t.string :published_on
       t.timestamps
     end
 
@@ -101,6 +110,7 @@ class InitialSchema < ActiveRecord::Migration
     drop_table :events
     drop_table :categories_events
     drop_table :reservations
+    drop_table :trips
   end
 end
 
