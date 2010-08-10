@@ -44,6 +44,7 @@
       <%= f.label @event.zipcode_title %><br />
       <%= f.text_field :zipcode %>
     </p>
+  <% end -%>
 
   <% if @reservation.round_trip? -%>
     <%= render 'round_trip_form', :f => f %>
@@ -53,7 +54,6 @@
     <%= render "user_info", :f => f %>
   <% end -%>
 
-<% end -%>
 <% end -%>
   <p>
     <%= f.submit "Next", :name => "next_button" %>

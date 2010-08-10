@@ -24,3 +24,46 @@
   <%= link_to "Destroy", trip_path(@trip), :confirm => 'Are you sure?', :method => :delete %>
 </p>
 
+<% form_for reserve_trips_path, :url => {:action => :reserve}, :html => {:multipart => true, :method => :post} do |f| %>
+  <%= f.hidden_field :event_id %>
+
+<% if @event -%>
+  <% if @event.date_title_show == true -%>
+    <p>
+      <%= f.label @event.date_title %><br />
+	    <%= calendar_date_select_tag "reservation[date]", @reservation.date, :time => true, :size => '30' %>
+    </p>
+  <% end -%>
+
+  <% if @event.address_title_show == true -%>
+    <p>
+      <%= f.label @event.address_title %><br />
+      <%= f.text_field :address %>
+    </p>
+  <% end -%>
+
+  <% if @event.city_title_show == true -%>
+    <p>
+      <%= f.label @event.city_title %><br />
+      <%= f.text_field :city %>
+    </p>
+  <% end -%>
+
+  <% if @event.zipcode_title_show == true -%>
+    <p>
+      <%= f.label @event.zipcode_title %><br />
+      <%= f.text_field :zipcode %>
+    </p>
+  <% end -%>
+
+  <% if @reservation.round_trip? -%>
+    <%= render 'reservations/round_trip_form', :f => f %>
+  <% end -%>
+
+  <% unless logged_in? -%>
+    <%= render "reservations/user_info", :f => f %>
+  <% end -%>
+<% end -%>
+    <%= f.submit "Submit", :trip_id => @trip %>
+<% end -%>
+

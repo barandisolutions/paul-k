@@ -5,6 +5,16 @@ class ReservationsController < ApplicationController
     @event = Event.find(@reservation.event_id)
   end
 
+  def reserve
+    @reservation = Reservation.new(params[:reservation])
+    if @reservation.save
+      flash[:notice] = "Successfully created reservation."
+      redirect_to root_url
+    else
+      render :action => 'new'
+    end
+  end
+
   def new
     @categories = Category.all
     session[:reservation_params] ||= {}
