@@ -44344,3 +44344,1730 @@ ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" wit
   
 
 Rendering rescues/layout (not_found)
+
+
+Processing ReservationsController#new (for 127.0.0.1 at 2010-08-10 03:16:30) [GET]
+  Parameters: {"action"=>"new", "controller"=>"reservations"}
+  [4;35;1mCategory Load (2.2ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/application
+Rendering reservations/new
+Rendered reservations/_user_info (4.5ms)
+Rendered reservations/_second (25.1ms)
+Rendered shared/_header (1.1ms)
+Rendered shared/_admin_header (1.0ms)
+Completed in 189ms (View: 74, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:16:31) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:16:31) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ReservationsController#create (for 127.0.0.1 at 2010-08-10 03:16:34) [POST]
+  Parameters: {"back_button"=>"Back", "reservation"=>{"city"=>"test", "address"=>"test", "zipcode"=>"", "date"=>"", "note"=>"", "phone"=>"", "last_name"=>"", "email"=>"", "first_name"=>""}, "action"=>"create", "authenticity_token"=>"RzsQ9UZPOknVO6vXlabxONU+WI3qPfPs6TV/3C+R6hQ=", "controller"=>"reservations"}
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mEvent Load (1.2ms)[0m   [0mSELECT * FROM "events" WHERE ("events"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering reservations/new
+  [4;36;1mEvent Load (2.9ms)[0m   [0;1mSELECT * FROM "events" INNER JOIN "categories_events" ON "events".id = "categories_events".event_id WHERE ("categories_events".category_id = 1 ) [0m
+  [4;35;1mEvent Load (2.3ms)[0m   [0mSELECT * FROM "events" INNER JOIN "categories_events" ON "events".id = "categories_events".event_id WHERE ("categories_events".category_id = 2 ) [0m
+Rendered reservations/_first (106.2ms)
+Rendered shared/_header (1.1ms)
+Rendered shared/_admin_header (1.0ms)
+Completed in 166ms (View: 117, DB: 7) | 200 OK [http://localhost/reservations]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:16:34) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:16:35) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ReservationsController#create (for 127.0.0.1 at 2010-08-10 03:17:43) [POST]
+  Parameters: {"reservation"=>{"event_id"=>"2", "type_of"=>"to"}, "action"=>"create", "authenticity_token"=>"RzsQ9UZPOknVO6vXlabxONU+WI3qPfPs6TV/3C+R6hQ=", "controller"=>"reservations", "next_button"=>"Next"}
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mEvent Load (2.8ms)[0m   [0mSELECT * FROM "events" WHERE ("events"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering reservations/new
+Rendered reservations/_user_info (4.2ms)
+Rendered reservations/_second (21.2ms)
+Rendered shared/_header (1.1ms)
+Rendered shared/_admin_header (1.0ms)
+Completed in 79ms (View: 34, DB: 4) | 200 OK [http://localhost/reservations]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:17:43) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:17:44) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ReservationsController#create (for 127.0.0.1 at 2010-08-10 03:17:46) [POST]
+  Parameters: {"back_button"=>"Back", "reservation"=>{"city"=>"test", "address"=>"test", "zipcode"=>"", "date"=>"", "note"=>"", "phone"=>"", "last_name"=>"", "email"=>"", "first_name"=>""}, "action"=>"create", "authenticity_token"=>"RzsQ9UZPOknVO6vXlabxONU+WI3qPfPs6TV/3C+R6hQ=", "controller"=>"reservations"}
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mEvent Load (1.3ms)[0m   [0mSELECT * FROM "events" WHERE ("events"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering reservations/new
+  [4;36;1mEvent Load (2.0ms)[0m   [0;1mSELECT * FROM "events" INNER JOIN "categories_events" ON "events".id = "categories_events".event_id WHERE ("categories_events".category_id = 1 ) [0m
+  [4;35;1mEvent Load (2.0ms)[0m   [0mSELECT * FROM "events" INNER JOIN "categories_events" ON "events".id = "categories_events".event_id WHERE ("categories_events".category_id = 2 ) [0m
+Rendered reservations/_first (26.8ms)
+Rendered shared/_header (1.1ms)
+Rendered shared/_admin_header (1.0ms)
+Completed in 91ms (View: 40, DB: 6) | 200 OK [http://localhost/reservations]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:17:46) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:17:46) [GET]
+
+ActionController::RoutingError (No route matches "/fancybox/jquery.fancybox-1.3.1.pack.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:17:46) [GET]
+
+ActionController::RoutingError (No route matches "/fancybox/jquery.fancybox-1.3.1.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:17:47) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:17:47) [GET]
+
+ActionController::RoutingError (No route matches "/fancybox/jquery.fancybox-1.3.1.pack.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:17:47) [GET]
+
+ActionController::RoutingError (No route matches "/fancybox/jquery.fancybox-1.3.1.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ReservationsController#create (for 127.0.0.1 at 2010-08-10 03:19:21) [POST]
+  Parameters: {"reservation"=>{"event_id"=>"2", "type_of"=>"to"}, "action"=>"create", "authenticity_token"=>"RzsQ9UZPOknVO6vXlabxONU+WI3qPfPs6TV/3C+R6hQ=", "controller"=>"reservations", "next_button"=>"Next"}
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mEvent Load (1.3ms)[0m   [0mSELECT * FROM "events" WHERE ("events"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering reservations/new
+Rendered reservations/_user_info (4.3ms)
+Rendered reservations/_second (21.1ms)
+Rendered shared/_header (1.1ms)
+Rendered shared/_admin_header (1.0ms)
+Completed in 79ms (View: 34, DB: 2) | 200 OK [http://localhost/reservations]
+
+
+Processing ReservationsController#create (for 127.0.0.1 at 2010-08-10 03:19:23) [POST]
+  Parameters: {"back_button"=>"Back", "reservation"=>{"city"=>"test", "address"=>"test", "zipcode"=>"", "date"=>"", "note"=>"", "phone"=>"", "last_name"=>"", "email"=>"", "first_name"=>""}, "action"=>"create", "authenticity_token"=>"RzsQ9UZPOknVO6vXlabxONU+WI3qPfPs6TV/3C+R6hQ=", "controller"=>"reservations"}
+  [4;36;1mCategory Load (1.1ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mEvent Load (1.4ms)[0m   [0mSELECT * FROM "events" WHERE ("events"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering reservations/new
+  [4;36;1mEvent Load (2.0ms)[0m   [0;1mSELECT * FROM "events" INNER JOIN "categories_events" ON "events".id = "categories_events".event_id WHERE ("categories_events".category_id = 1 ) [0m
+  [4;35;1mEvent Load (2.1ms)[0m   [0mSELECT * FROM "events" INNER JOIN "categories_events" ON "events".id = "categories_events".event_id WHERE ("categories_events".category_id = 2 ) [0m
+Rendered reservations/_first (26.2ms)
+Rendered shared/_header (1.1ms)
+Rendered shared/_admin_header (1.1ms)
+Completed in 90ms (View: 35, DB: 7) | 200 OK [http://localhost/reservations]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:19:23) [GET]
+
+ActionController::RoutingError (No route matches "/fancybox/jquery.fancybox-1.3.1.pack.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:19:23) [GET]
+
+ActionController::RoutingError (No route matches "/fancybox/jquery.fancybox-1.3.1.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ReservationsController#create (for 127.0.0.1 at 2010-08-10 03:20:41) [POST]
+  Parameters: {"back_button"=>"Back", "reservation"=>{"city"=>"test", "address"=>"test", "zipcode"=>"", "date"=>"", "note"=>"", "phone"=>"", "last_name"=>"", "email"=>"", "first_name"=>""}, "action"=>"create", "authenticity_token"=>"RzsQ9UZPOknVO6vXlabxONU+WI3qPfPs6TV/3C+R6hQ=", "controller"=>"reservations"}
+  [4;36;1mCategory Load (1.1ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mEvent Load (1.4ms)[0m   [0mSELECT * FROM "events" WHERE ("events"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering reservations/new
+Rendered reservations/_third (97.9ms)
+Rendered shared/_header (1.1ms)
+Rendered shared/_admin_header (1.0ms)
+Completed in 165ms (View: 111, DB: 2) | 200 OK [http://localhost/reservations]
+
+
+Processing ReservationsController#create (for 127.0.0.1 at 2010-08-10 03:20:43) [POST]
+  Parameters: {"back_button"=>"Back", "action"=>"create", "authenticity_token"=>"RzsQ9UZPOknVO6vXlabxONU+WI3qPfPs6TV/3C+R6hQ=", "controller"=>"reservations"}
+  [4;36;1mCategory Load (1.1ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mEvent Load (1.6ms)[0m   [0mSELECT * FROM "events" WHERE ("events"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering reservations/new
+Rendered reservations/_user_info (6.8ms)
+Rendered reservations/_second (27.8ms)
+Rendered shared/_header (1.2ms)
+Rendered shared/_admin_header (1.6ms)
+Completed in 87ms (View: 36, DB: 3) | 200 OK [http://localhost/reservations]
+
+
+Processing ReservationsController#create (for 127.0.0.1 at 2010-08-10 03:20:45) [POST]
+  Parameters: {"back_button"=>"Back", "reservation"=>{"city"=>"test", "address"=>"test", "zipcode"=>"", "date"=>"", "note"=>"", "phone"=>"", "last_name"=>"", "email"=>"", "first_name"=>""}, "action"=>"create", "authenticity_token"=>"RzsQ9UZPOknVO6vXlabxONU+WI3qPfPs6TV/3C+R6hQ=", "controller"=>"reservations"}
+  [4;36;1mCategory Load (1.1ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mEvent Load (1.7ms)[0m   [0mSELECT * FROM "events" WHERE ("events"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering reservations/new
+  [4;36;1mEvent Load (2.4ms)[0m   [0;1mSELECT * FROM "events" INNER JOIN "categories_events" ON "events".id = "categories_events".event_id WHERE ("categories_events".category_id = 1 ) [0m
+  [4;35;1mEvent Load (2.1ms)[0m   [0mSELECT * FROM "events" INNER JOIN "categories_events" ON "events".id = "categories_events".event_id WHERE ("categories_events".category_id = 2 ) [0m
+Rendered reservations/_first (28.7ms)
+Rendered shared/_header (1.2ms)
+Rendered shared/_admin_header (1.7ms)
+Completed in 162ms (View: 109, DB: 7) | 200 OK [http://localhost/reservations]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:20:46) [GET]
+
+ActionController::RoutingError (No route matches "/fancybox/jquery.fancybox-1.3.1.pack.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:20:46) [GET]
+
+ActionController::RoutingError (No route matches "/fancybox/jquery.fancybox-1.3.1.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ReservationsController#new (for 127.0.0.1 at 2010-08-10 03:20:49) [GET]
+  Parameters: {"action"=>"new", "controller"=>"reservations"}
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/application
+Rendering reservations/new
+  [4;35;1mEvent Load (2.2ms)[0m   [0mSELECT * FROM "events" INNER JOIN "categories_events" ON "events".id = "categories_events".event_id WHERE ("categories_events".category_id = 1 ) [0m
+  [4;36;1mEvent Load (2.0ms)[0m   [0;1mSELECT * FROM "events" INNER JOIN "categories_events" ON "events".id = "categories_events".event_id WHERE ("categories_events".category_id = 2 ) [0m
+Rendered reservations/_first (23.2ms)
+Rendered shared/_header (1.1ms)
+Rendered shared/_admin_header (1.0ms)
+Completed in 72ms (View: 34, DB: 5) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:20:49) [GET]
+
+ActionController::RoutingError (No route matches "/fancybox/jquery.fancybox-1.3.1.pack.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:20:49) [GET]
+
+ActionController::RoutingError (No route matches "/fancybox/jquery.fancybox-1.3.1.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ReservationsController#new (for 127.0.0.1 at 2010-08-10 03:21:03) [GET]
+  Parameters: {"action"=>"new", "controller"=>"reservations"}
+  [4;35;1mCategory Load (1.6ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/application
+Rendering reservations/new
+  [4;36;1mEvent Load (2.2ms)[0m   [0;1mSELECT * FROM "events" INNER JOIN "categories_events" ON "events".id = "categories_events".event_id WHERE ("categories_events".category_id = 1 ) [0m
+  [4;35;1mEvent Load (2.0ms)[0m   [0mSELECT * FROM "events" INNER JOIN "categories_events" ON "events".id = "categories_events".event_id WHERE ("categories_events".category_id = 2 ) [0m
+Rendered reservations/_first (28.7ms)
+Rendered shared/_header (1.1ms)
+Rendered shared/_admin_header (1.0ms)
+Completed in 83ms (View: 45, DB: 6) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:21:03) [GET]
+
+ActionController::RoutingError (No route matches "/fancybox/jquery.fancybox-1.3.1.pack.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:21:03) [GET]
+
+ActionController::RoutingError (No route matches "/fancybox/jquery.fancybox-1.3.1.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:22:50) [GET]
+
+ActionController::RoutingError (No route matches "/images/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ReservationsController#new (for 127.0.0.1 at 2010-08-10 03:22:51) [GET]
+  Parameters: {"action"=>"new", "controller"=>"reservations"}
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/application
+Rendering reservations/new
+  [4;35;1mEvent Load (2.0ms)[0m   [0mSELECT * FROM "events" INNER JOIN "categories_events" ON "events".id = "categories_events".event_id WHERE ("categories_events".category_id = 1 ) [0m
+  [4;36;1mEvent Load (2.1ms)[0m   [0;1mSELECT * FROM "events" INNER JOIN "categories_events" ON "events".id = "categories_events".event_id WHERE ("categories_events".category_id = 2 ) [0m
+Rendered reservations/_first (93.5ms)
+Rendered shared/_header (1.3ms)
+Rendered shared/_admin_header (1.1ms)
+Completed in 144ms (View: 109, DB: 5) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:22:51) [GET]
+
+ActionController::RoutingError (No route matches "/fancybox/jquery.fancybox-1.3.1.pack.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:22:51) [GET]
+
+ActionController::RoutingError (No route matches "/fancybox/jquery.fancybox-1.3.1.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:22:51) [GET]
+
+ActionController::RoutingError (No route matches "/fancybox/jquery.fancybox-1.3.1.pack.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:22:51) [GET]
+
+ActionController::RoutingError (No route matches "/fancybox/jquery.fancybox-1.3.1.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ReservationsController#new (for 127.0.0.1 at 2010-08-10 03:23:15) [GET]
+  Parameters: {"action"=>"new", "controller"=>"reservations"}
+  [4;35;1mCategory Load (1.1ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/application
+Rendering reservations/new
+  [4;36;1mEvent Load (2.0ms)[0m   [0;1mSELECT * FROM "events" INNER JOIN "categories_events" ON "events".id = "categories_events".event_id WHERE ("categories_events".category_id = 1 ) [0m
+  [4;35;1mEvent Load (2.2ms)[0m   [0mSELECT * FROM "events" INNER JOIN "categories_events" ON "events".id = "categories_events".event_id WHERE ("categories_events".category_id = 2 ) [0m
+Rendered reservations/_first (24.0ms)
+Rendered shared/_header (1.2ms)
+Rendered shared/_admin_header (1.1ms)
+Completed in 81ms (View: 43, DB: 5) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:23:16) [GET]
+
+ActionController::RoutingError (No route matches "/fancybox/jquery.fancybox-1.3.1.pack.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:23:16) [GET]
+
+ActionController::RoutingError (No route matches "/fancybox/jquery.fancybox-1.3.1.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:23:16) [GET]
+
+ActionController::RoutingError (No route matches "/fancybox/jquery.fancybox-1.3.1.pack.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:23:16) [GET]
+
+ActionController::RoutingError (No route matches "/fancybox/jquery.fancybox-1.3.1.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ReservationsController#new (for 127.0.0.1 at 2010-08-10 03:23:20) [GET]
+  Parameters: {"action"=>"new", "controller"=>"reservations"}
+  [4;36;1mCategory Load (1.1ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/application
+Rendering reservations/new
+  [4;35;1mEvent Load (3.3ms)[0m   [0mSELECT * FROM "events" INNER JOIN "categories_events" ON "events".id = "categories_events".event_id WHERE ("categories_events".category_id = 1 ) [0m
+  [4;36;1mEvent Load (2.4ms)[0m   [0;1mSELECT * FROM "events" INNER JOIN "categories_events" ON "events".id = "categories_events".event_id WHERE ("categories_events".category_id = 2 ) [0m
+Rendered reservations/_first (28.7ms)
+Rendered shared/_header (1.1ms)
+Rendered shared/_admin_header (1.0ms)
+Completed in 80ms (View: 43, DB: 7) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:23:20) [GET]
+
+ActionController::RoutingError (No route matches "/fancybox/jquery.fancybox-1.3.1.pack.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:23:20) [GET]
+
+ActionController::RoutingError (No route matches "/fancybox/jquery.fancybox-1.3.1.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ReservationsController#new (for 127.0.0.1 at 2010-08-10 03:23:37) [GET]
+  Parameters: {"action"=>"new", "controller"=>"reservations"}
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/application
+Rendering reservations/new
+  [4;36;1mEvent Load (3.0ms)[0m   [0;1mSELECT * FROM "events" INNER JOIN "categories_events" ON "events".id = "categories_events".event_id WHERE ("categories_events".category_id = 1 ) [0m
+  [4;35;1mEvent Load (2.5ms)[0m   [0mSELECT * FROM "events" INNER JOIN "categories_events" ON "events".id = "categories_events".event_id WHERE ("categories_events".category_id = 2 ) [0m
+Rendered reservations/_first (29.5ms)
+Rendered shared/_header (1.1ms)
+Rendered shared/_admin_header (1.0ms)
+Completed in 85ms (View: 45, DB: 7) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:23:38) [GET]
+
+ActionController::RoutingError (No route matches "/fancybox/jquery.fancybox-1.3.1.pack.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:23:38) [GET]
+
+ActionController::RoutingError (No route matches "/fancybox/jquery.fancybox-1.3.1.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ReservationsController#new (for 127.0.0.1 at 2010-08-10 03:23:45) [GET]
+  Parameters: {"action"=>"new", "controller"=>"reservations"}
+  [4;36;1mCategory Load (1.1ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/application
+Rendering reservations/new
+  [4;35;1mEvent Load (4.6ms)[0m   [0mSELECT * FROM "events" INNER JOIN "categories_events" ON "events".id = "categories_events".event_id WHERE ("categories_events".category_id = 1 ) [0m
+  [4;36;1mEvent Load (2.4ms)[0m   [0;1mSELECT * FROM "events" INNER JOIN "categories_events" ON "events".id = "categories_events".event_id WHERE ("categories_events".category_id = 2 ) [0m
+Rendered reservations/_first (29.9ms)
+Rendered shared/_header (1.1ms)
+Rendered shared/_admin_header (1.0ms)
+Completed in 80ms (View: 39, DB: 8) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:23:45) [GET]
+
+ActionController::RoutingError (No route matches "/fancybox/jquery.fancybox-1.3.1.pack.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:23:45) [GET]
+
+ActionController::RoutingError (No route matches "/fancybox/jquery.fancybox-1.3.1.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:23:46) [GET]
+
+ActionController::RoutingError (No route matches "/fancybox/jquery.fancybox-1.3.1.pack.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:23:46) [GET]
+
+ActionController::RoutingError (No route matches "/fancybox/jquery.fancybox-1.3.1.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ReservationsController#new (for 127.0.0.1 at 2010-08-10 03:28:40) [GET]
+  Parameters: {"action"=>"new", "controller"=>"reservations"}
+  [4;35;1mCategory Load (1.1ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/application
+Rendering reservations/new
+  [4;36;1mEvent Load (2.1ms)[0m   [0;1mSELECT * FROM "events" INNER JOIN "categories_events" ON "events".id = "categories_events".event_id WHERE ("categories_events".category_id = 1 ) [0m
+  [4;35;1mEvent Load (2.1ms)[0m   [0mSELECT * FROM "events" INNER JOIN "categories_events" ON "events".id = "categories_events".event_id WHERE ("categories_events".category_id = 2 ) [0m
+Rendered reservations/_first (23.8ms)
+Rendered shared/_header (1.2ms)
+Rendered shared/_admin_header (1.0ms)
+Completed in 79ms (View: 42, DB: 5) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:28:40) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.easing.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:28:40) [GET]
+
+ActionController::RoutingError (No route matches "/fancybox/jquery.fancybox-1.3.1.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:28:40) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.easing.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:28:40) [GET]
+
+ActionController::RoutingError (No route matches "/fancybox/jquery.fancybox-1.3.1.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ReservationsController#new (for 127.0.0.1 at 2010-08-10 03:28:46) [GET]
+  Parameters: {"action"=>"new", "controller"=>"reservations"}
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/application
+Rendering reservations/new
+  [4;35;1mEvent Load (2.1ms)[0m   [0mSELECT * FROM "events" INNER JOIN "categories_events" ON "events".id = "categories_events".event_id WHERE ("categories_events".category_id = 1 ) [0m
+  [4;36;1mEvent Load (2.0ms)[0m   [0;1mSELECT * FROM "events" INNER JOIN "categories_events" ON "events".id = "categories_events".event_id WHERE ("categories_events".category_id = 2 ) [0m
+Rendered reservations/_first (24.1ms)
+Rendered shared/_header (1.1ms)
+Rendered shared/_admin_header (1.1ms)
+Completed in 80ms (View: 38, DB: 5) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:28:47) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.easing.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:28:47) [GET]
+
+ActionController::RoutingError (No route matches "/fancybox/jquery.fancybox-1.3.1.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:28:47) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.easing.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:28:47) [GET]
+
+ActionController::RoutingError (No route matches "/fancybox/jquery.fancybox-1.3.1.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ReservationsController#new (for 127.0.0.1 at 2010-08-10 03:30:27) [GET]
+  Parameters: {"action"=>"new", "controller"=>"reservations"}
+  [4;35;1mCategory Load (1.1ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/application
+Rendering reservations/new
+  [4;36;1mEvent Load (2.0ms)[0m   [0;1mSELECT * FROM "events" INNER JOIN "categories_events" ON "events".id = "categories_events".event_id WHERE ("categories_events".category_id = 1 ) [0m
+  [4;35;1mEvent Load (2.3ms)[0m   [0mSELECT * FROM "events" INNER JOIN "categories_events" ON "events".id = "categories_events".event_id WHERE ("categories_events".category_id = 2 ) [0m
+Rendered reservations/_first (23.9ms)
+Rendered shared/_header (1.1ms)
+Rendered shared/_admin_header (1.0ms)
+Completed in 80ms (View: 43, DB: 5) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:30:27) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.easing.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ReservationsController#new (for 127.0.0.1 at 2010-08-10 03:30:30) [GET]
+  Parameters: {"action"=>"new", "controller"=>"reservations"}
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/application
+Rendering reservations/new
+  [4;35;1mEvent Load (2.0ms)[0m   [0mSELECT * FROM "events" INNER JOIN "categories_events" ON "events".id = "categories_events".event_id WHERE ("categories_events".category_id = 1 ) [0m
+  [4;36;1mEvent Load (2.2ms)[0m   [0;1mSELECT * FROM "events" INNER JOIN "categories_events" ON "events".id = "categories_events".event_id WHERE ("categories_events".category_id = 2 ) [0m
+Rendered reservations/_first (25.7ms)
+Rendered shared/_header (1.2ms)
+Rendered shared/_admin_header (1.0ms)
+Completed in 78ms (View: 39, DB: 5) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:30:31) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.easing.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:30:31) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.easing.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:30:33) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_n.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:30:33) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_ne.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:30:33) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_e.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:30:33) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_se.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:30:34) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_s.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:30:34) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_sw.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:30:34) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_w.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:30:34) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_nw.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:30:34) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_closebox.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ReservationsController#new (for 127.0.0.1 at 2010-08-10 03:31:34) [GET]
+  Parameters: {"action"=>"new", "controller"=>"reservations"}
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/application
+Rendering reservations/new
+  [4;36;1mEvent Load (2.1ms)[0m   [0;1mSELECT * FROM "events" INNER JOIN "categories_events" ON "events".id = "categories_events".event_id WHERE ("categories_events".category_id = 1 ) [0m
+  [4;35;1mEvent Load (2.1ms)[0m   [0mSELECT * FROM "events" INNER JOIN "categories_events" ON "events".id = "categories_events".event_id WHERE ("categories_events".category_id = 2 ) [0m
+Rendered reservations/_first (27.7ms)
+Rendered shared/_header (1.3ms)
+Rendered shared/_admin_header (1.0ms)
+Completed in 84ms (View: 45, DB: 5) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:31:34) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.easing.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:31:34) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.easing.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ReservationsController#new (for 127.0.0.1 at 2010-08-10 03:31:44) [GET]
+  Parameters: {"action"=>"new", "controller"=>"reservations"}
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/application
+Rendering reservations/new
+  [4;35;1mEvent Load (2.1ms)[0m   [0mSELECT * FROM "events" INNER JOIN "categories_events" ON "events".id = "categories_events".event_id WHERE ("categories_events".category_id = 1 ) [0m
+  [4;36;1mEvent Load (2.2ms)[0m   [0;1mSELECT * FROM "events" INNER JOIN "categories_events" ON "events".id = "categories_events".event_id WHERE ("categories_events".category_id = 2 ) [0m
+Rendered reservations/_first (28.9ms)
+Rendered shared/_header (1.2ms)
+Rendered shared/_admin_header (1.0ms)
+Completed in 87ms (View: 47, DB: 5) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:31:44) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.easing.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:31:44) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.easing.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:31:45) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_n.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:31:45) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_ne.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:31:45) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_e.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:31:45) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_se.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:31:45) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_s.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:31:45) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_sw.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:31:45) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_w.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:31:46) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_nw.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:31:46) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_closebox.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ReservationsController#new (for 127.0.0.1 at 2010-08-10 03:34:57) [GET]
+  Parameters: {"action"=>"new", "controller"=>"reservations"}
+  [4;35;1mCategory Load (1.1ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/application
+Rendering reservations/new
+  [4;36;1mEvent Load (2.1ms)[0m   [0;1mSELECT * FROM "events" INNER JOIN "categories_events" ON "events".id = "categories_events".event_id WHERE ("categories_events".category_id = 1 ) [0m
+  [4;35;1mEvent Load (2.0ms)[0m   [0mSELECT * FROM "events" INNER JOIN "categories_events" ON "events".id = "categories_events".event_id WHERE ("categories_events".category_id = 2 ) [0m
+Rendered reservations/_first (30.0ms)
+Rendered shared/_header (1.3ms)
+Rendered shared/_admin_header (1.0ms)
+Completed in 102ms (View: 58, DB: 5) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:34:58) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:34:58) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.easing.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:34:58) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:34:58) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.easing.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:34:59) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_n.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:34:59) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_ne.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:34:59) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_e.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:34:59) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_se.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:34:59) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_s.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:35:00) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_sw.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:35:00) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_w.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:35:00) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_nw.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:35:00) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_closebox.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ReservationsController#new (for 127.0.0.1 at 2010-08-10 03:35:35) [GET]
+  Parameters: {"action"=>"new", "controller"=>"reservations"}
+  [4;36;1mCategory Load (1.5ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/application
+Rendering reservations/new
+  [4;35;1mEvent Load (2.0ms)[0m   [0mSELECT * FROM "events" INNER JOIN "categories_events" ON "events".id = "categories_events".event_id WHERE ("categories_events".category_id = 1 ) [0m
+  [4;36;1mEvent Load (4.8ms)[0m   [0;1mSELECT * FROM "events" INNER JOIN "categories_events" ON "events".id = "categories_events".event_id WHERE ("categories_events".category_id = 2 ) [0m
+Rendered reservations/_first (116.8ms)
+Rendered shared/_header (1.3ms)
+Rendered shared/_admin_header (1.1ms)
+Completed in 179ms (View: 137, DB: 8) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:35:36) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:35:36) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.easing.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:35:36) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:35:36) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.easing.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:35:37) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_n.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:35:37) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_ne.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:35:37) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_e.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:35:37) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_se.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:35:37) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_s.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:35:37) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_sw.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:35:37) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_w.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:35:37) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_nw.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:35:38) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_closebox.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ReservationsController#new (for 127.0.0.1 at 2010-08-10 03:36:08) [GET]
+  Parameters: {"action"=>"new", "controller"=>"reservations"}
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/application
+Rendering reservations/new
+  [4;36;1mEvent Load (1.9ms)[0m   [0;1mSELECT * FROM "events" INNER JOIN "categories_events" ON "events".id = "categories_events".event_id WHERE ("categories_events".category_id = 1 ) [0m
+  [4;35;1mEvent Load (2.4ms)[0m   [0mSELECT * FROM "events" INNER JOIN "categories_events" ON "events".id = "categories_events".event_id WHERE ("categories_events".category_id = 2 ) [0m
+Rendered reservations/_first (28.2ms)
+Rendered shared/_header (1.1ms)
+Rendered shared/_admin_header (1.0ms)
+Completed in 87ms (View: 49, DB: 5) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:36:08) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:36:08) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.easing.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:36:09) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:36:09) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.easing.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:36:10) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_n.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:36:10) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_ne.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:36:10) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_e.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:36:10) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_se.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:36:10) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_s.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:36:10) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_sw.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:36:10) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_w.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:36:10) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_nw.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:36:10) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_closebox.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ReservationsController#new (for 127.0.0.1 at 2010-08-10 03:37:40) [GET]
+  Parameters: {"action"=>"new", "controller"=>"reservations"}
+  [4;36;1mCategory Load (2.5ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/application
+Rendering reservations/new
+  [4;35;1mEvent Load (2.3ms)[0m   [0mSELECT * FROM "events" INNER JOIN "categories_events" ON "events".id = "categories_events".event_id WHERE ("categories_events".category_id = 1 ) [0m
+  [4;36;1mEvent Load (2.2ms)[0m   [0;1mSELECT * FROM "events" INNER JOIN "categories_events" ON "events".id = "categories_events".event_id WHERE ("categories_events".category_id = 2 ) [0m
+Rendered reservations/_first (33.7ms)
+Rendered shared/_header (1.2ms)
+Rendered shared/_admin_header (1.1ms)
+Completed in 99ms (View: 54, DB: 7) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:37:40) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:37:40) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.easing.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:37:40) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:37:40) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.easing.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ReservationsController#new (for 127.0.0.1 at 2010-08-10 03:38:06) [GET]
+  Parameters: {"action"=>"new", "controller"=>"reservations"}
+  [4;35;1mCategory Load (1.1ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/application
+Rendering reservations/new
+  [4;36;1mEvent Load (1.9ms)[0m   [0;1mSELECT * FROM "events" INNER JOIN "categories_events" ON "events".id = "categories_events".event_id WHERE ("categories_events".category_id = 1 ) [0m
+  [4;35;1mEvent Load (2.0ms)[0m   [0mSELECT * FROM "events" INNER JOIN "categories_events" ON "events".id = "categories_events".event_id WHERE ("categories_events".category_id = 2 ) [0m
+Rendered reservations/_first (27.3ms)
+Rendered shared/_header (1.2ms)
+Rendered shared/_admin_header (1.0ms)
+Completed in 84ms (View: 47, DB: 5) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:38:07) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:38:07) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.easing.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:38:07) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.easing.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:38:08) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_n.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:38:08) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_ne.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:38:08) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_e.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:38:08) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_se.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:38:08) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_s.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:38:08) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_sw.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:38:08) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_w.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:38:08) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_nw.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:38:08) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_closebox.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ReservationsController#new (for 127.0.0.1 at 2010-08-10 03:40:21) [GET]
+  Parameters: {"action"=>"new", "controller"=>"reservations"}
+  [4;36;1mCategory Load (1.1ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/application
+Rendering reservations/new
+
+ActionView::TemplateError (undefined local variable or method `event' for #<ActionView::Base:0xb7092970>) on line #34 of app/views/reservations/_first.html.erb:
+31: 
+32: <div style="display:none">
+33: 
+34: 	<div id="data_<%= event.id %>" style="opacity: 1; width: 520px; height: 144px; top: 898px; left: 394.5px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+35: 
+36: 	<div id="data_<%= event.id %>" style="opacity: 1; width: 520px; height: 144px; top: 898px; left: 394.5px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+37: 
+
+    app/views/reservations/_first.html.erb:34
+    app/views/reservations/new.html.erb:7
+
+Rendered rescues/_trace (100.2ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ReservationsController#new (for 127.0.0.1 at 2010-08-10 03:40:36) [GET]
+  Parameters: {"action"=>"new", "controller"=>"reservations"}
+  [4;35;1mCategory Load (1.1ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/application
+Rendering reservations/new
+  [4;36;1mEvent Load (2.1ms)[0m   [0;1mSELECT * FROM "events" INNER JOIN "categories_events" ON "events".id = "categories_events".event_id WHERE ("categories_events".category_id = 1 ) [0m
+  [4;35;1mEvent Load (3.0ms)[0m   [0mSELECT * FROM "events" INNER JOIN "categories_events" ON "events".id = "categories_events".event_id WHERE ("categories_events".category_id = 2 ) [0m
+Rendered reservations/_first (32.2ms)
+Rendered shared/_header (1.2ms)
+Rendered shared/_admin_header (1.2ms)
+Completed in 173ms (View: 133, DB: 6) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:40:37) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:40:37) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.easing.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:40:37) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:40:37) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.easing.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:40:39) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_n.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:40:39) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_ne.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:40:40) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_e.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:40:40) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_se.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:40:40) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_s.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:40:40) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_sw.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:40:40) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_w.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:40:40) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_nw.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:40:40) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_closebox.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ReservationsController#new (for 127.0.0.1 at 2010-08-10 03:41:02) [GET]
+  Parameters: {"action"=>"new", "controller"=>"reservations"}
+  [4;36;1mCategory Load (1.1ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/application
+Rendering reservations/new
+  [4;35;1mEvent Load (2.6ms)[0m   [0mSELECT * FROM "events" INNER JOIN "categories_events" ON "events".id = "categories_events".event_id WHERE ("categories_events".category_id = 1 ) [0m
+  [4;36;1mEvent Load (2.0ms)[0m   [0;1mSELECT * FROM "events" INNER JOIN "categories_events" ON "events".id = "categories_events".event_id WHERE ("categories_events".category_id = 2 ) [0m
+Rendered reservations/_first (33.7ms)
+Rendered shared/_header (1.9ms)
+Rendered shared/_admin_header (1.2ms)
+Completed in 95ms (View: 55, DB: 6) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:41:03) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:41:03) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.easing.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:41:03) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:41:03) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.easing.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:41:06) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_n.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:41:07) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_ne.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:41:07) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_e.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:41:07) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_se.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:41:07) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_s.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:41:07) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_sw.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:41:07) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_w.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:41:07) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_nw.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:41:07) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_closebox.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ReservationsController#new (for 127.0.0.1 at 2010-08-10 03:41:31) [GET]
+  Parameters: {"action"=>"new", "controller"=>"reservations"}
+  [4;35;1mCategory Load (1.2ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/application
+Rendering reservations/new
+  [4;36;1mEvent Load (2.1ms)[0m   [0;1mSELECT * FROM "events" INNER JOIN "categories_events" ON "events".id = "categories_events".event_id WHERE ("categories_events".category_id = 1 ) [0m
+  [4;35;1mEvent Load (2.3ms)[0m   [0mSELECT * FROM "events" INNER JOIN "categories_events" ON "events".id = "categories_events".event_id WHERE ("categories_events".category_id = 2 ) [0m
+Rendered reservations/_first (30.6ms)
+Rendered shared/_header (1.2ms)
+Rendered shared/_admin_header (1.1ms)
+Completed in 105ms (View: 59, DB: 6) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:41:31) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:41:31) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.easing.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:41:32) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/yetii-min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:41:32) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.easing.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:41:33) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_n.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:41:33) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_ne.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:41:33) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_e.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:41:33) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_se.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:41:33) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_s.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:41:33) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_sw.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:41:33) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_w.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:41:33) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_shadow_nw.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-10 03:41:33) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/fancy_closebox.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)

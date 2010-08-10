@@ -1,3 +1,36 @@
+<% content_for(:head) do %>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+    <%= javascript_include_tag 'jquery.easing.js',
+    'jquery.fancybox-1.2.1.pack.js', 'jquery.fancybox-1.2.1.js' %>
+    <%= stylesheet_link_tag 'jquery.fancybox.css' %>
+<% end -%>
+
+<script>
+$(document).ready(function() {
+
+	/* This is basic - uses default settings */
+
+	/* Using custom settings */
+
+	$("a#inline").fancybox({
+		'hideOnContentClick': true
+	});
+
+	/* Apply fancybox to multiple items */
+
+	$("a.group").fancybox({
+		'transitionIn'	:	'elastic',
+		'transitionOut'	:	'elastic',
+		'speedIn'		:	600,
+		'speedOut'		:	200,
+		'overlayShow'	:	false
+	});
+
+});
+</script>
+
+
+
 <% title "Welcome to Share Cabs" %>
 
 <p><strong>Please choose Trip type:</strong></p>
@@ -11,7 +44,13 @@
 <br>
     <% category.events.each do |event| %>
         <%= f.radio_button :event_id, event.id %>
-        <%=h event.title %><br>
+        <a id="inline" href="#data_<%= event.id %>"><%=h event.title %></a>
+        <br>
+        <div style="display:none">
+
+	<div id="data_<%= event.id %>" style="opacity: 1; width: 520px; height: 144px; top: 898px; left: 394.5px;"><%= event.title %></div>
+
+</div>
     <% end -%>
     <br>
   <% end -%>
