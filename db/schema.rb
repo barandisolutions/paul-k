@@ -37,31 +37,31 @@ ActiveRecord::Schema.define(:version => 20100802231401) do
     t.text     "payment_bottom_html"
     t.string   "image_file_name"
     t.string   "title"
-    t.boolean  "title_show"
+    t.boolean  "title_show",              :default => true
     t.string   "type_title"
-    t.boolean  "type_title_show"
+    t.boolean  "type_title_show",         :default => true
     t.string   "note_title",              :default => "Note: "
     t.boolean  "note_title_show"
     t.integer  "category_ids"
-    t.boolean  "category_ids_show"
+    t.boolean  "category_ids_show",       :default => true
     t.string   "date_title",              :default => "Date: "
-    t.boolean  "date_title_show"
+    t.boolean  "date_title_show",         :default => true
     t.string   "time_title",              :default => "Time: "
-    t.boolean  "time_title_show"
+    t.boolean  "time_title_show",         :default => true
     t.string   "address_title",           :default => "Address: "
-    t.boolean  "address_title_show"
+    t.boolean  "address_title_show",      :default => true
     t.string   "city_title",              :default => "City: "
-    t.boolean  "city_title_show"
+    t.boolean  "city_title_show",         :default => true
     t.string   "zipcode_title",           :default => "Zipcode: "
-    t.boolean  "zipcode_title_show"
+    t.boolean  "zipcode_title_show",      :default => true
     t.string   "first_name_title",        :default => "First Name: "
-    t.boolean  "first_name_title_show"
+    t.boolean  "first_name_title_show",   :default => true
     t.string   "last_name_title",         :default => "Last Name: "
-    t.boolean  "last_name_title_show"
+    t.boolean  "last_name_title_show",    :default => true
     t.string   "email_title",             :default => "Email: "
-    t.boolean  "email_title_show"
+    t.boolean  "email_title_show",        :default => true
     t.string   "phone_title",             :default => "Phone: "
-    t.boolean  "phone_title_show"
+    t.boolean  "phone_title_show",        :default => true
     t.integer  "price"
     t.boolean  "visible"
     t.boolean  "purchaseable"

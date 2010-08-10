@@ -1,2 +1,8 @@
+<div class="calender">
+<p>See existing trips
+  <%= link_to 'here.',
+    calenders_path(:event => @event) %>
+</div>
+
 <%= render "#{@reservation.current_step}"%>
 

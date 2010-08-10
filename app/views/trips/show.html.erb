@@ -1,0 +1,26 @@
+<% title "Trip" %>
+
+<p>
+  <strong>Title:</strong>
+  <%=h @trip.title %>
+</p>
+<p>
+  <strong>Event:</strong>
+  <%= link_to @trip.event_id,
+      calenders_path(:event => @trip.event_id) %>
+</p>
+<p>
+  <strong>Date:</strong>
+  <%=h @trip.date %>
+</p>
+<p>
+  <strong>Passengers:</strong>
+  <%=h @trip.passengers %>
+</p>
+
+<p>
+  <%= link_to "Show", @trip %> |
+  <%= link_to "Edit", edit_trip_path(@trip) %> |
+  <%= link_to "Destroy", trip_path(@trip), :confirm => 'Are you sure?', :method => :delete %>
+</p>
+
