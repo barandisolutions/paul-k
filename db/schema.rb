@@ -1,4 +1,4 @@
-# This file is auto-generated from the current state of the database. Instead of editing this file, 
+# This file is auto-generated from the current state of the database. Instead of editing this file,
 # please use the migrations feature of Active Record to incrementally modify your database, and
 # then regenerate this schema definition.
 #
@@ -62,6 +62,12 @@ ActiveRecord::Schema.define(:version => 20100802231401) do
     t.boolean  "email_title_show",        :default => true
     t.string   "phone_title",             :default => "Phone: "
     t.boolean  "phone_title_show",        :default => true
+    t.string   "field1_title",            :default => "Field 1: "
+    t.boolean  "field1_title_show",       :default => true
+    t.string   "field2_title",            :default => "Field 2: "
+    t.boolean  "field2_title_show",       :default => true
+    t.string   "field3_title",            :default => "Field 3: "
+    t.boolean  "field3_title_show",       :default => true
     t.integer  "price"
     t.boolean  "visible"
     t.boolean  "purchaseable"
@@ -86,7 +92,10 @@ ActiveRecord::Schema.define(:version => 20100802231401) do
     t.string   "first_name"
     t.string   "last_name"
     t.string   "email"
-    t.integer  "phone"
+    t.string   "phone"
+    t.string   "field1"
+    t.string   "field2"
+    t.string   "field3"
     t.text     "note"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -117,3 +126,4 @@ ActiveRecord::Schema.define(:version => 20100802231401) do
   end
 
 end
+

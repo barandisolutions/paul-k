@@ -43,7 +43,7 @@ class InitialSchema < ActiveRecord::Migration
       t.boolean   :city_title_show, :default => true
       t.string    :zipcode_title, :default => 'Zipcode: '
       t.boolean   :zipcode_title_show, :default => true
-      t.string:first_name_title, :default => 'First Name: '
+      t.string    :first_name_title, :default => 'First Name: '
       t.boolean   :first_name_title_show, :default => true
       t.string  :last_name_title, :default => 'Last Name: '
       t.boolean   :last_name_title_show, :default => true
@@ -51,6 +51,12 @@ class InitialSchema < ActiveRecord::Migration
       t.boolean   :email_title_show, :default => true
       t.string    :phone_title, :default => 'Phone: '
       t.boolean   :phone_title_show, :default => true
+      t.string    :field1_title, :default => 'Field 1: '
+      t.boolean   :field1_title_show, :default => true
+      t.string    :field2_title, :default => 'Field 2: '
+      t.boolean   :field2_title_show, :default => true
+      t.string    :field3_title, :default => 'Field 3: '
+      t.boolean   :field3_title_show, :default => true
       t.integer   :price
       t.boolean   :visible
       t.boolean   :purchaseable
@@ -79,7 +85,10 @@ class InitialSchema < ActiveRecord::Migration
       t.string :first_name
       t.string :last_name
       t.string :email
-      t.integer :phone
+      t.string :phone
+      t.string :field1
+      t.string :field2
+      t.string :field3
       t.text :note
       t.timestamps
     end

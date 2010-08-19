@@ -14,13 +14,15 @@
     <th>Last Name_title</th>
     <th>Email title</th>
     <th>Phone title</th>
+    <th>Field1 title</th>
+    <th>Field2 title</th>
+    <th>Field3 title</th>
   </tr>
   <% for event in @events %>
     <tr>
       <td><%=h event.title %></td>
       <td><%=h event.type_title %></td>
       <td><%=h event.note_title %></td>
-      <td><%=h event.category_ids %></td>
       <td><%=h event.date_title %></td>
       <td><%=h event.time_title %></td>
       <td><%=h event.address_title %></td>
@@ -30,6 +32,9 @@
       <td><%=h event.last_name_title %></td>
       <td><%=h event.email_title %></td>
       <td><%=h event.phone_title %></td>
+      <td><%=h event.field1_title %></td>
+      <td><%=h event.field2_title %></td>
+      <td><%=h event.field3_title %></td>
       <td>
         <%= link_to "Show", admin_event_path(event) %>
       </td>

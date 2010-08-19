@@ -46,6 +46,27 @@
     </p>
   <% end -%>
 
+  <% if @event.field1_title_show == true -%>
+    <p>
+      <%= f.label @event.field1_title %><br />
+      <%= f.text_field :field1 %>
+    </p>
+  <% end -%>
+
+  <% if @event.field2_title_show == true -%>
+    <p>
+      <%= f.label @event.field2_title %><br />
+      <%= f.text_field :field2 %>
+    </p>
+  <% end -%>
+
+  <% if @event.field3_title_show == true -%>
+    <p>
+      <%= f.label @event.field3_title %><br />
+      <%= f.text_field :field3 %>
+    </p>
+  <% end -%>
+
   <% if @reservation.round_trip? -%>
     <%= render 'round_trip_form', :f => f %>
   <% end -%>

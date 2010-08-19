@@ -1,21 +1,22 @@
 <% title "Admin:Reservations" %>
 
+<% for reservation in @reservations %>
+  <% event = Event.find(reservation.event_id) -%>
 <table>
   <tr>
-    <th>Event</th>
-    <th>Type Of</th>
-    <th>Date</th>
-    <th>Time</th>
-    <th>Address</th>
-    <th>City</th>
-    <th>Zipcode</th>
-    <th>First Name</th>
-    <th>Last Name</th>
-    <th>Email</th>
-    <th>Phone</th>
-    <th>Note</th>
+    <th><%=h event.title %> |</th>
+    <th><%=h event.type_title %> |</th>
+    <th><%=h event.date_title %> |</th>
+    <th><%=h event.time_title %> |</th>
+    <th><%=h event.address_title %> |</th>
+    <th><%=h event.city_title %> |</th>
+    <th><%=h event.zipcode_title %> |</th>
+    <th><%=h event.first_name_title %> |</th>
+    <th><%=h event.last_name_title %> |</th>
+    <th><%=h event.email_title %> |</th>
+    <th><%=h event.phone_title %> |</th>
+    <th><%=h event.note_title %>l</th>
   </tr>
-  <% for reservation in @reservations %>
     <tr>
       <td><%=h reservation.event_id %></td>
       <td><%=h reservation.type_of %></td>

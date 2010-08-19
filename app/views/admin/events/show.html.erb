@@ -71,7 +71,18 @@
   <strong>Phone title:</strong>
   <%=h @event.phone_title %>
 </p>
-
+<p>
+  <strong>Field3 title:</strong>
+  <%=h @event.field1_title %>
+</p>
+<p>
+  <strong>Field2 title:</strong>
+  <%=h @event.field2_title %>
+</p>
+<p>
+  <strong>Field3 title:</strong>
+  <%=h @event.field3_title %>
+</p>
 <p>
   <%= link_to "Edit", edit_admin_event_path(@event) %> |
   <%= link_to "Destroy", admin_event_path(@event), :confirm => 'Are you sure?', :method => :delete %> |
