@@ -11,7 +11,7 @@
   </p>
   <p>
     <%= f.label :date %><br />
-    <%= f.date_select :date %>
+    <%= calendar_date_select_tag "reservation[date]", @reservation.date, :time => true, :size => '30' %>
   </p>
   <p>
     <%= f.label :time %><br />

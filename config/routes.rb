@@ -39,9 +39,9 @@ ActionController::Routing::Routes.draw do |map|
     admin.resources :trips
   end
 
-  map.admin_reservations '/admin/reservations',
-          :controller => "admin/reservations",
-          :action => "index"
+#  map.admin_reservations '/admin/reservations',
+#          :controller => "admin/reservations",
+#          :action => "index"
 
   map.root :controller => 'reservations', :action => 'new'
 end

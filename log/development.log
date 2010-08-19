@@ -50286,3 +50286,37 @@ Rendered reservations/_second (23.2ms)
 Rendered shared/_header (1.1ms)
 Rendered shared/_admin_header (1.0ms)
 Completed in 74ms (View: 42, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ReservationsController#new (for 127.0.0.1 at 2010-08-19 09:16:55) [GET]
+  Parameters: {"action"=>"new", "controller"=>"reservations"}
+  [4;36;1mCategory Load (4.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/application
+Rendering reservations/new
+Rendered reservations/_user_info (15.7ms)
+Rendered reservations/_second (58.9ms)
+Rendered shared/_header (10.0ms)
+Rendered shared/_admin_header (15.3ms)
+Completed in 523ms (View: 290, DB: 4) | 200 OK [http://localhost/]
+
+
+Processing Admin::ReservationsController#index (for 127.0.0.1 at 2010-08-19 09:16:58) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/reservations"}
+  [4;35;1mReservation Load (1.8ms)[0m   [0mSELECT * FROM "reservations" [0m
+Rendering template within layouts/application
+Rendering admin/reservations/index
+  [4;36;1mEvent Load (1.6ms)[0m   [0;1mSELECT * FROM "events" WHERE ("events"."id" = 1) [0m
+  [4;35;1mEvent Load (2.0ms)[0m   [0mSELECT * FROM "events" WHERE ("events"."id" = 2) [0m
+Rendered shared/_header (1.2ms)
+Rendered shared/_admin_header (1.0ms)
+Completed in 109ms (View: 83, DB: 5) | 200 OK [http://localhost/admin/reservations]
+
+
+Processing Admin::ReservationsController#edit (for 127.0.0.1 at 2010-08-19 09:17:02) [GET]
+  Parameters: {"action"=>"edit", "id"=>"2", "controller"=>"admin/reservations"}
+  [4;36;1mReservation Load (1.2ms)[0m   [0;1mSELECT * FROM "reservations" WHERE ("reservations"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering admin/reservations/edit
+Rendered shared/_header (1.6ms)
+Rendered shared/_admin_header (1.3ms)
+Completed in 85ms (View: 52, DB: 1) | 200 OK [http://localhost/admin/reservations/2/edit]

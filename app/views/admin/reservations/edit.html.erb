@@ -14,11 +14,11 @@
   </p>
   <p>
     <%= f.label :date %><br />
-    <%= f.text_field :date %>
+    <%= calendar_date_select_tag "reservation[date]", @reservation.date, :time => true, :size => '30' %>
   </p>
   <p>
     <%= f.label :time %><br />
-    <%= f.text_field :time %>
+    <%= calendar_date_select_tag "reservation[time]", @reservation.time, :time => true, :size => '30' %>
   </p>
   <p>
     <%= f.label :address %><br />
@@ -50,6 +50,10 @@
   <p>
     <%= f.label :note %><br />
     <%= f.text_area :note %>
+  </p>
+    <p>
+    <%= f.label :field1 %><br />
+    <%= f.text_area :field1 %>
   </p>
   <p><%= f.submit %></p>
 <% end %>
