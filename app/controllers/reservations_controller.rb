@@ -1,5 +1,9 @@
 class ReservationsController < ApplicationController
 
+  def index
+    redirect_to root_url
+  end
+
   def show
     @reservation = Reservation.find(params[:id])
     @event = Event.find(@reservation.event_id)
@@ -39,6 +43,9 @@ class ReservationsController < ApplicationController
         @reservation.previous_step
       elsif @reservation.last_step?
         @reservation.save if @reservation.all_valid?
+        if @reservation.save
+          ReservationMailer.deliver_reservation_email(@reservation)
+        end
       else
         @reservation.next_step
       end
@@ -75,7 +82,7 @@ class ReservationsController < ApplicationController
   end
 
   def dump_csv
-    @reservations = Reservation.find(:all)
+    @reservations = Reservation.all
     @outfile = "members_" + Time.now.strftime("%m-%d-%Y") + ".csv"
 
     csv_data = FasterCSV.generate do |csv|
@@ -134,7 +141,7 @@ class ReservationsController < ApplicationController
         reservation.address,
         reservation.city,
         reservation.zipcode,
-        reservation.first_name,
+        reserOvation.first_name,
         reservation.last_name,
         reservation.email,
         reservation.phone,

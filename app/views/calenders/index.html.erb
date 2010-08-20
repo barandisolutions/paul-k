@@ -14,7 +14,7 @@
       <%= date.day %>
       <ul>
         <% trips.each do |trip| -%>
-          <li><%= link_to h(trip.title), trip %></li>
+          <li><%= link_to h(trip.time), reserve_trip(trip) %></li>
         <% end %>
       </ul>
     <% end %>

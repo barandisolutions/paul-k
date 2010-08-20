@@ -67,6 +67,36 @@
     </p>
   <% end -%>
 
+  <% if @event.radio1_title_show == true -%>
+    <p>
+      <%= f.label @event.radio11_title %><br />
+      <%= f.radio_button :radio1, @event.radio11_title %>
+    </p>
+    <p>
+      <%= f.label @event.radio12_title %><br />
+      <%= f.radio_button :radio1, @event.radio12_title %>
+    </p>
+    <p>
+      <%= f.label @event.radio13_title %><br />
+      <%= f.radio_button :radio1, @event.radio13_title %>
+    </p>
+  <% end -%>
+
+  <% if @event.radio2_title_show == true -%>
+    <p>
+      <%= f.label @event.radio21_title %><br />
+      <%= f.radio_button :radio2, @event.radio21_title %>
+    </p>
+    <p>
+      <%= f.label @event.radio22_title %><br />
+      <%= f.radio_button :radio2, @event.radio22_title %>
+    </p>
+    <p>
+      <%= f.label @event.radio23_title %><br />
+      <%= f.radio_button :radio2, @event.radio23_title %>
+    </p>
+  <% end -%>
+
   <% if @reservation.round_trip? -%>
     <%= render 'round_trip_form', :f => f %>
   <% end -%>

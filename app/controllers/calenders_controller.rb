@@ -1,8 +1,8 @@
 class CalendersController < ApplicationController
   def index
     @event = params[:event]
-    @trips = Trip.find(:all,
-            :conditions => { :event_id => @event})
+    @trips = Reservation.find(:all,
+            :conditions => { :event_id => @event, :published => 'true'})
     @date = params[:month] ? Date.parse(params[:month]) : Date.today
   end
 

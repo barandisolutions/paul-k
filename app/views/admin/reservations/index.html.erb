@@ -15,7 +15,10 @@
     <th><%=h event.last_name_title %> |</th>
     <th><%=h event.email_title %> |</th>
     <th><%=h event.phone_title %> |</th>
-    <th><%=h event.note_title %>l</th>
+    <th><%=h event.note_title %> |</th>
+    <th><%=h event.field1_title %> |</th>
+    <th><%=h event.field2_title %> |</th>
+    <th><%=h event.field3_title %> |</th>
   </tr>
     <tr>
       <td><%=h reservation.event_id %></td>
@@ -30,6 +33,11 @@
       <td><%=h reservation.email %></td>
       <td><%=h reservation.phone %></td>
       <td><%=h reservation.note %></td>
+      <td><%=h reservation.field1 %></td>
+      <td><%=h reservation.field2 %></td>
+      <td><%=h reservation.field3 %></td>
+      <td><%=h reservation.radio1 %></td>
+      <td><%=h reservation.radio2 %></td>
       <td><%= link_to "Show", admin_reservation_path(reservation) %></td>
       <td><%= link_to "Edit", edit_admin_reservation_path(reservation) %></td>
       <td><%= link_to "Destroy", admin_reservation_path(reservation), :confirm => 'Are you sure?', :method => :delete %></td>

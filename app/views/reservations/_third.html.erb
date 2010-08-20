@@ -63,6 +63,27 @@
                 @event.note_title,
                 @reservation.note) %>
 </p>
+<p>
+<%= show_title( @event.field1_title_show,
+                @event.field1_title,
+                @reservation.field1) %>
+</p>
+<p>
+<%= show_title( @event.field2_title_show,
+                @event.field2_title,
+                @reservation.field2) %>
+</p>
+<p>
+<%= show_title( @event.field3_title_show,
+                @event.field3_title,
+                @reservation.field3) %>
+</p>
+<p>
+  <b><%= @reservation.radio1 %></b>
+</p>
+<p>
+  <b><%= @reservation.radio2 %></b>
+</p>
 
 <% form_for @reservation do |f| %>
   <%= f.submit 'Confirm', :name => "next_button" %>

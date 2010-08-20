@@ -1,4 +1,4 @@
-# This file is auto-generated from the current state of the database. Instead of editing this file,
+# This file is auto-generated from the current state of the database. Instead of editing this file, 
 # please use the migrations feature of Active Record to incrementally modify your database, and
 # then regenerate this schema definition.
 #
@@ -68,6 +68,14 @@ ActiveRecord::Schema.define(:version => 20100802231401) do
     t.boolean  "field2_title_show",       :default => true
     t.string   "field3_title",            :default => "Field 3: "
     t.boolean  "field3_title_show",       :default => true
+    t.boolean  "radio1_title_show",       :default => true
+    t.string   "radio11_title",           :default => "Radio 1.1: "
+    t.string   "radio12_title",           :default => "Radio 1.2: "
+    t.string   "radio13_title",           :default => "Radio 1.3: "
+    t.boolean  "radio2_title_show",       :default => true
+    t.string   "radio21_title",           :default => "Radio 2.1: "
+    t.string   "radio22_title",           :default => "Radio 2.2: "
+    t.string   "radio23_title",           :default => "Radio 2.3: "
     t.integer  "price"
     t.boolean  "visible"
     t.boolean  "purchaseable"
@@ -96,6 +104,10 @@ ActiveRecord::Schema.define(:version => 20100802231401) do
     t.string   "field1"
     t.string   "field2"
     t.string   "field3"
+    t.string   "radio1"
+    t.string   "radio2"
+    t.string   "published",     :default => "true"
+    t.date     "published_on",  :default => '2010-08-19'
     t.text     "note"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -126,4 +138,3 @@ ActiveRecord::Schema.define(:version => 20100802231401) do
   end
 
 end
-

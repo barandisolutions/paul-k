@@ -59,6 +59,21 @@
                 @reservation.note) %>
 </p>
 <p>
+<%= show_title( @event.field1_title_show,
+                @event.field1_title,
+                @reservation.field1) %>
+</p>
+<p>
+<%= show_title( @event.field2_title_show,
+                @event.field2_title,
+                @reservation.field2) %>
+</p>
+<p>
+<%= show_title( @event.field3_title_show,
+                @event.field3_title,
+                @reservation.field3) %>
+</p>
+<p>
   <%= link_to "Edit", edit_reservation_path(@reservation) %> |
   <%= link_to "Destroy", @reservation, :confirm => 'Are you sure?', :method => :delete %> |
 </p>

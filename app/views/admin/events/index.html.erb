@@ -17,6 +17,9 @@
     <th>Field1 title</th>
     <th>Field2 title</th>
     <th>Field3 title</th>
+    <th>Radio11 title</th>
+    <th>Radio12 title</th>
+    <th>Radio13 title</th>
   </tr>
   <% for event in @events %>
     <tr>
@@ -35,6 +38,9 @@
       <td><%=h event.field1_title %></td>
       <td><%=h event.field2_title %></td>
       <td><%=h event.field3_title %></td>
+      <td><%=h event.radio11_title %></td>
+      <td><%=h event.radio12_title %></td>
+      <td><%=h event.radio13_title %></td>
       <td>
         <%= link_to "Show", admin_event_path(event) %>
       </td>
